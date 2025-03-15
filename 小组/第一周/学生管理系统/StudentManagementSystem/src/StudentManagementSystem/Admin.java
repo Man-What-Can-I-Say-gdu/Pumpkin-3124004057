@@ -1,4 +1,6 @@
-public class admin {
+package StudentManagementSystem;
+
+public class Admin {
     public int[] AdminId;
     public String varchar;
 
