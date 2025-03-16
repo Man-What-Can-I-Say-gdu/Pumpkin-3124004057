@@ -1,13 +1,16 @@
 package StudentManagementSystem;
 
-
-
-enum UserType{
-    TypeIsStudent,
-    TypeIsAdmin;
-}
-
 public class User {
+
+    public enum UserType{
+        TypeIsStudent("TypeIsStudent",0),
+        TypeIsAdmin("TypeIsAdmin",1);
+
+        UserType(String Type, int value) {
+        }
+    }
+
+
 
     /*
     *
@@ -18,9 +21,6 @@ public class User {
     *
     *
      */
-
-
-
     public String user_name;
     private String password;
     private int user_type;
@@ -36,8 +36,9 @@ public class User {
         return user_type;
     }
 
-    public void setUser_type(int user_type) {
-        this.user_type = user_type - 1;
+    public User setUser_type(int user_type) {
+        this.user_type = user_type;
+        return this;
     }
 
     public String getPassword() {
