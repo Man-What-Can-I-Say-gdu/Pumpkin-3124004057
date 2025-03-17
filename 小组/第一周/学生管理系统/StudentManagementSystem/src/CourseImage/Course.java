@@ -1,4 +1,4 @@
-package StudentManagementSystem;
+package CourseImage;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,8 +7,17 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 public class Course {
-    private String courseName;
-    private int courseCode;
+    public String courseName;
+    public int courseCode;
+    public int Credits;
+
+    public int getCredits() {
+        return Credits;
+    }
+
+    public void setCredits(int credits) {
+        Credits = credits;
+    }
 
     public String getCourseName() {
         return courseName;
@@ -29,7 +38,7 @@ public class Course {
     @Override
     public String
     toString() {
-        return "课程编号：" +courseCode +"\t 课程名称：" + courseName;
+        return "课程编号：" +courseCode +"\t 课程名称：" + courseName + "\t所占学分：" + Credits;
     }
 
     //实现提供课程信息功能
@@ -48,6 +57,7 @@ public class Course {
         while (resultSet.next()) {
             course.setCourseCode(resultSet.getInt("course_id"));
             course.setCourseName(resultSet.getNString("course_name"));
+            course.setCredits(resultSet.getInt("credits"));
             courses.add(course);
         }
         preparedStatement.close();
@@ -73,6 +83,7 @@ public class Course {
         while (resultSet.next()) {
             course.setCourseCode(resultSet.getInt("course_id"));
             course.setCourseName(resultSet.getNString("course_name"));
+            course.setCredits(resultSet.getInt("credits"));
             courses.add(course);
         }
         preparedStatement.close();

@@ -1,4 +1,4 @@
-package StudentManagementSystem;
+package User_Type;
 
 import java.sql.*;
 import java.util.Objects;
@@ -37,15 +37,12 @@ public class User {
     private String password;
     private int user_type;
     public String phone_number;
-
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }
-
     public String getUser_name() {
         return user_name;
     }
@@ -61,20 +58,16 @@ public class User {
     public int getUser_type() {
         return user_type;
     }
-
     public User setUser_type(int user_type) {
         this.user_type = user_type;
         return this;
     }
-
     public String getPassword() {
         return password;
     }
-
     public void setPassword(String password) {
         this.password = password;
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -82,12 +75,10 @@ public class User {
         User user = (User) o;
         return Objects.equals(phone_number, user.phone_number);
     }
-
     @Override
     public int hashCode() {
         return Objects.hashCode(phone_number);
     }
-
     @Override
     public String toString() {
         return "User{" +
@@ -144,7 +135,7 @@ public class User {
         System.out.println("请选择你的用户类型(数字)：");
         System.out.println("1.学生");
         System.out.println("2.管理员");
-        while(user.setUser_type(scan.nextInt()).getUser_type() >= 2){
+        while(user.setUser_type(scan.nextInt()).getUser_type() > 2 || user.getUser_type()<=0){
             System.out.print("输入错误，请重新选择：");
         }
         System.out.println("请输入你的手机号：");
@@ -152,16 +143,17 @@ public class User {
         //判断输入的手机号码是否符合规定
         while (true){
             PhoneNumb = scan.next();
-            if(!Pattern.matches("^/d{11}$",PhoneNumb)){
+            if(!Pattern.matches("^\\d{11}$",PhoneNumb)){
                 System.out.println("输入的电话号码格式错误，请重新输入");
             }else{
+                user.setPhone_number(PhoneNumb);
                 break;
             }
         }
         //填充占位符
         preparedStatement.setString(1,user.getUser_name());
         preparedStatement.setString(2, user.getPassword());
-        preparedStatement.setInt(3,user.getUser_type());
+        preparedStatement.setInt(3,(user.getUser_type()-1));
         preparedStatement.setString(4,user.getPhone_number());
         //执行sql语句，并判断是否能够创建成功
         if (!preparedStatement.execute()){
@@ -248,7 +240,7 @@ public class User {
     public static void Exit(){
         System.exit(0);
     }
-    //修改密码:通过唯一凭证（电话号码）修改密码
+    //修改密码:通过唯一凭证（电话号码）修改密码,登陆界面使用
     public static void ModifyPassword() throws ClassNotFoundException, SQLException {
         System.out.println("请输入要修改密码的账号：");
         //建立链接
@@ -289,6 +281,38 @@ public class User {
         preparedStatement.close();
         connection.close();
     }
+    //修改密码：已登录的用户登录
+    public static void ModifyPassword(User user) throws ClassNotFoundException, SQLException {
+        //建立链接
+        Class.forName("com.mysql.jdbc.Driver");
+        //获取链接对象
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/StudentManagementSystem?serverTimezone=Asia/Shanghai","root","123456");
+        //获取预编译对象
+        PreparedStatement preparedStatement;
+        //设置SQL语句
+        String SelectSql = "select name, phone_number from user where name =?";
+        preparedStatement = connection.prepareStatement(SelectSql);
+        //获取resultSet
+        ResultSet resultSet = null;
+        Scanner scanner = new Scanner(System.in);
+        preparedStatement.setString(1,user.getUser_name());
+        String CorrectPhoneNumber = resultSet.getString("phone_number");
+        System.out.println("请输入该账号绑定的手机号：");
+        if(CorrectPhoneNumber.equals(scanner.next())){
+            System.out.println("请输入新密码:");
+            String NewPassword = scanner.next();
+            String UpdateSQL = "update user set phone_number=? where name =?";
+            preparedStatement = connection.prepareStatement(UpdateSQL);
+            preparedStatement.setString(1,NewPassword);
+            preparedStatement.setString(2,user.getUser_name());
+            if(preparedStatement.executeUpdate()>0){
+                System.out.println("操作成功！");
+
+                }
+            }
+        preparedStatement.close();
+        connection.close();
+    }
     //展示用户数据
     public void Display() throws Exception {
         //获取驱动
@@ -310,8 +334,6 @@ public class User {
                     + ",用户类型为：" + UserType.getUserType(resultSet.getInt(user_type)));
         }
     }
-
-
     //身份验证：
     public boolean VerifyIdentity() throws Exception {
         Class.forName("com.mysql.jdbc.Driver");
@@ -331,6 +353,7 @@ public class User {
         String PhoneNumber = scanner.next();
         preparedStatement.close();
         connection.close();
+        //空指针报错，发生错误字段“OperaterUser.getPhone_number()”
         return OperaterUser.getPhone_number().equals(PhoneNumber);
     }
 }

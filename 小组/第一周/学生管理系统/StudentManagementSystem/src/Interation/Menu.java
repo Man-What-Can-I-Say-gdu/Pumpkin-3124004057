@@ -1,4 +1,4 @@
-package StudentManagementSystem;
+package Interation;
 
 import java.util.Scanner;
 

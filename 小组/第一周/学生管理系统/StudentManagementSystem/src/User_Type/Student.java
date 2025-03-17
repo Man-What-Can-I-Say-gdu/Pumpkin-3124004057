@@ -1,4 +1,6 @@
-package StudentManagementSystem;
+package User_Type;
+
+import CourseImage.Course;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
