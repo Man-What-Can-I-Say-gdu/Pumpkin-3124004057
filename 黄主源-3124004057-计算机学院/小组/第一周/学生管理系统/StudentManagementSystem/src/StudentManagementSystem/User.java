@@ -10,7 +10,6 @@ public class User {
     public enum UserType{
         TypeIsStudent(0),
         TypeIsAdmin(1);
-
         private int value;
         UserType(int value) {
             this.value = value;
@@ -33,10 +32,19 @@ public class User {
             return null;
         }
     }
+    public int id;
     public String user_name;
     private String password;
     private int user_type;
     public String phone_number;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getUser_name() {
         return user_name;
@@ -301,5 +309,28 @@ public class User {
                     +",电话号码：" + resultSet.getString("phone_number")
                     + ",用户类型为：" + UserType.getUserType(resultSet.getInt(user_type)));
         }
+    }
+
+
+    //身份验证：
+    public boolean VerifyIdentity() throws Exception {
+        Class.forName("com.mysql.jdbc.Driver");
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/StudentManagementSystem?serverTimezone=Asia/Shanghai","root","123456");
+        PreparedStatement preparedStatement;
+        String SelectSql = "select phone_number,id from user where name =?";
+        preparedStatement = connection.prepareStatement(SelectSql);
+        preparedStatement.setString(1,this.user_name);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        User OperaterUser = new User();
+        while(resultSet.next()){
+            OperaterUser.setPhone_number(resultSet.getString("phone_number"));
+            OperaterUser.setId(resultSet.getInt("id"));
+        }
+        System.out.println("请输入手机号码：");
+        Scanner scanner = new Scanner(System.in);
+        String PhoneNumber = scanner.next();
+        preparedStatement.close();
+        connection.close();
+        return OperaterUser.getPhone_number().equals(PhoneNumber);
     }
 }
