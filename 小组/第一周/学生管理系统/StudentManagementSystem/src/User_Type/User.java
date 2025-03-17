@@ -155,13 +155,13 @@ public class User {
         preparedStatement.setString(2, user.getPassword());
         preparedStatement.setInt(3,(user.getUser_type()-1));
         preparedStatement.setString(4,user.getPhone_number());
+        //到此为止的user正常
         //执行sql语句，并判断是否能够创建成功
         if (!preparedStatement.execute()){
             System.out.println("创建用户失败：未知错误");
         }
         preparedStatement.close();
         connection.close();
-        System.out.println(user);
         return user;
     }
     //实现登录功能
@@ -335,13 +335,15 @@ public class User {
         }
     }
     //身份验证：
+    //错误：身份验证传入的参数出现问题
     public boolean VerifyIdentity() throws Exception {
         Class.forName("com.mysql.jdbc.Driver");
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/StudentManagementSystem?serverTimezone=Asia/Shanghai","root","123456");
         PreparedStatement preparedStatement;
         String SelectSql = "select phone_number,id from user where name =?";
         preparedStatement = connection.prepareStatement(SelectSql);
-        preparedStatement.setString(1,this.user_name);
+        //this指针出现问题
+        preparedStatement.setString(1,this.getUser_name());
         ResultSet resultSet = preparedStatement.executeQuery();
         User OperaterUser = new User();
         while(resultSet.next()){
@@ -351,6 +353,7 @@ public class User {
         System.out.println("请输入手机号码：");
         Scanner scanner = new Scanner(System.in);
         String PhoneNumber = scanner.next();
+        System.out.println(OperaterUser);
         preparedStatement.close();
         connection.close();
         //空指针报错，发生错误字段“OperaterUser.getPhone_number()”

@@ -5,6 +5,10 @@ import User_Type.Admin;
 import User_Type.Student;
 import User_Type.User;
 
+
+//目前要更改的问题：继承中子类可以继承父类属性，所以在子类中定义父类变量冗余，需要编写一个方法使得子类的对象能够再获取并给公共对象赋值
+//部分代码冗余，尝试合并形成工具类或者新方法
+//添加注释
 public class MajorLogic {
     public static void main(String[] args) throws Exception {
         //进行登录

@@ -109,7 +109,7 @@ public class Admin extends User{
     //对课程进行删除
     public void DeleteCourse() throws Exception {
         //验证管理员身份并询问是否确认删除，若否则返回
-        if(!this.VerifyIdentity()){
+        if(!this.getUser().VerifyIdentity()){
             System.out.println("验证失败！");
         }
         //展示课程信息
@@ -163,7 +163,7 @@ public class Admin extends User{
     }
     //对课程进行增加
     public void AddCourse() throws Exception{
-        if(!this.VerifyIdentity()){
+        if(!this.getUser().VerifyIdentity()){
             return;
         }
         this.CheckCourse();
@@ -203,7 +203,7 @@ public class Admin extends User{
     }
     //查询所有学生的信息
     public void ShowAllStudentImage() throws Exception{
-        if(!this.VerifyIdentity()){
+        if(!this.getUser().VerifyIdentity()){
             System.out.println("身份验证失败！");
         }else {
             Class.forName("com.mysql.jdbc.Driver");
@@ -218,7 +218,7 @@ public class Admin extends User{
     }
     //修改课程学分
     public void ResetCredits() throws Exception{
-        if(!this.VerifyIdentity()){
+        if(!this.getUser().VerifyIdentity()){
             System.out.println("身份验证失败，请重新验证");
         }else{
             Class.forName("com.mysql.jdbc.Driver");
