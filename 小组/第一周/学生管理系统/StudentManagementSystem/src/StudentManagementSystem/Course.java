@@ -29,10 +29,7 @@ public class Course {
     @Override
     public String
     toString() {
-        return "Course{" +
-                "courseName='" + courseName + '\'' +
-                ", courseCode='" + courseCode + '\'' +
-                '}';
+        return "课程编号：" +courseCode +"\t 课程名称：" + courseName;
     }
 
     //实现提供课程信息功能
@@ -60,7 +57,7 @@ public class Course {
 
 
     //实现提供用户课程信息功能
-    public ArrayList<Course> DisplayAllCourses(String SelectUser) throws Exception {
+    public static ArrayList<Course> DisplayAllCourses(String SelectUser) throws Exception {
         ArrayList<Course> courses = new ArrayList<>();
         Course course = new Course();
         //获取驱动
