@@ -1,12 +1,15 @@
-package Interation;
+package Operator;
 
 import User_Type.Admin;
 import CourseImage.Course;
 import User_Type.Student;
 import User_Type.User;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.ArrayList;
 
+//实现键盘监听器主要是为了当在任意位置都可以通过Esc进行退出，因此我们只需要重写keyRelease
 public class Interaction {
     public static User LoginEntrance() throws Exception {
         //设置表头和选项
@@ -126,4 +129,6 @@ public class Interaction {
         }while(true);
 
     }
+
+
 }

@@ -1,5 +1,7 @@
 package CourseImage;
 
+import DataBasePool.ConnectionPool;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -46,14 +48,14 @@ public class Course {
         ArrayList<Course> courses = new ArrayList<>();
         Course course = new Course();
         //获取驱动
-        Class.forName("com.mysql.jdbc.Driver");
         //获取连接池对象
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/StudentManagementSystem?serverTimezone=Asia/Shanghai","root","123456");
+        Connection connection = ConnectionPool.GetConnection();
         //构建查询语句
         String SelectSQL = "select * from course";
         //获取预处理语句
         PreparedStatement preparedStatement = connection.prepareStatement(SelectSQL);
         ResultSet resultSet = preparedStatement.executeQuery();
+        //遍历得到课程信息
         while (resultSet.next()) {
             course.setCourseCode(resultSet.getInt("course_id"));
             course.setCourseName(resultSet.getNString("course_name"));
@@ -61,7 +63,7 @@ public class Course {
             courses.add(course);
         }
         preparedStatement.close();
-        connection.close();
+        ConnectionPool.RecycleConnection(connection);
         return courses;
     }
 
@@ -71,9 +73,8 @@ public class Course {
         ArrayList<Course> courses = new ArrayList<>();
         Course course = new Course();
         //获取驱动
-        Class.forName("com.mysql.jdbc.Driver");
         //获取连接池对象
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/StudentManagementSystem?serverTimezone=Asia/Shanghai","root","123456");
+        Connection connection = ConnectionPool.GetConnection();
         //构建查询语句
         String SelectSQL = "select * from course where course_name = ?" ;
         //获取预处理语句
@@ -87,7 +88,7 @@ public class Course {
             courses.add(course);
         }
         preparedStatement.close();
-        connection.close();
+        ConnectionPool.RecycleConnection(connection);
         return courses;
     }
 }

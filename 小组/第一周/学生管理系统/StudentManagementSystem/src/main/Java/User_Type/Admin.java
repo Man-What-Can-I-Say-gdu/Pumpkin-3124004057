@@ -1,6 +1,7 @@
 package User_Type;
 
 import CourseImage.Course;
+import DataBasePool.ConnectionPool;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,15 +14,6 @@ import java.util.regex.Pattern;
 public class Admin extends User{
     public int[] AdminId;
     public String varchar;
-    public User user;
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 
     public int[] getAdminId() {
         return AdminId;
@@ -41,8 +33,7 @@ public class Admin extends User{
     //查询学生信息
     public void CheckOut(String StudentName) throws Exception{
         //获取数据库连接
-        Class.forName("com.mysql.jdbc.Driver");
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/StudentManagementSystem","root","123456");
+        Connection connection = ConnectionPool.GetConnection();
         //编写SQL语句：用于获取学生的全部信息
         String CheckOutSQL = "select * from student,user where user.name =?";
         //将SQL传入PreparedStatement对象获取学生信息
@@ -55,15 +46,16 @@ public class Admin extends User{
             System.out.println("电话号码：" + result.getString("phone_number"));
         }
         preparedStatement.close();
-        connection.close();
+        ConnectionPool.RecycleConnection(connection);
     }
     //修改学生手机号
     public void ModifyPhoneNumber() throws Exception{
+        //对管理员身份进行核对
+        this.VerifyIdentity();
         //创建Scanner对象用于获取输入的学生信息
         Scanner sc = new Scanner(System.in);
         //连接数据库
-        Class.forName("com.mysql.jdbc.Driver");
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/StudentManagementSystem","root","123456");
+        Connection connection = ConnectionPool.GetConnection();
         //获取学生的姓名，用于指定修改手机号的学生账号
         String name = sc.nextLine();
         //编写更新学生手机号的SQL
@@ -88,7 +80,7 @@ public class Admin extends User{
         }
         System.out.println("添加成功！");
         preparedStatement.close();
-        connection.close();
+        ConnectionPool.RecycleConnection(connection);
     }
     //查询所有课程信息
     public void CheckCourse() throws Exception{
@@ -100,7 +92,7 @@ public class Admin extends User{
     //对课程进行删除
     public void DeleteCourse() throws Exception {
         //验证管理员身份并询问是否确认删除，若否则返回
-        if(!this.getUser().VerifyIdentity()){
+        if(!this.VerifyIdentity()){
             System.out.println("验证失败！");
         }
         //展示课程信息
@@ -110,9 +102,8 @@ public class Admin extends User{
         Scanner sc = new Scanner(System.in);
         int DeleteCourseId = sc.nextInt();
         //连接数据库
-        Class.forName("com.mysql.jdbc.Driver");
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/StudentManagementSystem","root","123456");
-        //获取课程id
+        Connection connection = ConnectionPool.GetConnection();
+        //删除course
         String DeleteCourseSQL = "delete from course where course_id = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(DeleteCourseSQL);
         preparedStatement.setInt(1,DeleteCourseId);
@@ -123,16 +114,24 @@ public class Admin extends User{
         }else{
             System.out.println("删除成功！");
         }
+        //删除和学生的关联
+        DeleteCourseSQL = "delete from student_with_course where course_id =?";
+        preparedStatement = connection.prepareStatement(DeleteCourseSQL);
+        //打印是否成功的信息
+        if(preparedStatement.executeUpdate() != 0){
+            System.out.println("已断开删除课程与学生的关联");
+        }else{
+            System.out.println("删除课程与学生无关联");
+        }
         preparedStatement.close();
-        connection.close();
+        ConnectionPool.RecycleConnection(connection);
     }
     //查询某个课程的选课信息
     public void ShowCourseImage() throws Exception {
         //声名变量CourseName用于存放需要查询的课程的信息
         String CourseName;
         Scanner sc = new Scanner(System.in);
-        Class.forName("com.mysql.jdbc.Driver");
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/StudentManagementSystem","root","123456");
+        Connection connection = ConnectionPool.GetConnection();
         //获取课程Id用于关联其他表进行查询
         String GetCourseIdSQL ="select course_id from course where course_name=?";
         PreparedStatement preparedStatement =connection.prepareStatement(GetCourseIdSQL);
@@ -163,7 +162,7 @@ public class Admin extends User{
     //对课程进行增加
     public void AddCourse() throws Exception{
         //对管理员身份进行判断，防止误操作
-        if(!this.getUser().VerifyIdentity()){
+        if(!this.VerifyIdentity()){
             return;
         }
         //展示所有课程信息，目的是让管理员能够知道可以操作的课程数量
@@ -173,8 +172,7 @@ public class Admin extends User{
         Scanner sc = new Scanner(System.in);
         String AddCourseName = sc.nextLine();
         //获取驱动
-        Class.forName("com.mysql.jdbc.Driver");
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/StudentManagementSystem","root","123456");
+        Connection connection = ConnectionPool.GetConnection();
         String FindRepetitionSQL = "select * from course where course_name=?";
         PreparedStatement preparedStatement = connection.prepareStatement(FindRepetitionSQL);
         //对需要添加的课程信息进行查重，若已存在则重新获取课程名称
@@ -196,7 +194,7 @@ public class Admin extends User{
             System.out.println("添加课程成功！");
         }
         preparedStatement.close();
-        connection.close();
+        ConnectionPool.RecycleConnection(connection);
     }
     //查询某个学生的选课信息
     public void CheckStudentCourse() throws Exception{
@@ -213,12 +211,11 @@ public class Admin extends User{
     //查询所有学生的信息
     public void ShowAllStudentImage() throws Exception{
         //进行身份验证，防止信息泄露
-        if(!this.getUser().VerifyIdentity()){
+        if(!this.VerifyIdentity()){
             System.out.println("身份验证失败！");
         }else {
             //获取数据库连接
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/StudentManagementSystem", "root", "123456");
+            Connection connection = ConnectionPool.GetConnection();
             //SQL作用是获得用户的全部信息
             String ShowAllStudentImageSQL = "select * from user";
             PreparedStatement preparedStatement = connection.prepareStatement(ShowAllStudentImageSQL);
@@ -227,17 +224,18 @@ public class Admin extends User{
             while(result.next()){
                 System.out.println( result.getString("name") + ":" + result.getString("phone_number"));
             }
+            preparedStatement.close();
+            ConnectionPool.RecycleConnection(connection);
         }
     }
     //修改课程学分
     public void ResetCredits() throws Exception{
         //进行身份验证
-        if(!this.getUser().VerifyIdentity()){
+        if(!this.VerifyIdentity()){
             System.out.println("身份验证失败，请重新验证");
         }else{
             //获取驱动
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/StudentManagementSystem", "root", "123456");
+            Connection connection = ConnectionPool.GetConnection();
             String UpdateCreditsSQL = "update course set credit =? where course.course_name = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(UpdateCreditsSQL);
             Scanner sc = new Scanner(System.in);
@@ -258,7 +256,7 @@ public class Admin extends User{
             }else{
                 System.out.println("修改成功！");
                 preparedStatement.close();
-                connection.close();
+                ConnectionPool.RecycleConnection(connection);
             }
         }
     }

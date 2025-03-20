@@ -1,5 +1,7 @@
 package User_Type;
 
+import DataBasePool.ConnectionPool;
+
 import java.sql.*;
 import java.util.Objects;
 import java.util.Scanner;
@@ -91,32 +93,30 @@ public class User {
     public static User RegisterFunction() throws Exception {
         //获取User对象，用于存放注册的用户
         User user = new User();
-        //注册驱动
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-        //获取和数据库间的连接
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/StudentManagementSystem?serverTimezone=Asia/Shanghai","root","123456");
-
+        //从数据库中获取connection
+        Connection connection = ConnectionPool.GetConnection();
         //构建语句对象，先对输入的姓名内容进行查重
         PreparedStatement preparedStatement;
         String SelectSql = "select * from user where name=?";
         preparedStatement = connection.prepareStatement(SelectSql);
 
         Scanner scan = new Scanner(System.in);
+        //用于临时存放用户的名称
+        String TempName;
         //输入用户名，同时对用户名进行判断，
         while(true){
             System.out.print("请输入你的用户名(长度在10个字符以内)：");
-            user.setUser_name(scan.next());
             //填充占位符
-            preparedStatement.setString(1,user.getUser_name());
-            //执行sql语句，同时对结果进行判断,若用户存在则提示重新输入，不存在则创建用户
-            if (preparedStatement.executeQuery().next()){
-                System.out.println("该用户已存在，请重新输入:");
-            }else{
-                break;
+            if(!((TempName = scan.next()).isEmpty())){
+                //不为空的话,则对user进行赋值
+                user.setUser_name(TempName);
+                preparedStatement.setString(1,user.getUser_name());
+                //执行sql语句，同时对结果进行判断,若用户存在则提示重新输入，不存在则创建用户
+                if (preparedStatement.executeQuery().next()){
+                    System.out.println("该用户已存在，请重新输入:");
+                }else{
+                    break;
+                }
             }
         }
         //设置sql语句，这里的作用是：添加数据
@@ -132,15 +132,17 @@ public class User {
                 break;
             }
         }
+        //选择用户类型，输入不为1，2则重新选择
         System.out.println("请选择你的用户类型(数字)：");
         System.out.println("1.学生");
         System.out.println("2.管理员");
         while(user.setUser_type(scan.nextInt()).getUser_type() > 2 || user.getUser_type()<=0){
             System.out.print("输入错误，请重新选择：");
         }
+        //设置手机号，利用正则表达式进行校验（只校验11位是否都为数字）
         System.out.println("请输入你的手机号：");
         String PhoneNumb;
-        //判断输入的手机号码是否符合规定
+        //判断输入的手机号码是否符合规定，是则设置，否则退出
         while (true){
             PhoneNumb = scan.next();
             if(!Pattern.matches("^\\d{11}$",PhoneNumb)){
@@ -160,28 +162,27 @@ public class User {
         if (!preparedStatement.execute()){
             System.out.println("创建用户失败：未知错误");
         }
+        //设置用户的id
+        user.setId(GetIdFromDatabase(user));
+        //因存在数据库连接池中，故不需要直接关闭连接
+        ConnectionPool.RecycleConnection(connection);
+        if(user.user_type == 0){
+            //在学生表中添加数据
+            user.PutUserToStudentBase();
+        }
         preparedStatement.close();
-        connection.close();
         return user;
     }
     //实现登录功能
-    public static User LoginFunction() throws ClassNotFoundException, SQLException {
-        //注册驱动
-        Class.forName("com.mysql.jdbc.Driver");
+    public static User LoginFunction() throws Exception {
+        //创建的user用于返回User对象，方便后续调用
         User user = new User();
-        Connection connection;
-        //获取与数据库的链接
-        try{
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/StudentManagementSystem?serverTimezone=Asia/Shanghai","root","123456");
-        }catch (SQLException e){
-            throw new RuntimeException(e);
-        }
-        //创建预处理对象
-        PreparedStatement preparedStatement;
+        //从连接池中获取connection对象
+        Connection connection = ConnectionPool.GetConnection();
         //创建sql语句：查询
         String SelectSql = "select name,user_type,password from user where name=?";
-        //添加sql到预处理对象中
-        preparedStatement = connection.prepareStatement(SelectSql);
+        //获取预处理对象，添加sql到预处理对象中
+        PreparedStatement preparedStatement = connection.prepareStatement(SelectSql);
         //获取添加账户的昵称，在库中匹配
         System.out.print("请输入要登陆的账号的昵称：");
         Scanner scan = new Scanner(System.in);
@@ -226,6 +227,7 @@ public class User {
                 user.setUser_name(resultSet.getString("name"));
                 user.setPassword(resultSet.getString("password"));
                 user.setUser_type(resultSet.getInt("user_type"));
+                user.setId(resultSet.getInt("id"));
                 break;
             }else{
                 //
@@ -233,6 +235,8 @@ public class User {
             }
         }
         System.out.println("登陆成功，欢迎" + user.getUser_name());
+        preparedStatement.close();
+        ConnectionPool.RecycleConnection(connection);
         //返回user变量，方便后续进行判断
         return user;
     }
@@ -241,12 +245,16 @@ public class User {
         System.exit(0);
     }
     //修改密码:通过唯一凭证（电话号码）修改密码,登陆界面使用
-    public static void ModifyPassword() throws ClassNotFoundException, SQLException {
+    public static void ModifyPassword() throws Exception {
         System.out.println("请输入要修改密码的账号：");
         //建立链接
-        Class.forName("com.mysql.jdbc.Driver");
         //获取链接对象
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/StudentManagementSystem?serverTimezone=Asia/Shanghai","root","123456");
+        Connection connection;
+        try {
+            connection = ConnectionPool.GetConnection();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         //获取预编译对象
         PreparedStatement preparedStatement;
         //设置SQL语句
@@ -279,14 +287,13 @@ public class User {
             }
         }
         preparedStatement.close();
-        connection.close();
+        ConnectionPool.RecycleConnection(connection);
     }
     //修改密码：已登录的用户登录
-    public static void ModifyPassword(User user) throws ClassNotFoundException, SQLException {
+    public static void ModifyPassword(User user) throws Exception {
         //建立链接
-        Class.forName("com.mysql.jdbc.Driver");
         //获取链接对象
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/StudentManagementSystem?serverTimezone=Asia/Shanghai","root","123456");
+        Connection connection = ConnectionPool.GetConnection();
         //获取预编译对象
         PreparedStatement preparedStatement;
         //设置SQL语句
@@ -311,14 +318,13 @@ public class User {
                 }
             }
         preparedStatement.close();
-        connection.close();
+        ConnectionPool.RecycleConnection(connection);
     }
     //展示用户数据
     public void Display() throws Exception {
         //获取驱动
-        Class.forName("com.mysql.jdbc.Driver");
         //获取连接对象
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/StudentManagementSystem?serverTimezone=Asia/Shanghai","root","123456");
+        Connection connection = ConnectionPool.GetConnection();
         //获取预处理对象
         PreparedStatement preparedStatement;
         //获取SQL语句
@@ -333,12 +339,13 @@ public class User {
                     +",电话号码：" + resultSet.getString("phone_number")
                     + ",用户类型为：" + UserType.getUserType(resultSet.getInt(user_type)));
         }
+        ConnectionPool.RecycleConnection(connection);
+        preparedStatement.close();
     }
     //身份验证：
     //错误：身份验证传入的参数出现问题
     public boolean VerifyIdentity() throws Exception {
-        Class.forName("com.mysql.jdbc.Driver");
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/StudentManagementSystem?serverTimezone=Asia/Shanghai","root","123456");
+        Connection connection = ConnectionPool.GetConnection();
         PreparedStatement preparedStatement;
         String SelectSql = "select phone_number,id from user where name =?";
         preparedStatement = connection.prepareStatement(SelectSql);
@@ -355,8 +362,35 @@ public class User {
         String PhoneNumber = scanner.next();
         System.out.println(OperaterUser);
         preparedStatement.close();
-        connection.close();
+        ConnectionPool.RecycleConnection(connection);
         //空指针报错，发生错误字段“OperaterUser.getPhone_number()”
         return OperaterUser.getPhone_number().equals(PhoneNumber);
+    }
+    //从数据库中获取id
+    public static int GetIdFromDatabase(User user) throws Exception {
+        //id赋值为-1，方便后续判断id是否正确
+        int id = -1;
+        Connection conn = ConnectionPool.GetConnection();
+        //判断获取的conn是否为空，不为空才进行下一步
+        if (conn != null) {
+            PreparedStatement preparedStatement = conn.prepareStatement("select id from user where name =?");
+            preparedStatement.setString(1,user.getUser_name());
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if(resultSet.next()){
+                id = resultSet.getInt("id");
+            }
+        }else{
+            System.out.println("获取连接失败");
+        }
+        return id;
+    }
+    //将用户数据存放到student表中
+    public void PutUserToStudentBase() throws Exception {
+        //获取连接
+        Connection connection = ConnectionPool.GetConnection();
+        //获取SQL语句
+        String PutToStudent = "insert into student values(?)";
+        PreparedStatement preparedStatement = connection.prepareStatement(PutToStudent);
+        preparedStatement.setInt(1,this.id);
     }
 }
