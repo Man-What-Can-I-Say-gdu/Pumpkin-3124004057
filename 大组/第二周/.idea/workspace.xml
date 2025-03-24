@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c60ac454-5b53-4d53-b948-aa2126e4227d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Counter/cmake-build-debug/Node.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Counter/cmake-build-debug/counter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/.vs/Counter/FileContentIndex/3966185e-cd9c-4bd2-bc01-96da60f12b16.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/.vs/Counter/FileContentIndex/3ea701de-7655-4ed6-ba9a-cbe7547eafc1.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/.vs/Counter/FileContentIndex/8e0050a1-bf32-4701-9517-1e4877ba8b45.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/.vs/Counter/FileContentIndex/9816464b-920e-4ac6-af39-9b3743896d24.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/.vs/Counter/FileContentIndex/e3d3845e-232c-436c-9e45-920e74452da1.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/.vs/Counter/v17/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/.vs/Counter/v17/Browse.VC.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/.vs/Counter/v17/Browse.VC.db-shm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/.vs/Counter/v17/Browse.VC.db-wal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/.vs/Counter/v17/Browse.VC.opendb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/.vs/Counter/v17/DocumentLayout.backup.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/.vs/Counter/v17/DocumentLayout.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/.vs/Counter/v17/Solution.VC.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/.vs/Counter/v17/ipch/AutoPCH/2c9b9ffac001da73/COUNTER.ipch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/.vs/Counter/v17/ipch/AutoPCH/2c9ba8fac001e9be/COUNTER.ipch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/.vs/Counter/v17/ipch/AutoPCH/3920980cf965c5bd/LOGIC.ipch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/.vs/Counter/v17/ipch/AutoPCH/4d465309be28bd02/NODEOPERATION.ipch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/.vs/Counter/v17/ipch/AutoPCH/84d2178a250f1b3f/STACK.ipch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/.vs/Counter/v17/ipch/AutoPCH/a1e4a3b90f6f808/TOOLS.ipch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/.vs/Counter/v17/ipch/AutoPCH/e5155f9c55550104/MENU.ipch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/Counter.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/Counter.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/Counter.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/Counter.vcxproj.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/Logic.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/NodeOperation.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/Stack.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/Tools.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/counter.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/menu.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/x64/Debug/Counter.exe.recipe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/x64/Debug/Counter.ilk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/x64/Debug/Counter.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/x64/Debug/Counter.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/x64/Debug/Counter.tlog/CL.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/x64/Debug/Counter.tlog/CL.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/x64/Debug/Counter.tlog/CL.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/x64/Debug/Counter.tlog/Cl.items.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/x64/Debug/Counter.tlog/Counter.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/x64/Debug/Counter.tlog/link.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/x64/Debug/Counter.tlog/link.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/x64/Debug/Counter.tlog/link.secondary.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/x64/Debug/Counter.tlog/link.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/x64/Debug/Logic.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/x64/Debug/NodeOperation.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/x64/Debug/Stack.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/x64/Debug/Tools.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/x64/Debug/logic.new.obj.enc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/x64/Debug/menu.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/x64/Debug/vc143.idb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/Counter/x64/Debug/vc143.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/x64/Debug/Counter.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counter/x64/Debug/Counter.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../小组/第一周/学生管理系统/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../小组/第一周/学生管理系统/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2024" />
+    <option name="minorVersion" value="1" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2ugBxtkbM0MUsoxFbQ1LzHRB9Xj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\黄主源-3124004057-计算机学院\大组\第二周\Counter\cmake-build-debug" />
+      <recent name="C:\黄主源-3124004057-计算机学院\大组\第二周" />
+      <recent name="C:\黄主源-3124004057-计算机学院\大组\第二周\Counter\cmake-build-debug\CMakeFiles" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="c60ac454-5b53-4d53-b948-aa2126e4227d" name="Changes" comment="" />
+      <created>1742660586635</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742660586635</updated>
+      <workItem from="1742660588246" duration="182000" />
+      <workItem from="1742660776256" duration="951000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

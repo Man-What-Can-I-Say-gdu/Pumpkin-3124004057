@@ -59,8 +59,24 @@ html:<input type="button"value="一个按钮"v-on:click"show()">
 
 ![1742029778379](C:\Users\Pumpkin\AppData\Roaming\Typora\typora-user-images\1742029778379.png)
 
+事件监听![1742740930619](C:\Users\Pumpkin\AppData\Roaming\Typora\typora-user-images\1742740930619.png)
+
+事件关联![屏幕截图 2025-03-23 222049](C:\Users\Pumpkin\Pictures\Screenshots\屏幕截图 2025-03-23 222049.png)
+
 ## Vue生命周期
 
 ![1742029893414](C:\Users\Pumpkin\AppData\Roaming\Typora\typora-user-images\1742029893414.png)
 
 ![1742029907410](C:\Users\Pumpkin\AppData\Roaming\Typora\typora-user-images\1742029907410.png)
+
+
+
+![1742743772712](C:\Users\Pumpkin\AppData\Roaming\Typora\typora-user-images\1742743772712.png)
+
+![1742745273137](C:\Users\Pumpkin\AppData\Roaming\Typora\typora-user-images\1742745273137.png)
+
+![1742745788877](C:\Users\Pumpkin\AppData\Roaming\Typora\typora-user-images\1742745788877.png)
+
+
+
+![1742746323294](C:\Users\Pumpkin\AppData\Roaming\Typora\typora-user-images\1742746323294.png)
