@@ -5,45 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe5f1a79-0354-41a2-8c92-bb98553cd6d9" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/72306d2e-e54b-4b6f-8bc3-0ac451912e37.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/72306d2e-e54b-4b6f-8bc3-0ac451912e37/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/72306d2e-e54b-4b6f-8bc3-0ac451912e37/storage_v2/_src_/schema/studentmanagementsystem.bRg78Q.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CourseImage/Course.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interation/Interaction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interation/Menu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjectRunning/MajorLogic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StudentManagementSystem/Admin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StudentManagementSystem/Course.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StudentManagementSystem/KeyJudge.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StudentManagementSystem/Login.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StudentManagementSystem/MajorLogic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StudentManagementSystem/Menu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StudentManagementSystem/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StudentManagementSystem/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User_Type/Admin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User_Type/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User_Type/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/CourseImage/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/CourseImage/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/DataBasePool/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/DataBasePool/ConnectionPool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/DataBasePool/ConnectionPoolConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/DataBasePool/ConnectionPoolConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/DataBasePool/DataConn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/DataBasePool/DataConn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/Operator/Interaction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/Operator/KeyListenerOperator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/Operator/KeyListenerThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/Operator/Menu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/ProjectRunning/MajorLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/ProjectRunning/MajorLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/User_Type/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/User_Type/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/User_Type/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/User_Type/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/User_Type/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/User_Type/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/src/main/resources/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/.idea/第二周.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/cmake-build-debug/CMakeFiles/3.28.1/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/cmake-build-debug/Node.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/cmake-build-debug/Stack.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/cmake-build-debug/counter.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +88,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/黄主源-3124004057-计算机学院/小组/第一周/学生管理系统/StudentManagementSystem",
+    "last_opened_file_path": "C:/黄主源-3124004057-计算机学院/小组/第二周/LoginWindows",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -209,6 +193,7 @@
       <workItem from="1742522601569" duration="75000" />
       <workItem from="1742524387822" duration="98000" />
       <workItem from="1742887703688" duration="358000" />
+      <workItem from="1742893257262" duration="13000" />
     </task>
     <servers />
   </component>
