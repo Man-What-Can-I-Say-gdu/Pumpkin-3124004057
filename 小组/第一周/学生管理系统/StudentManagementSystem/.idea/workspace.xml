@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fe5f1a79-0354-41a2-8c92-bb98553cd6d9" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$/../../../.." source="test" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/../../../.." value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2uJOyG312BBKsuOp1p2FiZyINdq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "JAR 应用程序.mysql-connector-j-9.2.0.jar.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "test",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/新建文件夹/Mybatis__demo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true",
+    "应用程序.MajorLogic.executor": "Run",
+    "应用程序.TestSystem.executor": "Run",
+    "应用程序.test.executor": "Run",
+    "应用程序.testDataPool.executor": "Run"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ],
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL 方言": [
+      "MySQL"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src\main\Java" />
+      <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src\main\resources" />
+      <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src\main" />
+      <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src" />
+      <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src\DataBasePool" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="DataBasePool" />
+      <recent name="StudentManagementSystem" />
+    </key>
+  </component>
+  <component name="RunManager" selected="应用程序.MajorLogic">
+    <configuration name="MajorLogic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ProjectRunning.MajorLogic" />
+      <module name="StudentManagementSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ProjectRunning.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mysql-connector-j-9.2.0.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/lib/mysql-connector-j-9.2.0.jar" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.MajorLogic" />
+        <item itemvalue="JAR 应用程序.mysql-connector-j-9.2.0.jar" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="fe5f1a79-0354-41a2-8c92-bb98553cd6d9" name="更改" comment="" />
+      <created>1741963464762</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1741963464762</updated>
+      <workItem from="1741963465829" duration="4937000" />
+      <workItem from="1742032130457" duration="14027000" />
+      <workItem from="1742082578645" duration="24354000" />
+      <workItem from="1742135215696" duration="3032000" />
+      <workItem from="1742138262563" duration="5721000" />
+      <workItem from="1742172285382" duration="4595000" />
+      <workItem from="1742177289170" duration="6150000" />
+      <workItem from="1742195327038" duration="9597000" />
+      <workItem from="1742215939167" duration="707000" />
+      <workItem from="1742217854493" duration="5200000" />
+      <workItem from="1742225857718" duration="7072000" />
+      <workItem from="1742263409838" duration="2465000" />
+      <workItem from="1742292881884" duration="886000" />
+      <workItem from="1742305347636" duration="191000" />
+      <workItem from="1742310894327" duration="1422000" />
+      <workItem from="1742346046235" duration="27838000" />
+      <workItem from="1742440908120" duration="4205000" />
+      <workItem from="1742455551495" duration="9574000" />
+      <workItem from="1742468365426" duration="4745000" />
+      <workItem from="1742479665189" duration="8417000" />
+      <workItem from="1742522601569" duration="75000" />
+      <workItem from="1742524387822" duration="98000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/Java/User_Type/User.java</url>
+          <line>294</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
