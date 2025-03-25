@@ -1,4 +1,3 @@
-<<<<<<< HEAD:小组/第一周/学生管理系统/StudentManagementSystem/pom.xml
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 <modelVersion>4.0.0</modelVersion>
@@ -21,34 +20,4 @@
         <artifactId>mysql-connector-j</artifactId>
         <version>9.2.0</version>
     </dependency>
-
 </dependencies>
-
-=======
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-<modelVersion>4.0.0</modelVersion>
-<groupId>org.example</groupId>
-<artifactId>StudentManagementSystem</artifactId>
-<packaging>jar</packaging>
-<version>1.0-SNAPSHOT</version>
-<name>Maven Quick Start Archetype</name>
-<url>http://maven.apache.org</url>
-<dependencies>
-    <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>3.8.1</version>
-        <scope>test</scope>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
-    <dependency>
-        <groupId>com.mysql</groupId>
-        <artifactId>mysql-connector-j</artifactId>
-        <version>9.2.0</version>
-    </dependency>
-
-</dependencies>
-
->>>>>>> 2d83697314848c3aee51c5225472089c07daba39:黄主源-3124004057-计算机学院/小组/第一周/学生管理系统/StudentManagementSystem/pom.xml
-</project>

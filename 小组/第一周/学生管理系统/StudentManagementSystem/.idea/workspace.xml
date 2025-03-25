@@ -5,7 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe5f1a79-0354-41a2-8c92-bb98553cd6d9" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/72306d2e-e54b-4b6f-8bc3-0ac451912e37.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/72306d2e-e54b-4b6f-8bc3-0ac451912e37/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/72306d2e-e54b-4b6f-8bc3-0ac451912e37/storage_v2/_src_/schema/studentmanagementsystem.bRg78Q.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CourseImage/Course.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interation/Interaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interation/Menu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProjectRunning/MajorLogic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StudentManagementSystem/Admin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StudentManagementSystem/Course.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StudentManagementSystem/KeyJudge.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StudentManagementSystem/Login.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StudentManagementSystem/MajorLogic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StudentManagementSystem/Menu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StudentManagementSystem/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StudentManagementSystem/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User_Type/Admin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User_Type/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User_Type/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/CourseImage/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/CourseImage/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/DataBasePool/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/DataBasePool/ConnectionPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/DataBasePool/ConnectionPoolConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/DataBasePool/ConnectionPoolConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/DataBasePool/DataConn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/DataBasePool/DataConn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/Operator/Interaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/Operator/KeyListenerOperator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/Operator/KeyListenerThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/Operator/Menu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/ProjectRunning/MajorLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/ProjectRunning/MajorLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/User_Type/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/User_Type/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/User_Type/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/User_Type/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/User_Type/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/User_Type/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/src/main/resources/db.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,10 +101,10 @@
     "JAR 应用程序.mysql-connector-j-9.2.0.jar.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "test",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/新建文件夹/Mybatis__demo",
+    "last_opened_file_path": "C:/黄主源-3124004057-计算机学院/小组/第一周/学生管理系统/StudentManagementSystem",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -96,9 +134,9 @@
       <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src\main" />
       <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src\main\Java" />
       <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src\main\resources" />
-      <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src\main" />
       <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src" />
       <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src\DataBasePool" />
     </key>
@@ -170,6 +208,7 @@
       <workItem from="1742479665189" duration="8417000" />
       <workItem from="1742522601569" duration="75000" />
       <workItem from="1742524387822" duration="98000" />
+      <workItem from="1742887703688" duration="358000" />
     </task>
     <servers />
   </component>
@@ -183,6 +222,15 @@
           <url>file://$PROJECT_DIR$/src/main/Java/User_Type/User.java</url>
           <line>294</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/Java/CourseImage/Course.java</url>
+          <line>70</line>
+          <properties class="CourseImage.Course" method="DisplayAllCourses">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
