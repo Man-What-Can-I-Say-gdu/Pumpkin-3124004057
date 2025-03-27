@@ -1,5 +1,2 @@
-﻿  Datapackage.c
-C:\Users\Pumpkin\Desktop\counter\counter\Datapackage.c(91,67): warning C4047: “==”:“int”与“void *”的间接级别不同
-C:\Users\Pumpkin\Desktop\counter\counter\Datapackage.c(77,1): warning C4716: “PackageFormula”: 必须返回一个值
-C:\Users\Pumpkin\Desktop\counter\counter\Datapackage.c(101,1): warning C4172: 返回局部变量的地址或临时 : PartOfFormula
+﻿  main.c
   counter.vcxproj -> C:\Users\Pumpkin\Desktop\counter\x64\Debug\counter.exe

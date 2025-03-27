@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="High-precision.c" />
     <ClCompile Include="Datapackage.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="Node.c" />

@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Pumpkin\\Desktop\\counter\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A13E1190-8AAA-40B7-9C57-C3848BD022E8}|counter\\counter.vcxproj|C:\\Users\\Pumpkin\\Desktop\\counter\\counter\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A13E1190-8AAA-40B7-9C57-C3848BD022E8}|counter\\counter.vcxproj|solutionrelative:counter\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A13E1190-8AAA-40B7-9C57-C3848BD022E8}|counter\\counter.vcxproj|C:\\Users\\Pumpkin\\Desktop\\counter\\counter\\Datapackage.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A13E1190-8AAA-40B7-9C57-C3848BD022E8}|counter\\counter.vcxproj|solutionrelative:counter\\Datapackage.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -11,12 +15,12 @@
       "RelativeMoniker": "D:0:0:{A13E1190-8AAA-40B7-9C57-C3848BD022E8}|counter\\counter.vcxproj|solutionrelative:counter\\counter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A13E1190-8AAA-40B7-9C57-C3848BD022E8}|counter\\counter.vcxproj|C:\\Users\\Pumpkin\\Desktop\\counter\\counter\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A13E1190-8AAA-40B7-9C57-C3848BD022E8}|counter\\counter.vcxproj|solutionrelative:counter\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A13E1190-8AAA-40B7-9C57-C3848BD022E8}|counter\\counter.vcxproj|C:\\Users\\Pumpkin\\Desktop\\counter\\counter\\Stack.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A13E1190-8AAA-40B7-9C57-C3848BD022E8}|counter\\counter.vcxproj|solutionrelative:counter\\Stack.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A13E1190-8AAA-40B7-9C57-C3848BD022E8}|counter\\counter.vcxproj|C:\\Users\\Pumpkin\\Desktop\\counter\\counter\\High-precision.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A13E1190-8AAA-40B7-9C57-C3848BD022E8}|counter\\counter.vcxproj|solutionrelative:counter\\High-precision.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A13E1190-8AAA-40B7-9C57-C3848BD022E8}|counter\\counter.vcxproj|C:\\Users\\Pumpkin\\Desktop\\counter\\counter\\Node.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -30,45 +34,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "main.c",
               "DocumentMoniker": "C:\\Users\\Pumpkin\\Desktop\\counter\\counter\\main.c",
               "RelativeDocumentMoniker": "counter\\main.c",
-              "ToolTip": "C:\\Users\\Pumpkin\\Desktop\\counter\\counter\\main.c",
-              "RelativeToolTip": "counter\\main.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Pumpkin\\Desktop\\counter\\counter\\main.c*",
+              "RelativeToolTip": "counter\\main.c*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-03-26T02:44:43.148Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "High-precision.c",
+              "DocumentMoniker": "C:\\Users\\Pumpkin\\Desktop\\counter\\counter\\High-precision.c",
+              "RelativeDocumentMoniker": "counter\\High-precision.c",
+              "ToolTip": "C:\\Users\\Pumpkin\\Desktop\\counter\\counter\\High-precision.c",
+              "RelativeToolTip": "counter\\High-precision.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-03-26T15:47:47.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "counter.h",
               "DocumentMoniker": "C:\\Users\\Pumpkin\\Desktop\\counter\\counter\\counter.h",
               "RelativeDocumentMoniker": "counter\\counter.h",
               "ToolTip": "C:\\Users\\Pumpkin\\Desktop\\counter\\counter\\counter.h",
               "RelativeToolTip": "counter\\counter.h",
-              "ViewState": "AgIAACwAAAAAAAAAAAAAAEIAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAEYAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-03-26T02:03:34.959Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Datapackage.c",
-              "DocumentMoniker": "C:\\Users\\Pumpkin\\Desktop\\counter\\counter\\Datapackage.c",
-              "RelativeDocumentMoniker": "counter\\Datapackage.c",
-              "ToolTip": "C:\\Users\\Pumpkin\\Desktop\\counter\\counter\\Datapackage.c*",
-              "RelativeToolTip": "counter\\Datapackage.c*",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAkwGMAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-03-26T01:52:40.397Z",
               "EditorCaption": ""
             },
             {
@@ -81,11 +85,12 @@
               "RelativeToolTip": "counter\\Stack.c",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-03-26T01:52:40.353Z"
+              "WhenOpened": "2025-03-26T01:52:40.353Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Node.c",
               "DocumentMoniker": "C:\\Users\\Pumpkin\\Desktop\\counter\\counter\\Node.c",
               "RelativeDocumentMoniker": "counter\\Node.c",
@@ -94,6 +99,19 @@
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-03-26T01:52:39.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Datapackage.c",
+              "DocumentMoniker": "C:\\Users\\Pumpkin\\Desktop\\counter\\counter\\Datapackage.c",
+              "RelativeDocumentMoniker": "counter\\Datapackage.c",
+              "ToolTip": "C:\\Users\\Pumpkin\\Desktop\\counter\\counter\\Datapackage.c",
+              "RelativeToolTip": "counter\\Datapackage.c",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAAAGwAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-03-26T01:52:40.397Z",
+              "EditorCaption": ""
             }
           ]
         }

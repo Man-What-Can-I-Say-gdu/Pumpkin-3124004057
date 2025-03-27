@@ -7,9 +7,12 @@ const char divsymble = '/';
 const char leftbracket = '(';
 const char rightbracket = ')';
 
+
 int main() {
-	char test01[5] = "abcd";
-	char** test02 = MyStrtok(test01, 2, 0);
-	printf("%s,%s", test02[0], test02[1]);
+
+	Formula x =PackageFormula(GetFormula());
+	printf("%s", x.FormulaNumb[0]);
+	printf("%s", x.FormulaSymbol);
+	printf("%d", x.PartNumb);
 	return 0;
 }

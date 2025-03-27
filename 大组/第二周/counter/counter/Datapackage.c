@@ -34,29 +34,33 @@ char* GetFormula() {
 		//获取更多计算式的字符
 		Formula = Temp;
 		fgets(Formula + strlen(Formula), (InitSize / 2), stdin);
-		
 	} 
-	//等到读取完整个计算式后再返回
-	//防止出现51个字符的极端情况而浪费内存
-	char* Temp = (char*)realloc(Formula, strlen(Formula));
-	if (Temp == NULL) {
-		printf("获取内存失败");
-		free(Temp);
-		return NULL;
-	}
-	Formula = Temp;
-	Formula[strlen(Formula)-1] = '\0';
+
+	Formula[strlen(Formula)] = '\0';
+	//printf("%s", Formula);
+	////等到读取完整个计算式后再返回
+	////防止出现51个字符的极端情况而浪费内存
+	//char* Temp = (char*)realloc(Formula, sizeof(char)*strlen(Formula));
+	//if (Temp == NULL) {
+	//	printf("获取内存失败");
+	//	free(Temp);
+	//	return NULL;
+	//}
+	//Formula = Temp;
+	//Formula[strlen(Formula)] = '\0';
+	//printf("%s", Formula);
 	return Formula;
+	//出现realloc后的字符串包含一个换位符和一个随机字符的情况
 }
 
 
 
-//对数字进行预处理，将得到的式子进行重新封装获得一个二级数组以存放数据和算数运算符
+//对计算式进行预处理，将得到的式子进行重新封装获得一个二级数组以存放数据和算数运算符
 Formula PackageFormula(char* formula) {
 	int i = 0,LastIndex = 0,NumberPart = 0,SymbolPart = 0;
 	//用于存放计算式中的数字部分
 	char** FormulaNumbArr = (char**)malloc(sizeof(char*) * 2);
-	char* FormulaSymbol = (char*)malloc(sizeof(char));
+	char* FormulaSymbol = (char*)malloc(sizeof(char)*2);
 	if (FormulaNumbArr == NULL || FormulaSymbol == NULL) {
 		printf("分配内存出现异常！");
 		free(FormulaNumbArr);
@@ -66,10 +70,9 @@ Formula PackageFormula(char* formula) {
 	while (i < strlen(formula)) {
 		//将formula数组拆分
 		if ((formula[i] > '0' && formula[i] < '9')||(formula[i] == '.')) {
-			continue;
 		}
 		else if (formula[i] == '+' || formula[i] == '-' || formula[i] == '*' || formula[i] == '/' || formula[i] == '）') {
-			char** temp = MyStrtok(formula, i, LastIndex);
+			Result* temp = MyStrtok(formula, i, LastIndex);
 			//将数据存放到FormulaArr当中,如果Part不小于2，说明此时式子的组成部分不止3，应该增加
 			if (NumberPart >= 2) {
 				//存放符号和数字的数组增加长度
@@ -84,8 +87,8 @@ Formula PackageFormula(char* formula) {
 				FormulaNumbArr = TempFormulaNumbArr;
 				FormulaSymbol = TempFormulaSymbol;
 			}
-			FormulaNumbArr[NumberPart] = temp[0];
-			FormulaSymbol[SymbolPart] = temp[1];
+			FormulaNumbArr[NumberPart] = temp->number;
+			FormulaSymbol[SymbolPart] = *(temp->symbol);
 			NumberPart++;
 			SymbolPart++;
 			//更新上一次切割到的索引
@@ -101,8 +104,9 @@ Formula PackageFormula(char* formula) {
 			//接下来是对无关字符的处理，需要舍弃这部分，先赋值为统一的一个字符’_'
 			formula[i] = '_';
 		}
-
+		i++;
 	}
+	FormulaSymbol[SymbolPart] = '\0';
 	Formula PreparedFormula = {FormulaNumbArr,FormulaSymbol,NumberPart};
 	return PreparedFormula;
 }
@@ -135,31 +139,45 @@ void ProcessingFormula(Formula PreparedFormula) {
 }
 
 //TokIndex用于确认现在要切割的位点，LastPoint用于确定上一个切割的位点
-char** MyStrtok(char* String, int TokIndex,int LastIndex) {
-	//获取用于存放数字的数组
-	char* Number = (char*)malloc(TokIndex - LastIndex + 1);
-	//用于存放符号的数组
-	char* Operator = (char*)malloc(sizeof(char) * 2);
-	char* PartOfFormula[2] = { Number,Operator };
-	if (Number == NULL || Operator == NULL) {
-		printf("开辟内存失败");
-		free(Number);
-		free(Operator);
+Result* MyStrtok(char* String, int TokIndex, int LastIndex) {
+	// 输入验证
+	if (String == NULL || TokIndex <= LastIndex || TokIndex > (int)strlen(String)) {
 		return NULL;
 	}
-	if (*(strncpy(Number, String + LastIndex, TokIndex - LastIndex)) == NULL) {
-		printf("切割失败！");
-		free(Number);
-		free(Operator);
+
+	// 分配结果结构体
+	Result* result = (Result*)malloc(sizeof(Result));
+	if (result == NULL) {
+		printf("内存分配失败\n");
 		return NULL;
 	}
-	//设置字符串的最后一位为‘\0’防止内存泄露
-	Number[TokIndex - LastIndex] = '\0';
-	//获取运算符
-	Operator[0] = String[TokIndex];
-	//同97行作用
-	Operator[1] = '\0';
-	return PartOfFormula;
+
+	// 分配数字部分内存 
+	result->number = (char*)malloc(TokIndex - LastIndex + 1);
+	if (result->number == NULL) {
+		printf("内存分配失败\n");
+		free(result);
+		return NULL;
+	}
+
+	// 分配符号部分内存
+	result->symbol = (char*)malloc(2);
+	if (result->symbol == NULL) {
+		printf("内存分配失败\n");
+		free(result->number);
+		free(result);
+		return NULL;
+	}
+
+	// 复制数字部分
+	strncpy(result->number, String + LastIndex, TokIndex - LastIndex);
+	result->number[TokIndex - LastIndex] = '\0';
+
+	// 复制运算符
+	result->symbol[0] = String[TokIndex];
+	result->symbol[1] = '\0';
+
+	return result;
 }
 
 
