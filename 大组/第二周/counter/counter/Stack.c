@@ -1,6 +1,6 @@
 #include "counter.h"
 //初始化栈
-Stack* InitStack(Stack* stack) {
+Stack* InitStack(Stack* stack,Node* Head) {
 	//栈顶元素置空，栈的大小设为0
 	stack->top = NULL;
 	stack->Size = 0;
@@ -36,7 +36,7 @@ int LenthOfStack(Stack* stack) {
 	return stack->Size;
 }
 //出栈
-Stack* Pop(Stack* stack) {
+char* Pop(Stack* stack) {
 	//只弹出不销毁
 	stack->top->next = stack->top->next->next;
 	stack->Size--;

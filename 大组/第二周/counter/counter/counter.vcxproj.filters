@@ -27,7 +27,10 @@
     <ClCompile Include="Stack.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="High-precision.c">
+    <ClCompile Include="HighAlgorithem.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CounterStack.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

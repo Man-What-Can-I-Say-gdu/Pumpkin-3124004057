@@ -107,7 +107,7 @@ Formula PackageFormula(char* formula) {
 		i++;
 	}
 	FormulaSymbol[SymbolPart] = '\0';
-	Formula PreparedFormula = {FormulaNumbArr,FormulaSymbol,NumberPart};
+	Formula PreparedFormula = {FormulaNumbArr,FormulaSymbol,NumberPart,SymbolPart};
 	return PreparedFormula;
 }
 

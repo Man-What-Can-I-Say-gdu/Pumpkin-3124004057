@@ -1,2 +1,29 @@
-﻿  main.c
+﻿  HighAdd.c
+C:\Users\Pumpkin\Desktop\counter\counter\HighAdd.c(56,20): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Pumpkin\Desktop\counter\counter\HighAdd.c(57,20): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Pumpkin\Desktop\counter\counter\HighAdd.c(80,21): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Pumpkin\Desktop\counter\counter\HighAdd.c(81,25): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Pumpkin\Desktop\counter\counter\HighAdd.c(105,24): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Pumpkin\Desktop\counter\counter\HighAdd.c(106,24): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Pumpkin\Desktop\counter\counter\HighAdd.c(137,16): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Pumpkin\Desktop\counter\counter\HighAdd.c(138,16): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Pumpkin\Desktop\counter\counter\HighAdd.c(152,15): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Pumpkin\Desktop\counter\counter\HighAdd.c(172,15): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Pumpkin\Desktop\counter\counter\HighAdd.c(216,23): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Pumpkin\Desktop\counter\counter\HighAdd.c(217,22): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Pumpkin\Desktop\counter\counter\HighAdd.c(259,28): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  Datapackage.c
+C:\Users\Pumpkin\Desktop\counter\counter\Datapackage.c(68,3): warning C4033: “PackageFormula”必须返回值
+C:\Users\Pumpkin\Desktop\counter\counter\Datapackage.c(85,6): warning C4033: “PackageFormula”必须返回值
+C:\Users\Pumpkin\Desktop\counter\counter\Datapackage.c(128,39): warning C4047: “!=”:“char *”与“int”的间接级别不同
+C:\Users\Pumpkin\Desktop\counter\counter\Datapackage.c(129,35): warning C4047: “=”:“char”与“char *”的间接级别不同
+C:\Users\Pumpkin\Desktop\counter\counter\Datapackage.c(119,15): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  main.c
+  Node.c
+  Stack.c
+C:\Users\Pumpkin\Desktop\counter\counter\Stack.c(48,22): warning C4133: “函数”: 从“Node *”到“char *”的类型不兼容
+  正在生成代码...
+C:\Users\Pumpkin\Desktop\counter\counter\Node.c(8,1): warning C4716: “InitLinkList”: 必须返回一个值
+C:\Users\Pumpkin\Desktop\counter\counter\Datapackage.c(112,1): warning C4715: “PackageFormula”: 不是所有的控件路径都返回值
+C:\Users\Pumpkin\Desktop\counter\counter\HighAdd.c(130,1): warning C4716: “MulCaculate”: 必须返回一个值
   counter.vcxproj -> C:\Users\Pumpkin\Desktop\counter\x64\Debug\counter.exe
