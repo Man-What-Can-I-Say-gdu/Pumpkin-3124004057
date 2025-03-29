@@ -5,29 +5,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe5f1a79-0354-41a2-8c92-bb98553cd6d9" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/.idea/第二周.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/cmake-build-debug/CMakeFiles/3.28.1/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/cmake-build-debug/Node.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/cmake-build-debug/Stack.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/cmake-build-debug/counter.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/Counter/main.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../大组/第二周/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Service/MyServlet/MyServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/UserDaoImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/dao/StudentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/mysql_connector_j_9_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/学生管理系统.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentManagementSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/StudentManagementSystem.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentManagementSystem1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StudentManagementSystem.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/CourseImage/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/entity/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/DataBasePool/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/DataBasePool/ConnectionPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/DataBasePool/ConnectionPoolConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/DataBasePool/ConnectionPoolConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/DataBasePool/DataConn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/DataBasePool/DataConn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/Interation/Interaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/Service/Interation/Interaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/Interation/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/Service/Interation/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/ProjectRunning/MajorLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/Service/ProjectRunning/MajorLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/User_Type/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/entity/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/User_Type/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/User_Type/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestSystem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testDataPool.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CourseImage/Course.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataBasePool/ConnectionPool$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataBasePool/ConnectionPool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataBasePool/ConnectionPoolConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataBasePool/DataConn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Interation/Interaction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Interation/Menu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Operator/Interaction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Operator/KeyListenerThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Operator/Menu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ProjectRunning/MajorLogic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/User_Type/Admin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/User_Type/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/User_Type/User$UserType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/User_Type/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/testDataPool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../笔记/占位文件.text" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../笔记/笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../笔记/笔记.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../第二周/LoginWindows" beforeDir="false" afterPath="$PROJECT_DIR$/../../../第二周/LoginWindows" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +69,7 @@
       <list>
         <option value="package-info" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -78,56 +109,68 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "JAR 应用程序.mysql-connector-j-9.2.0.jar.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/黄主源-3124004057-计算机学院/小组/第二周/LoginWindows",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true",
-    "应用程序.MajorLogic.executor": "Run",
-    "应用程序.TestSystem.executor": "Run",
-    "应用程序.test.executor": "Run",
-    "应用程序.testDataPool.executor": "Run"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;JAR 应用程序.mysql-connector-j-9.2.0.jar.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.StudentManagementSystem [tomcat7:run].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/黄主源-3124004057-计算机学院/小组/第一周/学生管理系统/StudentManagementSystem&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;应用程序.MajorLogic.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.TestSystem.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.test.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.testDataPool.executor&quot;: &quot;Run&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL 方言": [
-      "MySQL"
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL 方言&quot;: [
+      &quot;MySQL&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src\main" />
-      <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src\main\Java" />
-      <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src\main\resources" />
-      <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src" />
-      <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src\DataBasePool" />
+      <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src\main\Java\com\Dao" />
+      <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src\main\Java\com" />
+      <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src\main\Java\Service" />
+      <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src\main\Java\Dao" />
+      <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src\main\Java\Config" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="MoveInnerDialog.RECENTS_KEY">
+      <recent name="com.entity.User_Type" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="DataBasePool" />
       <recent name="StudentManagementSystem" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn tomcat7:run" />
+    </option>
   </component>
   <component name="RunManager" selected="应用程序.MajorLogic">
     <configuration name="MajorLogic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -194,6 +237,12 @@
       <workItem from="1742524387822" duration="98000" />
       <workItem from="1742887703688" duration="358000" />
       <workItem from="1742893257262" duration="13000" />
+      <workItem from="1743220613076" duration="347000" />
+      <workItem from="1743221047063" duration="50000" />
+      <workItem from="1743221123356" duration="6488000" />
+      <workItem from="1743243799086" duration="9166000" />
+      <workItem from="1743263710332" duration="40000" />
+      <workItem from="1743263849538" duration="5271000" />
     </task>
     <servers />
   </component>
@@ -203,15 +252,10 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/Java/User_Type/User.java</url>
-          <line>294</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/Java/CourseImage/Course.java</url>
+          <url>file://$PROJECT_DIR$/src/main/Java/com/entity/Course.java</url>
           <line>70</line>
-          <properties class="CourseImage.Course" method="DisplayAllCourses">
+          <properties class="com.entity.Course" method="DisplayAllCourses">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
