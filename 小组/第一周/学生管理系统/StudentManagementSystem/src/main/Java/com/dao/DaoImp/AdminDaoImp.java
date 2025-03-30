@@ -91,12 +91,12 @@ public class AdminDaoImp implements AdminDao {
     }
 
     @Override
-    public ArrayList<String> SelectChosenCourseName(int course_id) {
-        ArrayList<String> result = new ArrayList<String>();
+    public ArrayList<User> SelectChosenCourseName(int course_id) {
+        ArrayList<User> result = new ArrayList<>();
         try{
             //获取连接
             Connection connection = DataBasePool.ConnectionPool.GetConnection();
-            String SQL = "select user.name from course,student_with_course,user,student where course_id = ? and "+
+            String SQL = "select user.name,user.phone_number,user.id from course,student_with_course,user,student where course_id = ? and "+
                     "student_with_course.student_id = user.id and student_with_course.course_id = course.course_id";
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
             preparedStatement.setInt(1,course_id);
@@ -105,7 +105,12 @@ public class AdminDaoImp implements AdminDao {
             //遍历过去结果
             int i = 0;
             while (resultSet.next()) {
-                result.add(resultSet.getString("name"));
+                User user = new User();
+                user.setId(resultSet.getInt("id"));
+                user.setPhone_number(resultSet.getString("phone_number"));
+                user.setPassword(resultSet.getString("password"));
+                user.setUser_name(resultSet.getString("name"));
+                result.add(user);
             }
             //关闭连接池
             preparedStatement.close();

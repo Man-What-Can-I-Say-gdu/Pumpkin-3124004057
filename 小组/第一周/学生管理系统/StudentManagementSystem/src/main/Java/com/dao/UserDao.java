@@ -29,8 +29,9 @@ public interface UserDao {
     /**
      * 添加用户
      * @param user 用户对象
+     * @return 是否添加成功
      */
-    abstract boolean addUser(User user);
+    boolean addUser(User user);
 
     /**
      * 更新密码
@@ -38,4 +39,12 @@ public interface UserDao {
      * @param newPassword 新密码
      */
     abstract boolean updatePassword(User user, String newPassword);
+
+
+    /**
+     * 将用户添加到学生类
+     * @param userId 用户id
+     * @return 是否添加成功
+     */
+    boolean addStudent(int userId);
 }

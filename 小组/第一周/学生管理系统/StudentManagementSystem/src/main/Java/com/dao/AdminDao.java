@@ -11,7 +11,7 @@ public interface AdminDao {
      * @param username 学生名
      * @return 学生的所有信息
     */
-    abstract User SelectStudentImage(String username);
+    User SelectStudentImage(String username);
 
     /**
      * 修改学生手机号
@@ -19,14 +19,14 @@ public interface AdminDao {
      * @param newPhoneNumb 新手机号
      * @return 是否修改成功
      */
-    abstract boolean ModifyStudentPhone(int id, String newPhoneNumb);
+    boolean ModifyStudentPhone(int id, String newPhoneNumb);
 
     /**
      * 删除课程信息
      * @param Course_id 课程id
      * @return 是否删除成功
      */
-    abstract boolean DeleteCourse(int Course_id);
+    boolean DeleteCourse(int Course_id);
 
 
     /**
@@ -42,7 +42,7 @@ public interface AdminDao {
      * @param course_id 课程id
      * @return 选该课程的学生的信息
      */
-    abstract ArrayList<String> SelectChosenCourseName(int course_id);
+    ArrayList<User> SelectChosenCourseName(int course_id);
 
     /**
      * 查询所有学生的信息
@@ -56,5 +56,5 @@ public interface AdminDao {
      * @param credits 学分情况
      * @return 是否修改成功
      */
-    abstract boolean ModifyCredits(int credits,int course_id);
+    boolean ModifyCredits(int credits,int course_id);
 }

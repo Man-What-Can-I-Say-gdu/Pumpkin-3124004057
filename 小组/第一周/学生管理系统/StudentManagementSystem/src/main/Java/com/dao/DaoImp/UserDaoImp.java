@@ -6,7 +6,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 public class UserDaoImp implements UserDao{
 
 
@@ -114,6 +113,8 @@ public class UserDaoImp implements UserDao{
         return user;
     }
 
+
+
     @Override
     public boolean addUser(User user) {
         //从数据库中获取connection
@@ -138,9 +139,9 @@ public class UserDaoImp implements UserDao{
             if (preparedStatement != null) {
                 //填充preparedStatement对象
                 preparedStatement.setString(1, user.getUser_name());
-                preparedStatement.setString(2,user.getPassword());
-                preparedStatement.setInt(3,user.getUser_type());
-                preparedStatement.setString(4,user.getPhone_number());
+                preparedStatement.setString(2, user.getPassword());
+                preparedStatement.setInt(3, user.getUser_type());
+                preparedStatement.setString(4, user.getPhone_number());
                 //执行sql语句
                 result = preparedStatement.execute();
                 //回收连接
@@ -173,6 +174,26 @@ public class UserDaoImp implements UserDao{
             DataBasePool.ConnectionPool.RecycleConnection(connection);
             //返回更新结果
             return preparedStatement.execute();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public boolean addStudent(int userId) {
+        boolean result = false;
+        try {
+            //获取连接和SQL语句
+            Connection connection = DataBasePool.ConnectionPool.GetConnection();
+            String SQL = "insert into student  values ?";
+            //获取预处理语句并获得结果
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            preparedStatement.setInt(1,userId);
+            result = preparedStatement.execute();
+            //回收连接
+            preparedStatement.close();
+            DataBasePool.ConnectionPool.RecycleConnection(connection);
+            return result;
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

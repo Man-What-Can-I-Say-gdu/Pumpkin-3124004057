@@ -19,7 +19,7 @@ public class Student extends User{
     }
 
 
-    //实现查询可选课程课程功能
+   /* //实现查询可选课程课程功能
     public void SelectCourse() throws Exception {
         Course.DisplayAllCourses();
     }
@@ -126,5 +126,5 @@ public class Student extends User{
         //回收preparedstatement和connection
         preparedStatement.close();
         ConnectionPool.RecycleConnection(connection);
-    }
+    }*/
 }

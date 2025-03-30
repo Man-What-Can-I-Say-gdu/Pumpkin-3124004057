@@ -42,7 +42,7 @@ public class Course {
         return "课程编号：" +courseCode +"\t 课程名称：" + courseName + "\t所占学分：" + Credits;
     }
 
-    //实现提供课程信息功能
+    /*//实现提供课程信息功能
     public static ArrayList<Course> DisplayAllCourses() throws Exception {
         ArrayList<Course> courses = new ArrayList<>();
         Course course = new Course();
@@ -89,5 +89,5 @@ public class Course {
         preparedStatement.close();
         ConnectionPool.RecycleConnection(connection);
         return courses;
-    }
+    }*/
 }

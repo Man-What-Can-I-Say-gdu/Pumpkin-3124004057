@@ -5,15 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe5f1a79-0354-41a2-8c92-bb98553cd6d9" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/Java/com/dao/AdminDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/com/dao/CourseDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/AdminDaoImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/CourseDaoImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/StudentDaoImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Controller/ControllerImp/UserControllerImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Service/AdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Service/CourseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Service/ServiceImp/AdminServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Service/ServiceImp/CourseServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Service/ServiceImp/StudentServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Service/ServiceImp/UserServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Service/StudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8bfb128d-81d4-4fdc-b2ad-dc80bfca18c1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8bfb128d-81d4-4fdc-b2ad-dc80bfca18c1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/Service/Interation/Interaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/Service/Interation/Menu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/Service/ProjectRunning/MajorLogic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/dao/AdminDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/dao/AdminDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/dao/CourseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/dao/CourseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/AdminDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/AdminDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/StudentDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/StudentDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/UserDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/UserDaoImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Java/com/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/dao/StudentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/entity/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/entity/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/entity/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../第二周/LoginWindows" beforeDir="false" afterPath="$PROJECT_DIR$/../../../第二周/LoginWindows" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +42,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -66,42 +83,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;JAR 应用程序.mysql-connector-j-9.2.0.jar.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.StudentManagementSystem [tomcat7:run].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/黄主源-3124004057-计算机学院/小组/第一周/学生管理系统/StudentManagementSystem&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
-    &quot;应用程序.MajorLogic.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.TestSystem.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.test.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.testDataPool.executor&quot;: &quot;Run&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "JAR 应用程序.mysql-connector-j-9.2.0.jar.executor": "Run",
+    "Maven.StudentManagementSystem [tomcat7:run].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/黄主源-3124004057-计算机学院/小组/第二周/LoginWindows",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true",
+    "应用程序.MajorLogic.executor": "Run",
+    "应用程序.TestSystem.executor": "Run",
+    "应用程序.test.executor": "Run",
+    "应用程序.testDataPool.executor": "Run"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL 方言&quot;: [
-      &quot;MySQL&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL 方言": [
+      "MySQL"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\lib" />
@@ -201,6 +218,7 @@
       <workItem from="1743263710332" duration="40000" />
       <workItem from="1743263849538" duration="5271000" />
       <workItem from="1743305639082" duration="9114000" />
+      <workItem from="1743325612122" duration="13180000" />
     </task>
     <servers />
   </component>
@@ -218,6 +236,11 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/UserDaoImp.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

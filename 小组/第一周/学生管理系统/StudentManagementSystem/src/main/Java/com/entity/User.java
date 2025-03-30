@@ -89,7 +89,7 @@ public class User {
                 ", user_type=" + user_type +
                 '}';
     }
-    //实现注册功能
+    /*//实现注册功能
     public static User RegisterFunction() throws Exception {
         //获取User对象，用于存放注册的用户
         User user = new User();
@@ -392,5 +392,5 @@ public class User {
         String PutToStudent = "insert into student values(?)";
         PreparedStatement preparedStatement = connection.prepareStatement(PutToStudent);
         preparedStatement.setInt(1,this.id);
-    }
+    }*/
 }
