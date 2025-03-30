@@ -1,0 +1,42 @@
+package ProjectRunning;
+
+import Interation.Interaction;
+import com.entity.Admin;
+import com.entity.Student;
+import User_Type.User;
+
+
+//目前要更改的问题：继承中子类可以继承父类属性，所以在子类中定义父类变量冗余，需要编写一个方法使得子类的对象能够再获取并给公共对象赋值
+//部分代码冗余，尝试合并形成工具类或者新方法
+//添加注释
+public class MajorLogic {
+    public static void main(String[] args) throws Exception {
+        //进行登录
+        User user;
+        try {
+            user = Interaction.LoginEntrance();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        if(user.getUser_type() == 0){
+            Student LoginingStudent = new Student();
+            LoginingStudent.setId(user.getId());
+            LoginingStudent.setPassword(user.getPassword());
+            LoginingStudent.setPhone_number(user.getPhone_number());
+            LoginingStudent.setUser_name(user.getUser_name());
+            LoginingStudent.setUser_type(0);
+            //进入学生页面，应该是do，while和switch嵌套形成的菜单
+            Interaction.studentOperate(LoginingStudent);
+        }else{
+            //获取登录的Admin对象
+            Admin LoginingAdmin = new Admin();
+            LoginingAdmin.setId(user.getId());
+            LoginingAdmin.setPassword(user.getPassword());
+            LoginingAdmin.setPhone_number(user.getPhone_number());
+            LoginingAdmin.setUser_name(user.getUser_name());
+            LoginingAdmin.setUser_type(1);
+            Interaction.AdminOperate(LoginingAdmin);
+        }
+
+    }
+}
