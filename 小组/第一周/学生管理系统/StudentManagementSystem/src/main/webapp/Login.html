@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LoginWindow</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!--引入vue-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <!--引入Axios-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        .login-container {
+            width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            border: 1px solid #ebeef5;
+            border-radius: 4px;
+            box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+        }
+        .clearfix h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+
+<body>
+<div id="LoginWindow">
+    <div class="login-container">
+        <div class="clearfix">
+            <h2><span>登录界面</span></h2>
+        </div>
+        <div class="LoginSelection">
+            <!--model:数据类型 rules：规则名 ref；结果集-->
+            <el-form :model="LoginForm" :rules="rules" ref="loginForm" label-width="100px" class="LoginWindow" action="action" method="post">
+                <!--用户名输入-->
+                <el-form-item label="用户名" prop="username">
+                    <el-input  v-model="LoginUser.username" size="middle"></el-input>
+                </el-form-item>
+                <!--密码输入-->
+                <el-form-item label="密码" prop="password">
+                    <el-input v-model="LoginUser.password" show-password size="middle"></el-input>
+                </el-form-item>
+                <el-form-item>
+                    <el-button type="primary" @click="submitForm('loginUser')">立即创建</el-button>
+                    <el-button @click="resetForm('loginUser' )">重置</el-button>
+                </el-form-item>
+                <el-link type="primary" href="Register.html">还未注册？一键跳转注册</el-link>
+            </el-form>
+        </div>
+    </div>
+</div>
+
+<script>
+    new Vue({
+        el:"#LoginWindow",
+
+        data() {
+            return {
+                LoginUser: {
+                    username: '',
+                    password:''
+                },
+                rules: {
+                    username: [
+                        { required: true, message: '请输入用户名称', trigger: 'blur' },
+                        { min: 5, max: 10, message: '长度小于 10 个字符', trigger: 'blur' }
+                    ],
+                    password:[
+                        { required: true, message: '请输入密码', trigger: 'blur'},
+                        { min: 10,max: 20,message: '长度在 10 到 20 个字符之间', trigger: 'blur' }
+                    ]
+                }
+            };
+        },
+        methods: {
+            submitForm() {
+                this.$refs.LoginForm.validate((valid) => {
+                    if (valid) {
+                        axios({
+                            method:'post',
+                            url:'/api/login',
+                            data:this.LoginUser
+                        }).then(response =>{
+                            if(response.data().success){
+                                alert("登录成功！")
+                                //接下来就跳转到菜单界面
+                                window.location.href = "..."
+                            }else{
+                                alert("登录失败：" + response.data.message);
+                            }
+                        }).catch(err=>{
+                            console.error(err);
+                            alert("请求失败，请检查网络");
+                        })
+                    } else {
+                        console.log('输入格式错误');
+                        return false;
+                    }
+                });
+            },
+            resetForm() {
+                this.$refs.loginForm.resetFields();
+            }
+        }
+    })
+
+</script>
+</body>
+</html>

@@ -1,5 +1,6 @@
 package com.dao.DaoImp;
 
+import com.DataBasePool.ConnectionPool;
 import com.dao.CourseDao;
 import com.entity.Course;
 
@@ -12,7 +13,7 @@ public class CourseDaoImp implements CourseDao {
     public ArrayList<Course> findAll() {
         ArrayList<Course> result= new ArrayList<Course>();
         try {
-            Connection connection = DataBasePool.ConnectionPool.GetConnection();
+            Connection connection = ConnectionPool.GetConnection();
             String SQL = "select * from course";
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -24,7 +25,7 @@ public class CourseDaoImp implements CourseDao {
                 result.add(course);
             }
             preparedStatement.close();
-            DataBasePool.ConnectionPool.RecycleConnection(connection);
+            ConnectionPool.RecycleConnection(connection);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -35,7 +36,7 @@ public class CourseDaoImp implements CourseDao {
     public Course findByName(String course_name) {
         Course result=new Course();
         try{
-            Connection connection = DataBasePool.ConnectionPool.GetConnection();
+            Connection connection = ConnectionPool.GetConnection();
             String SQL = "select * from course where course_name=?";
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -45,7 +46,7 @@ public class CourseDaoImp implements CourseDao {
                 result.setCourseCode(resultSet.getInt("course_id"));
             }
             preparedStatement.close();
-            DataBasePool.ConnectionPool.RecycleConnection(connection);
+            ConnectionPool.RecycleConnection(connection);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

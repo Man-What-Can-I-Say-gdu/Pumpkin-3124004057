@@ -1,4 +1,4 @@
-package DataBasePool;
+package com.DataBasePool;
 
 import java.sql.Connection;
 import java.sql.Time;

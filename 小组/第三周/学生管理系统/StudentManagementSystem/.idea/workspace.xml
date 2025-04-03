@@ -5,38 +5,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe5f1a79-0354-41a2-8c92-bb98553cd6d9" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/Controller/ControllerImp/UserControllerImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/Controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/Service/AdminService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/Service/CourseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/Service/ServiceImp/AdminServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/Service/ServiceImp/CourseServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/Service/ServiceImp/StudentServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/Service/ServiceImp/UserServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/Service/StudentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/Service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/webapp/Login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/webapp/Register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Controller/ControllerImp/userControllerImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Controller/userController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Service/AdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Service/CourseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Service/ServiceImp/AdminServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Service/ServiceImp/CourseServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Service/ServiceImp/StudentServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Service/ServiceImp/UserServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Service/StudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/webpack.common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/webpack.config.dev.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/webpack.config.prod.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/Service/Interation/Interaction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/Service/Interation/Menu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/Service/ProjectRunning/MajorLogic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/dao/AdminDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/dao/AdminDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/dao/CourseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/dao/CourseDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/dao/DaoImp/AdminDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/dao/DaoImp/AdminDaoImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/dao/DaoImp/StudentDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/dao/DaoImp/StudentDaoImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/dao/DaoImp/UserDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/dao/DaoImp/UserDaoImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/dao/StudentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/entity/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/entity/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/entity/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/entity/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../第一周/学生管理系统/StudentManagementSystem/src/main/Java/com/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/8bfb128d-81d4-4fdc-b2ad-dc80bfca18c1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8bfb128d-81d4-4fdc-b2ad-dc80bfca18c1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8bfb128d-81d4-4fdc-b2ad-dc80bfca18c1/storage_v2/_src_/schema/student_manage_system.RTdwwA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8bfb128d-81d4-4fdc-b2ad-dc80bfca18c1/storage_v2/_src_/schema/student_manage_system.RTdwwA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/DataBasePool/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/DataBasePool/ConnectionPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/DataBasePool/ConnectionPoolConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/DataBasePool/ConnectionPoolConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/DataBasePool/DataConn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/DataBasePool/DataConn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/Service/Interation/Interaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/Service/Interation/Menu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/Service/MyServlet/MyServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/Service/ProjectRunning/MajorLogic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/dao/AdminDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/dao/AdminDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/dao/CourseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/dao/CourseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/AdminDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/AdminDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/CourseDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/CourseDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/StudentDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/StudentDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/UserDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/UserDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/dao/StudentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/entity/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/entity/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/entity/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../第二周/LoginWindows" beforeDir="false" afterPath="$PROJECT_DIR$/../../../第二周/LoginWindows" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,9 +65,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -97,6 +115,8 @@
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;JAR 应用程序.mysql-connector-j-9.2.0.jar.executor&quot;: &quot;Run&quot;,
     &quot;Maven.StudentManagementSystem [tomcat7:run].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.StudentManagementSystem [tomcat7:run、].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.StudentManagementSystem.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
@@ -112,8 +132,9 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
-    &quot;应用程序.MajorLogic.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.MajorLogic.executor&quot;: &quot;Debug&quot;,
     &quot;应用程序.TestSystem.executor&quot;: &quot;Run&quot;,
     &quot;应用程序.test.executor&quot;: &quot;Run&quot;,
     &quot;应用程序.testDataPool.executor&quot;: &quot;Run&quot;
@@ -129,15 +150,16 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\黄主源-3124004057-计算机学院\小组\第三周\学生管理系统\StudentManagementSystem\src\main\webapp" />
       <recent name="C:\黄主源-3124004057-计算机学院\小组\第三周\学生管理系统\StudentManagementSystem\lib" />
       <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\黄主源-3124004057-计算机学院\小组\第三周\学生管理系统\StudentManagementSystem\src" />
+      <recent name="C:\黄主源-3124004057-计算机学院\小组\第三周\学生管理系统\StudentManagementSystem\src\main\webapp" />
       <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src\main\Java\com\Dao" />
       <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src\main\Java\com" />
       <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src\main\Java\Service" />
-      <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src\main\Java\Dao" />
-      <recent name="C:\黄主源-3124004057-计算机学院\小组\第一周\学生管理系统\StudentManagementSystem\src\main\Java\Config" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -152,6 +174,8 @@
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
+      <command value="mvn " />
+      <command value="mvn tomcat7:run、" />
       <command value="mvn tomcat7:run" />
     </option>
   </component>
@@ -227,13 +251,41 @@
       <workItem from="1743263710332" duration="40000" />
       <workItem from="1743263849538" duration="5271000" />
       <workItem from="1743305639082" duration="9114000" />
-      <workItem from="1743347200296" duration="990000" />
-      <workItem from="1743348203083" duration="1425000" />
+      <workItem from="1743325612122" duration="13180000" />
+      <workItem from="1743364266980" duration="186000" />
+      <workItem from="1743392785998" duration="2287000" />
+      <workItem from="1743427973408" duration="2117000" />
+      <workItem from="1743430162731" duration="1103000" />
+      <workItem from="1743431283708" duration="134000" />
+      <workItem from="1743431425616" duration="109000" />
+      <workItem from="1743431541547" duration="127000" />
+      <workItem from="1743431683738" duration="29550000" />
+      <workItem from="1743523829482" duration="7275000" />
+      <workItem from="1743559307668" duration="16027000" />
+      <workItem from="1743644994159" duration="1330000" />
+      <workItem from="1743689861782" duration="5419000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="includedJSSourcePackages">
+      <set>
+        <option value="element-ui" />
+        <option value="vue" />
+      </set>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -241,11 +293,26 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/Java/com/entity/Course.java</url>
           <line>70</line>
-          <properties class="com.entity.Course" method="DisplayAllCourses">
+          <properties class="com.entity.Course">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/UserDaoImp.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/UserDaoImp.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/Java/com/Service/ServiceImp/UserServiceImp.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

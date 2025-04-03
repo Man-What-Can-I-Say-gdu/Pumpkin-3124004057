@@ -5,32 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe5f1a79-0354-41a2-8c92-bb98553cd6d9" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Controller/ControllerImp/UserControllerImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Service/AdminService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Service/CourseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Service/ServiceImp/AdminServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Service/ServiceImp/CourseServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Service/ServiceImp/StudentServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Service/ServiceImp/UserServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Service/StudentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/com/Service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../第三周/学生管理系统/StudentManagementSystem/src/main/Java/com/Controller/ControllerImp/userControllerImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../第三周/学生管理系统/StudentManagementSystem/src/main/Java/com/Controller/userController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/com/Service/Interation/Interaction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/com/Service/Interation/Menu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/com/Service/ProjectRunning/MajorLogic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/com/dao/AdminDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/dao/AdminDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/com/dao/CourseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/dao/CourseDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/AdminDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/AdminDaoImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/StudentDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/StudentDaoImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/UserDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/dao/DaoImp/UserDaoImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/com/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/dao/StudentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/com/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/com/entity/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/entity/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/com/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/entity/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/com/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/entity/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/com/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../第三周/学生管理系统/StudentManagementSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../第三周/学生管理系统/StudentManagementSystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../第三周/学生管理系统/StudentManagementSystem/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../第三周/学生管理系统/StudentManagementSystem/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../第三周/学生管理系统/StudentManagementSystem/src/main/Java/com/Service/Interation/Interaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../第三周/学生管理系统/StudentManagementSystem/src/main/Java/com/Service/Interation/Menu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../第三周/学生管理系统/StudentManagementSystem/src/main/Java/com/Service/MyServlet/MyServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../第三周/学生管理系统/StudentManagementSystem/src/main/Java/com/Service/ProjectRunning/MajorLogic.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../第二周/LoginWindows" beforeDir="false" afterPath="$PROJECT_DIR$/../../../第二周/LoginWindows" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +29,7 @@
         <option value="package-info" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -87,6 +73,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
     "JAR 应用程序.mysql-connector-j-9.2.0.jar.executor": "Run",
     "Maven.StudentManagementSystem [tomcat7:run].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -219,6 +206,7 @@
       <workItem from="1743263849538" duration="5271000" />
       <workItem from="1743305639082" duration="9114000" />
       <workItem from="1743325612122" duration="13180000" />
+      <workItem from="1743364266980" duration="186000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,6 @@
 package com.entity;
 
-import DataBasePool.ConnectionPool;
+import com.DataBasePool.ConnectionPool;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -29,7 +29,7 @@ public class Admin extends User {
         this.varchar = varchar;
     }
 
-    //查询学生信息
+    /*//查询学生信息
     public void CheckOut(String StudentName) throws Exception {
         //获取数据库连接
         Connection connection = ConnectionPool.GetConnection();
@@ -266,5 +266,5 @@ public class Admin extends User {
                 ConnectionPool.RecycleConnection(connection);
             }
         }
-    }
+    }*/
 }

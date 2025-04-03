@@ -1,6 +1,6 @@
 package com.entity;
 
-import DataBasePool.ConnectionPool;
+import com.DataBasePool.ConnectionPool;
 
 import java.sql.*;
 import java.util.Objects;
@@ -35,7 +35,7 @@ public class User {
         }
     }
     public int id;
-    public String user_name;
+    public String username;
     private String password;
     private int user_type;
     public String phone_number;
@@ -46,7 +46,7 @@ public class User {
         this.id = id;
     }
     public String getUser_name() {
-        return user_name;
+        return username;
     }
     public String getPhone_number() {
         return phone_number;
@@ -54,8 +54,8 @@ public class User {
     public void setPhone_number(String phone_number) {
         this.phone_number = phone_number;
     }
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
+    public void setUser_name(String username) {
+        this.username = username;
     }
     public int getUser_type() {
         return user_type;
@@ -84,12 +84,12 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "user_name='" + user_name + '\'' +
+                "user_name='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", user_type=" + user_type +
                 '}';
     }
-    //实现注册功能
+    /*//实现注册功能
     public static User RegisterFunction() throws Exception {
         //获取User对象，用于存放注册的用户
         User user = new User();
@@ -392,5 +392,5 @@ public class User {
         String PutToStudent = "insert into student values(?)";
         PreparedStatement preparedStatement = connection.prepareStatement(PutToStudent);
         preparedStatement.setInt(1,this.id);
-    }
+    }*/
 }

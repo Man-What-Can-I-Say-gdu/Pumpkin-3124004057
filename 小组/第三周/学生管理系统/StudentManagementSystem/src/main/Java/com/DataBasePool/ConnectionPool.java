@@ -1,5 +1,4 @@
-package DataBasePool;
-
+package com.DataBasePool;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,7 +11,7 @@ import java.util.Vector;
 public class ConnectionPool {
     //正在使用的Connection对象池，使用Vector集合保证线程安全（起初用过ArrayList数组，但编写到一般查资料才发现Arraylist的没有同步机制
     //使用DataConn得到使用的开始时间，通过当前时间与开始时间相减能得到运行时间，用于判断是否使用超时
-    private final static Vector<DataConn> UsingConnPool = new Vector<>();
+    private final static Vector<com.DataBasePool.DataConn> UsingConnPool = new Vector<>();
     //空闲的Connection对象池
     private final static Vector<Connection> FreeConnPool = new Vector<>();
 
