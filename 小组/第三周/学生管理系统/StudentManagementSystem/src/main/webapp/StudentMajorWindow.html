@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StudentMajorWindow</title>
+    <script>import Vue from 'vue';
+    import ElementUI from 'element-ui';
+    import 'element-ui/lib/theme-chalk/index.css';
+    import App from './RegisterWindow.vue';
+    </script>
+</head>
+
+
+<body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+<!-- 引入样式 -->
+<link rel="stylesheet" href="element-ui/lib/theme-chalk/index.css">
+<!-- 引入组件库 -->
+<script src="element-ui/lib/index.js"></script>
+<!--引入axios-->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<div id="StudentMajorWindow">
+    <!--使用导航菜单进行总界面的跳转-->
+
+</div>
+</body>
+<script>
+    new Vue({
+        el: '#RegisterWindow',
+
+        data() {
+            return {
+                activeIndex: '1',
+            };
+        },
+        methods: {
+            handleSelect(key, keyPath) {
+                console.log(key, keyPath);
+            }
+        }
+    })
+</script>
+</html>
