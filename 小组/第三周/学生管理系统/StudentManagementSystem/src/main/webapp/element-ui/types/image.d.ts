@@ -38,6 +38,4 @@ export declare class ElImage extends ElementUIComponent {
   previewSrcList: string[]
 
   zIndex: number
-
-  initialIndex: number
 }

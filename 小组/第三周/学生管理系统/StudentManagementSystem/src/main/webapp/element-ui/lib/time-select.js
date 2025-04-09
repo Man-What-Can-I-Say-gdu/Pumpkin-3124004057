@@ -82,7 +82,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 76);
+/******/ 	return __webpack_require__(__webpack_require__.s = 73);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -210,7 +210,7 @@ module.exports = require("element-ui/lib/utils/clickoutside");
 
 /***/ }),
 
-/***/ 15:
+/***/ 14:
 /***/ (function(module, exports) {
 
 module.exports = require("element-ui/lib/scrollbar");
@@ -224,7 +224,7 @@ module.exports = require("element-ui/lib/utils/scroll-into-view");
 
 /***/ }),
 
-/***/ 32:
+/***/ 33:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -255,9 +255,7 @@ var render = function() {
                 !_vm.editable ||
                 _vm.readonly ||
                 _vm.type === "dates" ||
-                _vm.type === "week" ||
-                _vm.type === "years" ||
-                _vm.type === "months",
+                _vm.type === "week",
               disabled: _vm.pickerDisabled,
               size: _vm.pickerSize,
               name: _vm.name,
@@ -536,8 +534,7 @@ var NewPopper = {
     appendToBody: vue_popper_default.a.props.appendToBody,
     offset: vue_popper_default.a.props.offset,
     boundariesPadding: vue_popper_default.a.props.boundariesPadding,
-    arrowOffset: vue_popper_default.a.props.arrowOffset,
-    transformOrigin: vue_popper_default.a.props.transformOrigin
+    arrowOffset: vue_popper_default.a.props.arrowOffset
   },
   methods: vue_popper_default.a.methods,
   data: function data() {
@@ -550,7 +547,6 @@ var NewPopper = {
 var DEFAULT_FORMATS = {
   date: 'yyyy-MM-dd',
   month: 'yyyy-MM',
-  months: 'yyyy-MM',
   datetime: 'yyyy-MM-dd HH:mm:ss',
   time: 'HH:mm:ss',
   week: 'yyyywWW',
@@ -558,10 +554,9 @@ var DEFAULT_FORMATS = {
   daterange: 'yyyy-MM-dd',
   monthrange: 'yyyy-MM',
   datetimerange: 'yyyy-MM-dd HH:mm:ss',
-  year: 'yyyy',
-  years: 'yyyy'
+  year: 'yyyy'
 };
-var HAVE_TRIGGER_TYPES = ['date', 'datetime', 'time', 'time-select', 'week', 'month', 'year', 'daterange', 'monthrange', 'timerange', 'datetimerange', 'dates', 'months', 'years'];
+var HAVE_TRIGGER_TYPES = ['date', 'datetime', 'time', 'time-select', 'week', 'month', 'year', 'daterange', 'monthrange', 'timerange', 'datetimerange', 'dates'];
 var pickervue_type_script_lang_js_DATE_FORMATTER = function DATE_FORMATTER(value, format) {
   if (format === 'timestamp') return value.getTime();
   return Object(date_util_["formatDate"])(value, format);
@@ -675,30 +670,6 @@ var TYPE_VALUE_RESOLVER_MAP = {
     }
   },
   dates: {
-    formatter: function formatter(value, format) {
-      return value.map(function (date) {
-        return pickervue_type_script_lang_js_DATE_FORMATTER(date, format);
-      });
-    },
-    parser: function parser(value, format) {
-      return (typeof value === 'string' ? value.split(', ') : value).map(function (date) {
-        return date instanceof Date ? date : pickervue_type_script_lang_js_DATE_PARSER(date, format);
-      });
-    }
-  },
-  months: {
-    formatter: function formatter(value, format) {
-      return value.map(function (date) {
-        return pickervue_type_script_lang_js_DATE_FORMATTER(date, format);
-      });
-    },
-    parser: function parser(value, format) {
-      return (typeof value === 'string' ? value.split(', ') : value).map(function (date) {
-        return date instanceof Date ? date : pickervue_type_script_lang_js_DATE_PARSER(date, format);
-      });
-    }
-  },
-  years: {
     formatter: function formatter(value, format) {
       return value.map(function (date) {
         return pickervue_type_script_lang_js_DATE_FORMATTER(date, format);
@@ -934,10 +905,6 @@ var validator = function validator(val) {
         return 'year';
       } else if (this.type === 'dates') {
         return 'dates';
-      } else if (this.type === 'months') {
-        return 'months';
-      } else if (this.type === 'years') {
-        return 'years';
       }
 
       return 'day';
@@ -955,7 +922,7 @@ var validator = function validator(val) {
       } else if (this.userInput !== null) {
         return this.userInput;
       } else if (formattedValue) {
-        return this.type === 'dates' || this.type === 'years' || this.type === 'months' ? formattedValue.join(', ') : formattedValue;
+        return this.type === 'dates' ? formattedValue.join(', ') : formattedValue;
       } else {
         return '';
       }
@@ -1145,7 +1112,7 @@ var validator = function validator(val) {
       if (!this.pickerVisible) return;
       this.pickerVisible = false;
 
-      if (this.type === 'dates' || this.type === 'years' || this.type === 'months') {
+      if (this.type === 'dates') {
         // restore to former value
         var oldValue = parseAsFormatAndType(this.valueOnOpen, this.valueFormat, this.type, this.rangeSeparator) || this.valueOnOpen;
         this.emitInput(oldValue);
@@ -1412,14 +1379,14 @@ module.exports = require("vue");
 
 /***/ }),
 
-/***/ 76:
+/***/ 73:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./packages/date-picker/src/picker.vue + 4 modules
-var picker = __webpack_require__(32);
+var picker = __webpack_require__(33);
 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./packages/date-picker/src/panel/time-select.vue?vue&type=template&id=51ab9320&
 var render = function() {
@@ -1496,7 +1463,7 @@ render._withStripped = true
 // CONCATENATED MODULE: ./packages/date-picker/src/panel/time-select.vue?vue&type=template&id=51ab9320&
 
 // EXTERNAL MODULE: external "element-ui/lib/scrollbar"
-var scrollbar_ = __webpack_require__(15);
+var scrollbar_ = __webpack_require__(14);
 var scrollbar_default = /*#__PURE__*/__webpack_require__.n(scrollbar_);
 
 // EXTERNAL MODULE: external "element-ui/lib/utils/scroll-into-view"

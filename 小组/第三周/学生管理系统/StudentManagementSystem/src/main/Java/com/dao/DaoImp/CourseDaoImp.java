@@ -19,9 +19,9 @@ public class CourseDaoImp implements CourseDao {
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 Course course = new Course();
-                course.setCourseName(resultSet.getString("course_name"));
-                course.setCourseCode(resultSet.getInt("course_id"));
-                course.setCredits(resultSet.getInt("course_credits"));
+                course.setCourse_name(resultSet.getString("course_name"));
+                course.setCourse_id(resultSet.getInt("course_id"));
+                course.setCredit(resultSet.getInt("course_credits"));
                 result.add(course);
             }
             preparedStatement.close();
@@ -41,9 +41,9 @@ public class CourseDaoImp implements CourseDao {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
-                result.setCredits(resultSet.getInt("course_credits"));
-                result.setCourseName(resultSet.getString("course_name"));
-                result.setCourseCode(resultSet.getInt("course_id"));
+                result.setCredit(resultSet.getInt("course_credits"));
+                result.setCourse_name(resultSet.getString("course_name"));
+                result.setCourse_id(resultSet.getInt("course_id"));
             }
             preparedStatement.close();
             ConnectionPool.RecycleConnection(connection);

@@ -90,9 +90,13 @@
                             })
                             .then(response=>{
                                 if(response.data.success){
+                                    alert(response.data.success)
                                     alert("登录成功！")
                                     //接下来就跳转到菜单界面
-                                    //window.location.href = "..."
+                                    //由于this已经保存有登录时的数据，因此尝试不从服务器获取数据直接跳转
+                                    localStorage.setItem('LoginUser',JSON.stringify(this.LoginUser));
+                                    //进行页面跳转(同个目录使用相对路径)
+                                    window.location.href = 'StudentMajorWindow.html';
                                 }else{
                                     alert("登录失败：" + response.data.message);
                                 }

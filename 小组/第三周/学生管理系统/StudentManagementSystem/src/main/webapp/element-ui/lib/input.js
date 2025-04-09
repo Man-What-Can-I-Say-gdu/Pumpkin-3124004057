@@ -82,7 +82,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 75);
+/******/ 	return __webpack_require__(__webpack_require__.s = 76);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -210,7 +210,7 @@ module.exports = require("element-ui/lib/mixins/emitter");
 
 /***/ }),
 
-/***/ 75:
+/***/ 76:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -852,18 +852,15 @@ var shared_ = __webpack_require__(21);
       this.focused = true;
       this.$emit('focus', event);
     },
-    handleCompositionStart: function handleCompositionStart(event) {
-      this.$emit('compositionstart', event);
+    handleCompositionStart: function handleCompositionStart() {
       this.isComposing = true;
     },
     handleCompositionUpdate: function handleCompositionUpdate(event) {
-      this.$emit('compositionupdate', event);
       var text = event.target.value;
       var lastCharacter = text[text.length - 1] || '';
       this.isComposing = !Object(shared_["isKorean"])(lastCharacter);
     },
     handleCompositionEnd: function handleCompositionEnd(event) {
-      this.$emit('compositionend', event);
       if (this.isComposing) {
         this.isComposing = false;
         this.handleInput(event);
@@ -920,12 +917,8 @@ var shared_ = __webpack_require__(21);
       this.$emit('clear');
     },
     handlePasswordVisible: function handlePasswordVisible() {
-      var _this2 = this;
-
       this.passwordVisible = !this.passwordVisible;
-      this.$nextTick(function () {
-        _this2.focus();
-      });
+      this.focus();
     },
     getInput: function getInput() {
       return this.$refs.input || this.$refs.textarea;

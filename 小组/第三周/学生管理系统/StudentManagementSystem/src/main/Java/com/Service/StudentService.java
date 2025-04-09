@@ -4,7 +4,7 @@ import com.entity.Course;
 
 import java.util.ArrayList;
 
-public interface StudentService {
+public interface StudentService{
 
     /**
      * 选课功能

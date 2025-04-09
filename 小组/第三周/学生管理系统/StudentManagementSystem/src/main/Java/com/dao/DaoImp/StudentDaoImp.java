@@ -9,7 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-public class StudentDaoImp implements StudentDao {
+public class StudentDaoImp extends UserDaoImp implements StudentDao {
     @Override
     public ArrayList<Course> getCourses() {
         ArrayList<Course> courses = new ArrayList<>();
@@ -23,9 +23,9 @@ public class StudentDaoImp implements StudentDao {
             //将结果存放至数组中
             while(resultSet.next()){
                 Course course = new Course();
-                course.setCredits(resultSet.getInt("credits"));
-                course.setCourseName(resultSet.getString("courseName"));
-                course.setCourseCode(resultSet.getInt("courseCode"));
+                course.setCredit(resultSet.getInt("credit"));
+                course.setCourse_name(resultSet.getString("courseName"));
+                course.setCourse_id(resultSet.getInt("courseCode"));
                 courses.add(course);
             }
             //回收连接
@@ -83,16 +83,16 @@ public class StudentDaoImp implements StudentDao {
         try{
             //获取连接和SQL语句
             Connection connection = ConnectionPool.GetConnection();
-            String SQL="Select * from student_with_course where student_id = ?";
+            String SQL="Select * from student_with_course,course where student_id = ? && course.course_id = student_with_course.course_id";
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
             preparedStatement.setInt(1,StudentId);
             //获取结果集并将结果集放入数组中
             ResultSet resultSet = preparedStatement.executeQuery();
             while(resultSet.next()){
                 Course course = new Course();
-                course.setCredits(resultSet.getInt("credits"));
-                course.setCourseName(resultSet.getString("courseName"));
-                course.setCourseCode(resultSet.getInt("courseCode"));
+                course.setCredit(resultSet.getInt("credit"));
+                course.setCourse_name(resultSet.getString("course_name"));
+                course.setCourse_id(resultSet.getInt("course_id"));
                 courses.add(course);
             }
             //回收连接

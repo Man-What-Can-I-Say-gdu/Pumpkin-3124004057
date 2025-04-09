@@ -96,10 +96,11 @@
     height: $--transfer-item-height;
     line-height: $--transfer-item-height;
     padding-left: 15px;
-    display: block !important;
+    display: block;
 
     & + .el-transfer-panel__item {
       margin-left: 0;
+      display: block!important;
     }
 
     &.el-checkbox {

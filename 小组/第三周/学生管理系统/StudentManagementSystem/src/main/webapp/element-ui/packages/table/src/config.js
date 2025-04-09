@@ -32,16 +32,15 @@ export const cellForced = {
       return <el-checkbox
         disabled={ store.states.data && store.states.data.length === 0 }
         indeterminate={ store.states.selection.length > 0 && !this.isAllSelected }
-        on-input={ this.toggleAllSelection }
+        nativeOn-click={ this.toggleAllSelection }
         value={ this.isAllSelected } />;
     },
-    renderCell: function(h, { row, column, isSelected, store, $index }) {
+    renderCell: function(h, { row, column, store, $index }) {
       return <el-checkbox
         nativeOn-click={ (event) => event.stopPropagation() }
-        value={ isSelected }
+        value={ store.isSelected(row) }
         disabled={ column.selectable ? !column.selectable.call(null, row, $index) : false }
-        on-input={ () => { store.commit('rowSelectedChanged', row); } }
-      />;
+        on-input={ () => { store.commit('rowSelectedChanged', row); } } />;
     },
     sortable: false,
     resizable: false
@@ -68,9 +67,9 @@ export const cellForced = {
     renderHeader: function(h, { column }) {
       return column.label || '';
     },
-    renderCell: function(h, { row, store, isExpanded }) {
+    renderCell: function(h, { row, store }) {
       const classes = ['el-table__expand-icon'];
-      if (isExpanded) {
+      if (store.states.expandRows.indexOf(row) > -1) {
         classes.push('el-table__expand-icon--expanded');
       }
       const callback = function(e) {

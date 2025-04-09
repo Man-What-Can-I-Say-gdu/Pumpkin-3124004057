@@ -82,7 +82,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 106);
+/******/ 	return __webpack_require__(__webpack_require__.s = 107);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -189,7 +189,7 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ 106:
+/***/ 107:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -218,7 +218,7 @@ var render = function() {
           ],
           staticClass: "el-badge__content",
           class: [
-            _vm.type ? "el-badge__content--" + _vm.type : null,
+            "el-badge__content--" + _vm.type,
             {
               "is-fixed": _vm.$slots.default,
               "is-dot": _vm.isDot

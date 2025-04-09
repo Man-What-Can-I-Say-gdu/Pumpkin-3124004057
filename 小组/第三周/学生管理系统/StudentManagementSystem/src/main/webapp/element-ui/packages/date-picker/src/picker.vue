@@ -2,7 +2,7 @@
   <el-input
     class="el-date-editor"
     :class="'el-date-editor--' + type"
-    :readonly="!editable || readonly || type === 'dates' || type === 'week' || type === 'years' || type === 'months'"
+    :readonly="!editable || readonly || type === 'dates' || type === 'week'"
     :disabled="pickerDisabled"
     :size="pickerSize"
     :name="name"
@@ -97,8 +97,7 @@ const NewPopper = {
     appendToBody: Popper.props.appendToBody,
     offset: Popper.props.offset,
     boundariesPadding: Popper.props.boundariesPadding,
-    arrowOffset: Popper.props.arrowOffset,
-    transformOrigin: Popper.props.transformOrigin
+    arrowOffset: Popper.props.arrowOffset
   },
   methods: Popper.methods,
   data() {
@@ -110,7 +109,6 @@ const NewPopper = {
 const DEFAULT_FORMATS = {
   date: 'yyyy-MM-dd',
   month: 'yyyy-MM',
-  months: 'yyyy-MM',
   datetime: 'yyyy-MM-dd HH:mm:ss',
   time: 'HH:mm:ss',
   week: 'yyyywWW',
@@ -118,8 +116,7 @@ const DEFAULT_FORMATS = {
   daterange: 'yyyy-MM-dd',
   monthrange: 'yyyy-MM',
   datetimerange: 'yyyy-MM-dd HH:mm:ss',
-  year: 'yyyy',
-  years: 'yyyy'
+  year: 'yyyy'
 };
 const HAVE_TRIGGER_TYPES = [
   'date',
@@ -133,9 +130,7 @@ const HAVE_TRIGGER_TYPES = [
   'monthrange',
   'timerange',
   'datetimerange',
-  'dates',
-  'months',
-  'years'
+  'dates'
 ];
 const DATE_FORMATTER = function(value, format) {
   if (format === 'timestamp') return value.getTime();
@@ -252,24 +247,6 @@ const TYPE_VALUE_RESOLVER_MAP = {
     }
   },
   dates: {
-    formatter(value, format) {
-      return value.map(date => DATE_FORMATTER(date, format));
-    },
-    parser(value, format) {
-      return (typeof value === 'string' ? value.split(', ') : value)
-        .map(date => date instanceof Date ? date : DATE_PARSER(date, format));
-    }
-  },
-  months: {
-    formatter(value, format) {
-      return value.map(date => DATE_FORMATTER(date, format));
-    },
-    parser(value, format) {
-      return (typeof value === 'string' ? value.split(', ') : value)
-        .map(date => date instanceof Date ? date : DATE_PARSER(date, format));
-    }
-  },
-  years: {
     formatter(value, format) {
       return value.map(date => DATE_FORMATTER(date, format));
     },
@@ -512,10 +489,6 @@ export default {
         return 'year';
       } else if (this.type === 'dates') {
         return 'dates';
-      } else if (this.type === 'months') {
-        return 'months';
-      } else if (this.type === 'years') {
-        return 'years';
       }
 
       return 'day';
@@ -538,7 +511,7 @@ export default {
       } else if (this.userInput !== null) {
         return this.userInput;
       } else if (formattedValue) {
-        return (this.type === 'dates' || this.type === 'years' || this.type === 'months')
+        return this.type === 'dates'
           ? formattedValue.join(', ')
           : formattedValue;
       } else {
@@ -740,7 +713,7 @@ export default {
       if (!this.pickerVisible) return;
       this.pickerVisible = false;
 
-      if (this.type === 'dates' || this.type === 'years' || this.type === 'months') {
+      if (this.type === 'dates') {
         // restore to former value
         const oldValue = parseAsFormatAndType(this.valueOnOpen, this.valueFormat, this.type, this.rangeSeparator) || this.valueOnOpen;
         this.emitInput(oldValue);

@@ -113,11 +113,8 @@ export default {
       title: 'Voltar'
     },
     popconfirm: {
-      confirmButtonText: 'Sim',
-      cancelButtonText: 'Não'
-    },
-    empty: {
-      description: 'Sem dados'
+      confirmButtonText: 'Yes', // to be translated
+      cancelButtonText: 'No' // to be translated
     }
   }
 };

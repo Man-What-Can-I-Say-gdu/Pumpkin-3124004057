@@ -239,7 +239,3 @@ export function objToArray(obj) {
   }
   return isEmpty(obj) ? [] : [obj];
 }
-
-export const isMac = function() {
-  return !Vue.prototype.$isServer && /macintosh|mac os x/i.test(navigator.userAgent);
-};

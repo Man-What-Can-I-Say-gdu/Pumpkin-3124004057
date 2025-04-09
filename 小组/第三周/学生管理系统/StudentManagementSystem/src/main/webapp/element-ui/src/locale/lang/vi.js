@@ -107,17 +107,14 @@ export default {
       hasCheckedFormat: '{checked}/{total} đã chọn '
     },
     image: {
-      error: 'LỖI'
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Quay lại'
+      title: 'Back' // to be translated
     },
     popconfirm: {
-      confirmButtonText: 'Ok',
-      cancelButtonText: 'Huỷ'
-    },
-    empty: {
-      description: 'Không có dữ liệu'
+      confirmButtonText: 'Yes', // to be translated
+      cancelButtonText: 'No' // to be translated
     }
   }
 };

@@ -24,11 +24,8 @@ public class ConnectionPoolConfig {
     private String initSize;
     private String health;
     private String delay;
-
     private String period;
-
     private String timeout;
-
     private String waittime;
 
 
@@ -69,6 +66,9 @@ public class ConnectionPoolConfig {
         }
         return PoolConfig;
     }
+
+
+
     /*
      *利用反射读取配置文件信息
     */
@@ -79,6 +79,9 @@ public class ConnectionPoolConfig {
         //获得Set方法的名称
         return "set" + new String(chars);
     }
+
+
+
 
     public String getDriver() {
         return driver;

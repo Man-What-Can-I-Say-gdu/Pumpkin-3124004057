@@ -218,7 +218,6 @@ export default {
       for (let index = 0; index < slots.length; index++) {
         if (slots[index] && slots[index].tag) {
           element = slots[index];
-          break;
         };
       }
       return element;

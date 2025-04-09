@@ -82,7 +82,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 71);
+/******/ 	return __webpack_require__(__webpack_require__.s = 66);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -196,7 +196,7 @@ module.exports = require("element-ui/lib/utils/date-util");
 
 /***/ }),
 
-/***/ 14:
+/***/ 13:
 /***/ (function(module, exports) {
 
 module.exports = require("element-ui/lib/button");
@@ -224,7 +224,7 @@ module.exports = require("element-ui/lib/mixins/locale");
 
 /***/ }),
 
-/***/ 71:
+/***/ 66:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -361,7 +361,7 @@ var date_ = __webpack_require__(24);
 var date_default = /*#__PURE__*/__webpack_require__.n(date_);
 
 // EXTERNAL MODULE: external "element-ui/lib/button"
-var button_ = __webpack_require__(14);
+var button_ = __webpack_require__(13);
 var button_default = /*#__PURE__*/__webpack_require__.n(button_);
 
 // EXTERNAL MODULE: external "element-ui/lib/button-group"
@@ -395,6 +395,13 @@ var date_util_ = __webpack_require__(1);
   },
 
   inject: ['elCalendar'],
+
+  data: function data() {
+    return {
+      WEEK_DAYS: Object(date_util_["getI18nSettings"])().dayNames
+    };
+  },
+
 
   methods: {
     toNestedArr: function toNestedArr(days) {
@@ -459,9 +466,6 @@ var date_util_ = __webpack_require__(1);
   },
 
   computed: {
-    WEEK_DAYS: function WEEK_DAYS() {
-      return Object(date_util_["getI18nSettings"])().dayNames;
-    },
     prevMonthDatePrefix: function prevMonthDatePrefix() {
       var temp = new Date(this.date.getTime());
       temp.setDate(0);
@@ -508,8 +512,7 @@ var date_util_ = __webpack_require__(1);
         var firstDay = Object(date_util_["getFirstDayOfMonth"])(date);
         firstDay = firstDay === 0 ? 7 : firstDay;
         var firstDayOfWeek = typeof this.firstDayOfWeek === 'number' ? this.firstDayOfWeek : 1;
-        var offset = (7 + firstDay - firstDayOfWeek) % 7;
-        var prevMonthDays = Object(date_util_["getPrevMonthLastDays"])(date, offset).map(function (day) {
+        var prevMonthDays = Object(date_util_["getPrevMonthLastDays"])(date, firstDay - firstDayOfWeek).map(function (day) {
           return {
             text: day,
             type: 'prev'

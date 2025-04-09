@@ -2,13 +2,13 @@ export default {
   el: {
     colorpicker: {
       confirm: 'Confirmar',
-      clear: 'Limpiar'
+      clear: 'Despejar'
     },
     datepicker: {
       now: 'Ahora',
       today: 'Hoy',
       cancel: 'Cancelar',
-      clear: 'Limpiar',
+      clear: 'Despejar',
       confirm: 'Confirmar',
       selectDate: 'Seleccionar fecha',
       selectTime: 'Seleccionar hora',
@@ -91,7 +91,7 @@ export default {
       emptyText: 'Sin Datos',
       confirmFilter: 'Confirmar',
       resetFilter: 'Reiniciar',
-      clearFilter: 'Limpiar',
+      clearFilter: 'Despejar',
       sumText: 'Suma'
     },
     tree: {
@@ -112,11 +112,8 @@ export default {
       title: 'Volver'
     },
     popconfirm: {
-      confirmButtonText: 'Si',
-      cancelButtonText: 'No'
-    },
-    empty: {
-      description: 'Sin Datos'
+      confirmButtonText: 'Yes', // to be translated
+      cancelButtonText: 'No' // to be translated
     }
   }
 };

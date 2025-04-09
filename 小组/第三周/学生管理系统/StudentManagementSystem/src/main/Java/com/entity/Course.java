@@ -8,38 +8,38 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 public class Course {
-    public String courseName;
-    public int courseCode;
-    public int Credits;
+    public String course_name;
+    public int course_id;
+    public int credit;
 
-    public int getCredits() {
-        return Credits;
+    public String getCourse_name() {
+        return course_name;
     }
 
-    public void setCredits(int credits) {
-        Credits = credits;
+    public void setCourse_name(String course_name) {
+        this.course_name = course_name;
     }
 
-    public String getCourseName() {
-        return courseName;
+    public int getCourse_id() {
+        return course_id;
     }
 
-    public void setCourseName(String courseName) {
-        this.courseName = courseName;
+    public void setCourse_id(int course_id) {
+        this.course_id = course_id;
     }
 
-    public int getCourseCode() {
-        return courseCode;
+    public int getCredit() {
+        return credit;
     }
 
-    public void setCourseCode(int courseCode) {
-        this.courseCode = courseCode;
+    public void setCredit(int credit) {
+        this.credit = credit;
     }
 
     @Override
     public String
     toString() {
-        return "课程编号：" +courseCode +"\t 课程名称：" + courseName + "\t所占学分：" + Credits;
+        return "课程编号：" +course_id +"\t 课程名称：" + course_name + "\t所占学分：" + credit;
     }
 
     /*//实现提供课程信息功能

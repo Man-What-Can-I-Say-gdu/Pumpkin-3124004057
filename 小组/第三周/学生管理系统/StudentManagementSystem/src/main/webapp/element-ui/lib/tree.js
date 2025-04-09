@@ -82,7 +82,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 60);
+/******/ 	return __webpack_require__(__webpack_require__.s = 58);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -196,17 +196,17 @@ module.exports = require("element-ui/lib/checkbox");
 
 /***/ }),
 
+/***/ 19:
+/***/ (function(module, exports) {
+
+module.exports = require("element-ui/lib/locale");
+
+/***/ }),
+
 /***/ 2:
 /***/ (function(module, exports) {
 
 module.exports = require("element-ui/lib/utils/dom");
-
-/***/ }),
-
-/***/ 20:
-/***/ (function(module, exports) {
-
-module.exports = require("element-ui/lib/locale");
 
 /***/ }),
 
@@ -231,7 +231,7 @@ module.exports = require("element-ui/lib/mixins/emitter");
 
 /***/ }),
 
-/***/ 60:
+/***/ 58:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -362,7 +362,7 @@ var getChildState = function getChildState(node) {
 };
 
 var reInitChecked = function reInitChecked(node) {
-  if (node.childNodes.length === 0 || node.loading) return;
+  if (node.childNodes.length === 0) return;
 
   var _getChildState = getChildState(node.childNodes),
       all = _getChildState.all,
@@ -531,7 +531,7 @@ var node_Node = function () {
 
     if (!(child instanceof Node)) {
       if (!batch) {
-        var children = this.getChildren(true) || [];
+        var children = this.getChildren(true);
         if (children.indexOf(child.data) === -1) {
           if (typeof index === 'undefined' || index < 0) {
             children.push(child.data);
@@ -803,11 +803,12 @@ var node_Node = function () {
       this.loading = true;
 
       var resolve = function resolve(children) {
+        _this5.loaded = true;
+        _this5.loading = false;
         _this5.childNodes = [];
 
         _this5.doCreateChildren(children, defaultProps);
-        _this5.loaded = true;
-        _this5.loading = false;
+
         _this5.updateLeafState();
         if (callback) {
           callback.call(_this5, children);
@@ -1732,7 +1733,7 @@ if (false) { var api; }
 component.options.__file = "packages/tree/src/tree-node.vue"
 /* harmony default export */ var tree_node = (component.exports);
 // EXTERNAL MODULE: external "element-ui/lib/locale"
-var locale_ = __webpack_require__(20);
+var locale_ = __webpack_require__(19);
 
 // EXTERNAL MODULE: external "element-ui/lib/utils/dom"
 var dom_ = __webpack_require__(2);

@@ -6,6 +6,7 @@ com\DataBasePool\ConnectionPool.class
 com\Service\AdminService.class
 com\Service\StudentService.class
 com\DataBasePool\DataConn.class
+com\Controller\ControllerImp\studentControllerImp.class
 com\dao\DaoImp\CourseDaoImp.class
 com\entity\Admin.class
 com\Service\CourseService.class

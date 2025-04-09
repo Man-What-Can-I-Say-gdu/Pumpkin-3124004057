@@ -1,0 +1,6 @@
+0:0:0:0:0:0:0:1 - - [07/Apr/2025:21:27:27 +0800] "OPTIONS /StudentManagementSystem/register HTTP/1.1" 200 - http-bio-8080-exec-1 62
+0:0:0:0:0:0:0:1 - - [07/Apr/2025:21:27:28 +0800] "POST /StudentManagementSystem/register HTTP/1.1" 200 17 http-bio-8080-exec-3 105
+0:0:0:0:0:0:0:1 - - [07/Apr/2025:21:27:28 +0800] "POST /StudentManagementSystem/register HTTP/1.1" 500 2615 http-bio-8080-exec-2 1745
+0:0:0:0:0:0:0:1 - - [07/Apr/2025:21:27:45 +0800] "OPTIONS /StudentManagementSystem/login HTTP/1.1" 200 - http-bio-8080-exec-4 2
+0:0:0:0:0:0:0:1 - - [07/Apr/2025:21:27:45 +0800] "POST /StudentManagementSystem/login HTTP/1.1" 200 17 http-bio-8080-exec-5 9
+0:0:0:0:0:0:0:1 - - [07/Apr/2025:21:29:30 +0800] "POST /StudentManagementSystem/login HTTP/1.1" 200 17 http-bio-8080-exec-7 8

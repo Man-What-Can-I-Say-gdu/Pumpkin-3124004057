@@ -136,7 +136,7 @@ export default {
                   </th>))
                 }
                 {
-                  this.hasGutter ? <th class="el-table__cell gutter"></th> : ''
+                  this.hasGutter ? <th class="gutter"></th> : ''
                 }
               </tr>
             )
@@ -286,12 +286,11 @@ export default {
         }));
       }
 
-      classes.push('el-table__cell');
-
       return classes.join(' ');
     },
 
-    toggleAllSelection() {
+    toggleAllSelection(event) {
+      event.stopPropagation();
       this.store.commit('toggleAllSelection');
     },
 

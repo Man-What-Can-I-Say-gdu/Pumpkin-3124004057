@@ -82,12 +82,12 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 136);
+/******/ 	return __webpack_require__(__webpack_require__.s = 130);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 136:
+/***/ 130:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -136,15 +136,14 @@ var cellForced = {
           indeterminate: store.states.selection.length > 0 && !this.isAllSelected,
 
           value: this.isAllSelected },
-        on: {
-          'input': this.toggleAllSelection
+        nativeOn: {
+          'click': this.toggleAllSelection
         }
       });
     },
     renderCell: function renderCell(h, _ref2) {
       var row = _ref2.row,
           column = _ref2.column,
-          isSelected = _ref2.isSelected,
           store = _ref2.store,
           $index = _ref2.$index;
 
@@ -155,7 +154,7 @@ var cellForced = {
           }
         },
         attrs: {
-          value: isSelected,
+          value: store.isSelected(row),
           disabled: column.selectable ? !column.selectable.call(null, row, $index) : false
         },
         on: {
@@ -199,11 +198,10 @@ var cellForced = {
     },
     renderCell: function renderCell(h, _ref6) {
       var row = _ref6.row,
-          store = _ref6.store,
-          isExpanded = _ref6.isExpanded;
+          store = _ref6.store;
 
       var classes = ['el-table__expand-icon'];
-      if (isExpanded) {
+      if (store.states.expandRows.indexOf(row) > -1) {
         classes.push('el-table__expand-icon--expanded');
       }
       var callback = function callback(e) {
@@ -370,10 +368,10 @@ var columnIdSeed = 1;
       return parent;
     },
     realWidth: function realWidth() {
-      return Object(util["m" /* parseWidth */])(this.width);
+      return Object(util["l" /* parseWidth */])(this.width);
     },
     realMinWidth: function realMinWidth() {
-      return Object(util["l" /* parseMinWidth */])(this.minWidth);
+      return Object(util["k" /* parseMinWidth */])(this.minWidth);
     },
     realAlign: function realAlign() {
       return this.align ? 'is-' + this.align : null;
@@ -637,20 +635,19 @@ module.exports = require("element-ui/lib/utils/util");
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getCell; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return orderBy; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return orderBy; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return getColumnById; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getColumnByKey; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getColumnByCell; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return getRowIdentity; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return getKeysMap; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return mergeOptions; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return parseWidth; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return parseMinWidth; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return parseHeight; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return parseWidth; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return parseMinWidth; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return parseHeight; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return compose; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return toggleRowStatus; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return walkTreeNode; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return objectEquals; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return toggleRowStatus; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return walkTreeNode; });
 /* harmony import */ var element_ui_src_utils_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 /* harmony import */ var element_ui_src_utils_util__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(element_ui_src_utils_util__WEBPACK_IMPORTED_MODULE_0__);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -927,24 +924,6 @@ function walkTreeNode(root, cb) {
     }
   });
 }
-
-var objectEquals = function objectEquals(objectA, objectB) {
-  // 取对象a和b的属性名
-  var aProps = Object.getOwnPropertyNames(objectA);
-  var bProps = Object.getOwnPropertyNames(objectB);
-  // 判断属性名的length是否一致
-  if (aProps.length !== bProps.length) {
-    return false;
-  }
-  // 循环取出属性名，再判断属性值是否一致
-  for (var i = 0; i < aProps.length; i++) {
-    var propName = aProps[i];
-    if (objectA[propName] !== objectB[propName]) {
-      return false;
-    }
-  }
-  return true;
-};
 
 /***/ })
 

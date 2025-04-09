@@ -109,17 +109,14 @@ exports.default = {
       hasCheckedFormat: '{checked}/{total} seleccionats'
     },
     image: {
-      error: 'HA FALLAT'
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Tornar'
+      title: 'Back' // to be translated
     },
     popconfirm: {
-      confirmButtonText: 'Si',
-      cancelButtonText: 'No'
-    },
-    empty: {
-      description: 'Sense Dades'
+      confirmButtonText: 'Yes', // to be translated
+      cancelButtonText: 'No' // to be translated
     }
   }
 };

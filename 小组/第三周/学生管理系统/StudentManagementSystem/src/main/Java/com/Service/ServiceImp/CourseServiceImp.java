@@ -24,4 +24,12 @@ public class CourseServiceImp implements CourseService {
     public Course getCourse(String courseName) {
         return courseDao.findByName(courseName);
     }
+
+    public CourseDao getCourseDao() {
+        return courseDao;
+    }
+
+    public void setCourseDao(CourseDao courseDao) {
+        this.courseDao = courseDao;
+    }
 }

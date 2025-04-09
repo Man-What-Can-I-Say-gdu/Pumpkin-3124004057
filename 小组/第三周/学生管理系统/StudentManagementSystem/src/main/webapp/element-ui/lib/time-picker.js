@@ -82,7 +82,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 77);
+/******/ 	return __webpack_require__(__webpack_require__.s = 71);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -210,7 +210,7 @@ module.exports = require("element-ui/lib/utils/clickoutside");
 
 /***/ }),
 
-/***/ 15:
+/***/ 14:
 /***/ (function(module, exports) {
 
 module.exports = require("element-ui/lib/scrollbar");
@@ -327,7 +327,7 @@ var locale_ = __webpack_require__(6);
 var locale_default = /*#__PURE__*/__webpack_require__.n(locale_);
 
 // EXTERNAL MODULE: ./packages/date-picker/src/basic/time-spinner.vue + 4 modules
-var time_spinner = __webpack_require__(34);
+var time_spinner = __webpack_require__(35);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/date-picker/src/panel/time.vue?vue&type=script&lang=js&
 //
@@ -552,34 +552,23 @@ component.options.__file = "packages/date-picker/src/panel/time.vue"
 
 /***/ }),
 
-/***/ 3:
-/***/ (function(module, exports) {
-
-module.exports = require("element-ui/lib/utils/util");
-
-/***/ }),
-
 /***/ 30:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var element_ui_src_utils_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var element_ui_src_utils_dom__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(element_ui_src_utils_dom__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var element_ui_src_utils_util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
-/* harmony import */ var element_ui_src_utils_util__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(element_ui_src_utils_util__WEBPACK_IMPORTED_MODULE_1__);
-
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   bind: function bind(el, binding, vnode) {
     var interval = null;
     var startTime = void 0;
-    var maxIntervals = Object(element_ui_src_utils_util__WEBPACK_IMPORTED_MODULE_1__["isMac"])() ? 100 : 200;
     var handler = function handler() {
       return vnode.context[binding.expression].apply();
     };
     var clear = function clear() {
-      if (Date.now() - startTime < maxIntervals) {
+      if (Date.now() - startTime < 100) {
         handler();
       }
       clearInterval(interval);
@@ -591,14 +580,14 @@ module.exports = require("element-ui/lib/utils/util");
       startTime = Date.now();
       Object(element_ui_src_utils_dom__WEBPACK_IMPORTED_MODULE_0__["once"])(document, 'mouseup', clear);
       clearInterval(interval);
-      interval = setInterval(handler, maxIntervals);
+      interval = setInterval(handler, 100);
     });
   }
 });
 
 /***/ }),
 
-/***/ 32:
+/***/ 33:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -629,9 +618,7 @@ var render = function() {
                 !_vm.editable ||
                 _vm.readonly ||
                 _vm.type === "dates" ||
-                _vm.type === "week" ||
-                _vm.type === "years" ||
-                _vm.type === "months",
+                _vm.type === "week",
               disabled: _vm.pickerDisabled,
               size: _vm.pickerSize,
               name: _vm.name,
@@ -910,8 +897,7 @@ var NewPopper = {
     appendToBody: vue_popper_default.a.props.appendToBody,
     offset: vue_popper_default.a.props.offset,
     boundariesPadding: vue_popper_default.a.props.boundariesPadding,
-    arrowOffset: vue_popper_default.a.props.arrowOffset,
-    transformOrigin: vue_popper_default.a.props.transformOrigin
+    arrowOffset: vue_popper_default.a.props.arrowOffset
   },
   methods: vue_popper_default.a.methods,
   data: function data() {
@@ -924,7 +910,6 @@ var NewPopper = {
 var DEFAULT_FORMATS = {
   date: 'yyyy-MM-dd',
   month: 'yyyy-MM',
-  months: 'yyyy-MM',
   datetime: 'yyyy-MM-dd HH:mm:ss',
   time: 'HH:mm:ss',
   week: 'yyyywWW',
@@ -932,10 +917,9 @@ var DEFAULT_FORMATS = {
   daterange: 'yyyy-MM-dd',
   monthrange: 'yyyy-MM',
   datetimerange: 'yyyy-MM-dd HH:mm:ss',
-  year: 'yyyy',
-  years: 'yyyy'
+  year: 'yyyy'
 };
-var HAVE_TRIGGER_TYPES = ['date', 'datetime', 'time', 'time-select', 'week', 'month', 'year', 'daterange', 'monthrange', 'timerange', 'datetimerange', 'dates', 'months', 'years'];
+var HAVE_TRIGGER_TYPES = ['date', 'datetime', 'time', 'time-select', 'week', 'month', 'year', 'daterange', 'monthrange', 'timerange', 'datetimerange', 'dates'];
 var pickervue_type_script_lang_js_DATE_FORMATTER = function DATE_FORMATTER(value, format) {
   if (format === 'timestamp') return value.getTime();
   return Object(date_util_["formatDate"])(value, format);
@@ -1049,30 +1033,6 @@ var TYPE_VALUE_RESOLVER_MAP = {
     }
   },
   dates: {
-    formatter: function formatter(value, format) {
-      return value.map(function (date) {
-        return pickervue_type_script_lang_js_DATE_FORMATTER(date, format);
-      });
-    },
-    parser: function parser(value, format) {
-      return (typeof value === 'string' ? value.split(', ') : value).map(function (date) {
-        return date instanceof Date ? date : pickervue_type_script_lang_js_DATE_PARSER(date, format);
-      });
-    }
-  },
-  months: {
-    formatter: function formatter(value, format) {
-      return value.map(function (date) {
-        return pickervue_type_script_lang_js_DATE_FORMATTER(date, format);
-      });
-    },
-    parser: function parser(value, format) {
-      return (typeof value === 'string' ? value.split(', ') : value).map(function (date) {
-        return date instanceof Date ? date : pickervue_type_script_lang_js_DATE_PARSER(date, format);
-      });
-    }
-  },
-  years: {
     formatter: function formatter(value, format) {
       return value.map(function (date) {
         return pickervue_type_script_lang_js_DATE_FORMATTER(date, format);
@@ -1308,10 +1268,6 @@ var validator = function validator(val) {
         return 'year';
       } else if (this.type === 'dates') {
         return 'dates';
-      } else if (this.type === 'months') {
-        return 'months';
-      } else if (this.type === 'years') {
-        return 'years';
       }
 
       return 'day';
@@ -1329,7 +1285,7 @@ var validator = function validator(val) {
       } else if (this.userInput !== null) {
         return this.userInput;
       } else if (formattedValue) {
-        return this.type === 'dates' || this.type === 'years' || this.type === 'months' ? formattedValue.join(', ') : formattedValue;
+        return this.type === 'dates' ? formattedValue.join(', ') : formattedValue;
       } else {
         return '';
       }
@@ -1519,7 +1475,7 @@ var validator = function validator(val) {
       if (!this.pickerVisible) return;
       this.pickerVisible = false;
 
-      if (this.type === 'dates' || this.type === 'years' || this.type === 'months') {
+      if (this.type === 'dates') {
         // restore to former value
         var oldValue = parseAsFormatAndType(this.valueOnOpen, this.valueFormat, this.type, this.rangeSeparator) || this.valueOnOpen;
         this.emitInput(oldValue);
@@ -1765,7 +1721,7 @@ component.options.__file = "packages/date-picker/src/picker.vue"
 
 /***/ }),
 
-/***/ 34:
+/***/ 35:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2131,7 +2087,7 @@ render._withStripped = true
 var date_util_ = __webpack_require__(1);
 
 // EXTERNAL MODULE: external "element-ui/lib/scrollbar"
-var scrollbar_ = __webpack_require__(15);
+var scrollbar_ = __webpack_require__(14);
 var scrollbar_default = /*#__PURE__*/__webpack_require__.n(scrollbar_);
 
 // EXTERNAL MODULE: ./src/directives/repeat-click.js
@@ -2351,16 +2307,16 @@ var repeat_click = __webpack_require__(30);
     bindScrollEvent: function bindScrollEvent() {
       var _this2 = this;
 
-      var bindFunction = function bindFunction(type) {
+      var bindFuntion = function bindFuntion(type) {
         _this2.$refs[type].wrap.onscroll = function (e) {
           // TODO: scroll is emitted when set scrollTop programatically
           // should find better solutions in the future!
           _this2.handleScroll(type, e);
         };
       };
-      bindFunction('hours');
-      bindFunction('minutes');
-      bindFunction('seconds');
+      bindFuntion('hours');
+      bindFuntion('minutes');
+      bindFuntion('seconds');
     },
     handleScroll: function handleScroll(type) {
       var value = Math.min(Math.round((this.$refs[type].wrap.scrollTop - (this.scrollBarHeight(type) * 0.5 - 10) / this.typeItemHeight(type) + 3) / this.typeItemHeight(type)), type === 'hours' ? 23 : 59);
@@ -2494,14 +2450,14 @@ module.exports = require("vue");
 
 /***/ }),
 
-/***/ 77:
+/***/ 71:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./packages/date-picker/src/picker.vue + 4 modules
-var picker = __webpack_require__(32);
+var picker = __webpack_require__(33);
 
 // EXTERNAL MODULE: ./packages/date-picker/src/panel/time.vue + 4 modules
 var time = __webpack_require__(27);
@@ -2650,7 +2606,7 @@ var locale_ = __webpack_require__(6);
 var locale_default = /*#__PURE__*/__webpack_require__.n(locale_);
 
 // EXTERNAL MODULE: ./packages/date-picker/src/basic/time-spinner.vue + 4 modules
-var time_spinner = __webpack_require__(34);
+var time_spinner = __webpack_require__(35);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/date-picker/src/panel/time-range.vue?vue&type=script&lang=js&
 //

@@ -16,10 +16,10 @@ export default {
       startTime: 'Start Tidspunkt',
       endDate: 'Sluttdato',
       endTime: 'Sluttidspunkt',
-      prevYear: 'Forrige År',
-      nextYear: 'Neste År',
-      prevMonth: 'Forrige Måned',
-      nextMonth: 'Neste Måned',
+      prevYear: 'Previous Year', // to be translated
+      nextYear: 'Next Year', // to be translated
+      prevMonth: 'Previous Month', // to be translated
+      nextMonth: 'Next Month', // to be translated
       year: '',
       month1: 'Januar',
       month2: 'Februar',
@@ -82,7 +82,7 @@ export default {
       error: 'Ugyldig input'
     },
     upload: {
-      deleteTip: 'trykk slett for å ta bort',
+      deleteTip: 'press delete to remove', // to be translated
       delete: 'Slett',
       preview: 'Forhåndsvisning',
       continue: 'Fortsett'
@@ -92,7 +92,7 @@ export default {
       confirmFilter: 'Bekreft',
       resetFilter: 'Tilbakestill',
       clearFilter: 'Alle',
-      sumText: 'Sum'
+      sumText: 'Sum' // to be translated
     },
     tree: {
       emptyText: 'Ingen Data'
@@ -100,23 +100,20 @@ export default {
     transfer: {
       noMatch: 'Ingen samsvarende data',
       noData: 'Ingen data',
-      titles: ['Liste 1', 'Liste 2'],
-      filterPlaceholder: 'Tast inn nøkkelord',
-      noCheckedFormat: '{total} gjenstander',
-      hasCheckedFormat: '{checked}/{total} sjekket'
+      titles: ['List 1', 'List 2'], // to be translated
+      filterPlaceholder: 'Enter keyword', // to be translated
+      noCheckedFormat: '{total} items', // to be translated
+      hasCheckedFormat: '{checked}/{total} checked' // to be translated
     },
     image: {
-      error: 'MISLYKTES'
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Tilbake'
+      title: 'Back' // to be translated
     },
     popconfirm: {
-      confirmButtonText: 'Ja',
-      cancelButtonText: 'Nei'
-    },
-    empty: {
-      description: 'Ingen Data'
+      confirmButtonText: 'Yes', // to be translated
+      cancelButtonText: 'No' // to be translated
     }
   }
 };

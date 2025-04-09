@@ -102,7 +102,6 @@
             <year-table
               v-show="currentView === 'year'"
               @pick="handleYearPick"
-              :selection-mode="selectionMode"
               :value="value"
               :default-value="defaultValue ? new Date(defaultValue) : null"
               :date="date"
@@ -111,7 +110,6 @@
             <month-table
               v-show="currentView === 'month'"
               @pick="handleMonthPick"
-              :selection-mode="selectionMode"
               :value="value"
               :default-value="defaultValue ? new Date(defaultValue) : null"
               :date="date"
@@ -123,13 +121,13 @@
 
       <div
         class="el-picker-panel__footer"
-        v-show="footerVisible && (currentView === 'date' || currentView === 'month' || currentView === 'year')">
+        v-show="footerVisible && currentView === 'date'">
         <el-button
           size="mini"
           type="text"
           class="el-picker-panel__link-btn"
           @click="changeToNow"
-          v-show="selectionMode !== 'dates' && selectionMode !== 'months' && selectionMode !== 'years'">
+          v-show="selectionMode !== 'dates'">
           {{ t('el.datepicker.now') }}
         </el-button>
         <el-button
@@ -192,8 +190,6 @@
 
       value(val) {
         if (this.selectionMode === 'dates' && this.value) return;
-        if (this.selectionMode === 'months' && this.value) return;
-        if (this.selectionMode === 'years' && this.value) return;
         if (isDate(val)) {
           this.date = new Date(val);
         } else {
@@ -219,10 +215,6 @@
           }
         } else if (newVal === 'dates') {
           this.currentView = 'date';
-        } else if (newVal === 'years') {
-          this.currentView = 'year';
-        } else if (newVal === 'months') {
-          this.currentView = 'month';
         }
       }
     },
@@ -336,8 +328,6 @@
         if (this.selectionMode === 'month') {
           this.date = modifyDate(this.date, this.year, month, 1);
           this.emit(this.date);
-        } else if (this.selectionMode === 'months') {
-          this.emit(month, true);
         } else {
           this.date = changeYearMonthAndClampDate(this.date, this.year, month);
           // TODO: should emit intermediate value ??
@@ -368,8 +358,6 @@
         if (this.selectionMode === 'year') {
           this.date = modifyDate(this.date, year, 0, 1);
           this.emit(this.date);
-        } else if (this.selectionMode === 'years') {
-          this.emit(year, true);
         } else {
           this.date = changeYearMonthAndClampDate(this.date, year, this.month);
           // TODO: should emit intermediate value ??
@@ -388,7 +376,7 @@
       },
 
       confirm() {
-        if (this.selectionMode === 'dates' || this.selectionMode === 'months' || this.selectionMode === 'years') {
+        if (this.selectionMode === 'dates') {
           this.emit(this.value);
         } else {
           // value were emitted in handle{Date,Time}Pick, nothing to update here
@@ -402,9 +390,9 @@
       },
 
       resetView() {
-        if (this.selectionMode === 'month' || this.selectionMode === 'months') {
+        if (this.selectionMode === 'month') {
           this.currentView = 'month';
-        } else if (this.selectionMode === 'year' || this.selectionMode === 'years') {
+        } else if (this.selectionMode === 'year') {
           this.currentView = 'year';
         } else {
           this.currentView = 'date';
@@ -558,7 +546,7 @@
       },
 
       footerVisible() {
-        return this.showTime || this.selectionMode === 'dates' || this.selectionMode === 'months' || this.selectionMode === 'years';
+        return this.showTime || this.selectionMode === 'dates';
       },
 
       visibleTime() {

@@ -47,4 +47,5 @@ public interface UserDao {
      * @return 是否添加成功
      */
     boolean addStudent(int userId);
+
 }

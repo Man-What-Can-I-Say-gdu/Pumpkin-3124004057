@@ -64,8 +64,7 @@
           return val === null || (val instanceof Date && isDate(val));
         }
       },
-      date: {},
-      selectionMode: {}
+      date: {}
     },
 
     computed: {
@@ -94,16 +93,7 @@
         if (target.tagName === 'A') {
           if (hasClass(target.parentNode, 'disabled')) return;
           const year = target.textContent || target.innerText;
-          if (this.selectionMode === 'years') {
-            const value = this.value || [];
-            const idx = arrayFindIndex(value, date => date.getFullYear() === Number(year));
-            const newValue = idx > -1
-              ? [...value.slice(0, idx), ...value.slice(idx + 1)]
-              : [...value, new Date(year)];
-            this.$emit('pick', newValue);
-          } else {
-            this.$emit('pick', Number(year));
-          }
+          this.$emit('pick', Number(year));
         }
       }
     }

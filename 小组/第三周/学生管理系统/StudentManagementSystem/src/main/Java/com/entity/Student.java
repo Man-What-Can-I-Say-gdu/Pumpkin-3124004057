@@ -18,8 +18,17 @@ public class Student extends User{
         ChooseCourse = chooseCourse;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "ChooseCourse=" + ChooseCourse +
+                ", id=" + id +
+                ", username='" + username + '\'' +
+                ", phone_number='" + phone_number + '\'' +
+                '}';
+    }
 
-   /* //实现查询可选课程课程功能
+/* //实现查询可选课程课程功能
     public void SelectCourse() throws Exception {
         Course.DisplayAllCourses();
     }

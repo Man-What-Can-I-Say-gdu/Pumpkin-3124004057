@@ -218,16 +218,16 @@
       },
 
       bindScrollEvent() {
-        const bindFunction = (type) => {
+        const bindFuntion = (type) => {
           this.$refs[type].wrap.onscroll = (e) => {
             // TODO: scroll is emitted when set scrollTop programatically
             // should find better solutions in the future!
             this.handleScroll(type, e);
           };
         };
-        bindFunction('hours');
-        bindFunction('minutes');
-        bindFunction('seconds');
+        bindFuntion('hours');
+        bindFuntion('minutes');
+        bindFuntion('seconds');
       },
 
       handleScroll(type) {

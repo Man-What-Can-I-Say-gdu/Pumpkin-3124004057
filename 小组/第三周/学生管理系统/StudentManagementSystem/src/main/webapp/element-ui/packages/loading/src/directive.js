@@ -64,7 +64,7 @@ loadingDirective.install = Vue => {
         el.mask.style[property] = el.maskStyle[property];
       });
 
-      if (el.originalPosition !== 'absolute' && el.originalPosition !== 'fixed' && el.originalPosition !== 'sticky') {
+      if (el.originalPosition !== 'absolute' && el.originalPosition !== 'fixed') {
         addClass(parent, 'el-loading-parent--relative');
       }
       if (binding.modifiers.fullscreen && binding.modifiers.lock) {

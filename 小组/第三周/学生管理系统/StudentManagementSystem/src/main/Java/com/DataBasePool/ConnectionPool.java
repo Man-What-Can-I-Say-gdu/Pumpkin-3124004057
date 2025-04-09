@@ -104,7 +104,6 @@ public class ConnectionPool {
                     FreeConnPool.add(TempConn);
                 }
             }
-            System.out.println("回收失败！");
         }
     }
     //定时检查器，用来判断数据库运行是否超时,如果超时则回收连接
@@ -114,7 +113,6 @@ public class ConnectionPool {
         if(Boolean.parseBoolean(config.isHealth())){
             //判断为真，开启检查
             //设置定时器
-            System.out.println("定时器启用中");
             Timer timer = new Timer();
             //开启定时器任务，每个WaitTime检查一次连接是否释放，启动时机应该是获得连接以后
             timer.schedule(new TimerTask() {

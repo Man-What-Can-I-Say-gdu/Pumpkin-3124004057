@@ -82,7 +82,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 56);
+/******/ 	return __webpack_require__(__webpack_require__.s = 55);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -249,19 +249,19 @@ module.exports = require("element-ui/lib/input");
 module.exports = require("element-ui/lib/utils/clickoutside");
 
 /***/ }),
-/* 13 */,
-/* 14 */
+/* 13 */
 /***/ (function(module, exports) {
 
 module.exports = require("element-ui/lib/button");
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports) {
 
 module.exports = require("element-ui/lib/scrollbar");
 
 /***/ }),
+/* 15 */,
 /* 16 */,
 /* 17 */,
 /* 18 */,
@@ -376,7 +376,7 @@ var locale_ = __webpack_require__(6);
 var locale_default = /*#__PURE__*/__webpack_require__.n(locale_);
 
 // EXTERNAL MODULE: ./packages/date-picker/src/basic/time-spinner.vue + 4 modules
-var time_spinner = __webpack_require__(34);
+var time_spinner = __webpack_require__(35);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/date-picker/src/panel/time.vue?vue&type=script&lang=js&
 //
@@ -608,21 +608,17 @@ component.options.__file = "packages/date-picker/src/panel/time.vue"
 "use strict";
 /* harmony import */ var element_ui_src_utils_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var element_ui_src_utils_dom__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(element_ui_src_utils_dom__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var element_ui_src_utils_util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
-/* harmony import */ var element_ui_src_utils_util__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(element_ui_src_utils_util__WEBPACK_IMPORTED_MODULE_1__);
-
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   bind: function bind(el, binding, vnode) {
     var interval = null;
     var startTime = void 0;
-    var maxIntervals = Object(element_ui_src_utils_util__WEBPACK_IMPORTED_MODULE_1__["isMac"])() ? 100 : 200;
     var handler = function handler() {
       return vnode.context[binding.expression].apply();
     };
     var clear = function clear() {
-      if (Date.now() - startTime < maxIntervals) {
+      if (Date.now() - startTime < 100) {
         handler();
       }
       clearInterval(interval);
@@ -634,14 +630,15 @@ component.options.__file = "packages/date-picker/src/panel/time.vue"
       startTime = Date.now();
       Object(element_ui_src_utils_dom__WEBPACK_IMPORTED_MODULE_0__["once"])(document, 'mouseup', clear);
       clearInterval(interval);
-      interval = setInterval(handler, maxIntervals);
+      interval = setInterval(handler, 100);
     });
   }
 });
 
 /***/ }),
 /* 31 */,
-/* 32 */
+/* 32 */,
+/* 33 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -672,9 +669,7 @@ var render = function() {
                 !_vm.editable ||
                 _vm.readonly ||
                 _vm.type === "dates" ||
-                _vm.type === "week" ||
-                _vm.type === "years" ||
-                _vm.type === "months",
+                _vm.type === "week",
               disabled: _vm.pickerDisabled,
               size: _vm.pickerSize,
               name: _vm.name,
@@ -953,8 +948,7 @@ var NewPopper = {
     appendToBody: vue_popper_default.a.props.appendToBody,
     offset: vue_popper_default.a.props.offset,
     boundariesPadding: vue_popper_default.a.props.boundariesPadding,
-    arrowOffset: vue_popper_default.a.props.arrowOffset,
-    transformOrigin: vue_popper_default.a.props.transformOrigin
+    arrowOffset: vue_popper_default.a.props.arrowOffset
   },
   methods: vue_popper_default.a.methods,
   data: function data() {
@@ -967,7 +961,6 @@ var NewPopper = {
 var DEFAULT_FORMATS = {
   date: 'yyyy-MM-dd',
   month: 'yyyy-MM',
-  months: 'yyyy-MM',
   datetime: 'yyyy-MM-dd HH:mm:ss',
   time: 'HH:mm:ss',
   week: 'yyyywWW',
@@ -975,10 +968,9 @@ var DEFAULT_FORMATS = {
   daterange: 'yyyy-MM-dd',
   monthrange: 'yyyy-MM',
   datetimerange: 'yyyy-MM-dd HH:mm:ss',
-  year: 'yyyy',
-  years: 'yyyy'
+  year: 'yyyy'
 };
-var HAVE_TRIGGER_TYPES = ['date', 'datetime', 'time', 'time-select', 'week', 'month', 'year', 'daterange', 'monthrange', 'timerange', 'datetimerange', 'dates', 'months', 'years'];
+var HAVE_TRIGGER_TYPES = ['date', 'datetime', 'time', 'time-select', 'week', 'month', 'year', 'daterange', 'monthrange', 'timerange', 'datetimerange', 'dates'];
 var pickervue_type_script_lang_js_DATE_FORMATTER = function DATE_FORMATTER(value, format) {
   if (format === 'timestamp') return value.getTime();
   return Object(date_util_["formatDate"])(value, format);
@@ -1092,30 +1084,6 @@ var TYPE_VALUE_RESOLVER_MAP = {
     }
   },
   dates: {
-    formatter: function formatter(value, format) {
-      return value.map(function (date) {
-        return pickervue_type_script_lang_js_DATE_FORMATTER(date, format);
-      });
-    },
-    parser: function parser(value, format) {
-      return (typeof value === 'string' ? value.split(', ') : value).map(function (date) {
-        return date instanceof Date ? date : pickervue_type_script_lang_js_DATE_PARSER(date, format);
-      });
-    }
-  },
-  months: {
-    formatter: function formatter(value, format) {
-      return value.map(function (date) {
-        return pickervue_type_script_lang_js_DATE_FORMATTER(date, format);
-      });
-    },
-    parser: function parser(value, format) {
-      return (typeof value === 'string' ? value.split(', ') : value).map(function (date) {
-        return date instanceof Date ? date : pickervue_type_script_lang_js_DATE_PARSER(date, format);
-      });
-    }
-  },
-  years: {
     formatter: function formatter(value, format) {
       return value.map(function (date) {
         return pickervue_type_script_lang_js_DATE_FORMATTER(date, format);
@@ -1351,10 +1319,6 @@ var validator = function validator(val) {
         return 'year';
       } else if (this.type === 'dates') {
         return 'dates';
-      } else if (this.type === 'months') {
-        return 'months';
-      } else if (this.type === 'years') {
-        return 'years';
       }
 
       return 'day';
@@ -1372,7 +1336,7 @@ var validator = function validator(val) {
       } else if (this.userInput !== null) {
         return this.userInput;
       } else if (formattedValue) {
-        return this.type === 'dates' || this.type === 'years' || this.type === 'months' ? formattedValue.join(', ') : formattedValue;
+        return this.type === 'dates' ? formattedValue.join(', ') : formattedValue;
       } else {
         return '';
       }
@@ -1562,7 +1526,7 @@ var validator = function validator(val) {
       if (!this.pickerVisible) return;
       this.pickerVisible = false;
 
-      if (this.type === 'dates' || this.type === 'years' || this.type === 'months') {
+      if (this.type === 'dates') {
         // restore to former value
         var oldValue = parseAsFormatAndType(this.valueOnOpen, this.valueFormat, this.type, this.rangeSeparator) || this.valueOnOpen;
         this.emitInput(oldValue);
@@ -1807,8 +1771,8 @@ component.options.__file = "packages/date-picker/src/picker.vue"
 /* harmony default export */ var picker = __webpack_exports__["a"] = (component.exports);
 
 /***/ }),
-/* 33 */,
-/* 34 */
+/* 34 */,
+/* 35 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2174,7 +2138,7 @@ render._withStripped = true
 var date_util_ = __webpack_require__(1);
 
 // EXTERNAL MODULE: external "element-ui/lib/scrollbar"
-var scrollbar_ = __webpack_require__(15);
+var scrollbar_ = __webpack_require__(14);
 var scrollbar_default = /*#__PURE__*/__webpack_require__.n(scrollbar_);
 
 // EXTERNAL MODULE: ./src/directives/repeat-click.js
@@ -2394,16 +2358,16 @@ var repeat_click = __webpack_require__(30);
     bindScrollEvent: function bindScrollEvent() {
       var _this2 = this;
 
-      var bindFunction = function bindFunction(type) {
+      var bindFuntion = function bindFuntion(type) {
         _this2.$refs[type].wrap.onscroll = function (e) {
           // TODO: scroll is emitted when set scrollTop programatically
           // should find better solutions in the future!
           _this2.handleScroll(type, e);
         };
       };
-      bindFunction('hours');
-      bindFunction('minutes');
-      bindFunction('seconds');
+      bindFuntion('hours');
+      bindFuntion('minutes');
+      bindFuntion('seconds');
     },
     handleScroll: function handleScroll(type) {
       var value = Math.min(Math.round((this.$refs[type].wrap.scrollTop - (this.scrollBarHeight(type) * 0.5 - 10) / this.typeItemHeight(type) + 3) / this.typeItemHeight(type)), type === 'hours' ? 23 : 59);
@@ -2508,7 +2472,6 @@ component.options.__file = "packages/date-picker/src/basic/time-spinner.vue"
 /* harmony default export */ var time_spinner = __webpack_exports__["a"] = (component.exports);
 
 /***/ }),
-/* 35 */,
 /* 36 */,
 /* 37 */,
 /* 38 */,
@@ -2528,15 +2491,14 @@ component.options.__file = "packages/date-picker/src/basic/time-spinner.vue"
 /* 52 */,
 /* 53 */,
 /* 54 */,
-/* 55 */,
-/* 56 */
+/* 55 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./packages/date-picker/src/picker.vue + 4 modules
-var picker = __webpack_require__(32);
+var picker = __webpack_require__(33);
 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./packages/date-picker/src/panel/date.vue?vue&type=template&id=2440d4ea&
 var render = function() {
@@ -2809,7 +2771,6 @@ var render = function() {
                         }
                       ],
                       attrs: {
-                        "selection-mode": _vm.selectionMode,
                         value: _vm.value,
                         "default-value": _vm.defaultValue
                           ? new Date(_vm.defaultValue)
@@ -2829,7 +2790,6 @@ var render = function() {
                         }
                       ],
                       attrs: {
-                        "selection-mode": _vm.selectionMode,
                         value: _vm.value,
                         "default-value": _vm.defaultValue
                           ? new Date(_vm.defaultValue)
@@ -2853,13 +2813,8 @@ var render = function() {
                 {
                   name: "show",
                   rawName: "v-show",
-                  value:
-                    _vm.footerVisible &&
-                    (_vm.currentView === "date" ||
-                      _vm.currentView === "month" ||
-                      _vm.currentView === "year"),
-                  expression:
-                    "footerVisible && (currentView === 'date' || currentView === 'month' || currentView === 'year')"
+                  value: _vm.footerVisible && _vm.currentView === "date",
+                  expression: "footerVisible && currentView === 'date'"
                 }
               ],
               staticClass: "el-picker-panel__footer"
@@ -2872,12 +2827,8 @@ var render = function() {
                     {
                       name: "show",
                       rawName: "v-show",
-                      value:
-                        _vm.selectionMode !== "dates" &&
-                        _vm.selectionMode !== "months" &&
-                        _vm.selectionMode !== "years",
-                      expression:
-                        "selectionMode !== 'dates' && selectionMode !== 'months' && selectionMode !== 'years'"
+                      value: _vm.selectionMode !== "dates",
+                      expression: "selectionMode !== 'dates'"
                     }
                   ],
                   staticClass: "el-picker-panel__link-btn",
@@ -2937,7 +2888,7 @@ var input_ = __webpack_require__(10);
 var input_default = /*#__PURE__*/__webpack_require__.n(input_);
 
 // EXTERNAL MODULE: external "element-ui/lib/button"
-var button_ = __webpack_require__(14);
+var button_ = __webpack_require__(13);
 var button_default = /*#__PURE__*/__webpack_require__.n(button_);
 
 // EXTERNAL MODULE: ./packages/date-picker/src/panel/time.vue + 4 modules
@@ -3162,8 +3113,7 @@ var year_tablevue_type_script_lang_js_datesInYear = function datesInYear(year) {
         return val === null || val instanceof Date && Object(date_util_["isDate"])(val);
       }
     },
-    date: {},
-    selectionMode: {}
+    date: {}
   },
 
   computed: {
@@ -3191,16 +3141,7 @@ var year_tablevue_type_script_lang_js_datesInYear = function datesInYear(year) {
       if (target.tagName === 'A') {
         if (Object(dom_["hasClass"])(target.parentNode, 'disabled')) return;
         var year = target.textContent || target.innerText;
-        if (this.selectionMode === 'years') {
-          var value = this.value || [];
-          var idx = Object(util_["arrayFindIndex"])(value, function (date) {
-            return date.getFullYear() === Number(year);
-          });
-          var newValue = idx > -1 ? [].concat(value.slice(0, idx), value.slice(idx + 1)) : [].concat(value, [new Date(year)]);
-          this.$emit('pick', newValue);
-        } else {
-          this.$emit('pick', Number(year));
-        }
+        this.$emit('pick', Number(year));
       }
     }
   }
@@ -3319,14 +3260,6 @@ var getMonthTimestamp = function getMonthTimestamp(time) {
   } else {
     return NaN;
   }
-};
-
-// remove the first element that satisfies `pred` from arr
-// return a new array if modification occurs
-// return the original array otherwise
-var month_tablevue_type_script_lang_js_removeFromArray = function removeFromArray(arr, pred) {
-  var idx = typeof pred === 'function' ? Object(util_["arrayFindIndex"])(arr, pred) : arr.indexOf(pred);
-  return idx >= 0 ? [].concat(arr.slice(0, idx), arr.slice(idx + 1)) : arr;
 };
 /* harmony default export */ var month_tablevue_type_script_lang_js_ = ({
   props: {
@@ -3502,15 +3435,6 @@ var month_tablevue_type_script_lang_js_removeFromArray = function removeFromArra
           }
           this.rangeState.selecting = false;
         }
-      } else if (this.selectionMode === 'months') {
-        var value = this.value || [];
-        var year = this.date.getFullYear();
-        var newValue = Object(util_["arrayFindIndex"])(value, function (date) {
-          return date.getFullYear() === year && date.getMonth() === month;
-        }) >= 0 ? month_tablevue_type_script_lang_js_removeFromArray(value, function (date) {
-          return date.getTime() === newDate.getTime();
-        }) : [].concat(value, [newDate]);
-        this.$emit('pick', newValue);
       } else {
         this.$emit('pick', month);
       }
@@ -4268,8 +4192,6 @@ date_table_component.options.__file = "packages/date-picker/src/basic/date-table
 //
 //
 //
-//
-//
 
 
 
@@ -4301,8 +4223,6 @@ date_table_component.options.__file = "packages/date-picker/src/basic/date-table
     },
     value: function value(val) {
       if (this.selectionMode === 'dates' && this.value) return;
-      if (this.selectionMode === 'months' && this.value) return;
-      if (this.selectionMode === 'years' && this.value) return;
       if (Object(date_util_["isDate"])(val)) {
         this.date = new Date(val);
       } else {
@@ -4329,10 +4249,6 @@ date_table_component.options.__file = "packages/date-picker/src/basic/date-table
         }
       } else if (newVal === 'dates') {
         this.currentView = 'date';
-      } else if (newVal === 'years') {
-        this.currentView = 'year';
-      } else if (newVal === 'months') {
-        this.currentView = 'month';
       }
     }
   },
@@ -4454,8 +4370,6 @@ date_table_component.options.__file = "packages/date-picker/src/basic/date-table
       if (this.selectionMode === 'month') {
         this.date = Object(date_util_["modifyDate"])(this.date, this.year, month, 1);
         this.emit(this.date);
-      } else if (this.selectionMode === 'months') {
-        this.emit(month, true);
       } else {
         this.date = Object(date_util_["changeYearMonthAndClampDate"])(this.date, this.year, month);
         // TODO: should emit intermediate value ??
@@ -4482,8 +4396,6 @@ date_table_component.options.__file = "packages/date-picker/src/basic/date-table
       if (this.selectionMode === 'year') {
         this.date = Object(date_util_["modifyDate"])(this.date, year, 0, 1);
         this.emit(this.date);
-      } else if (this.selectionMode === 'years') {
-        this.emit(year, true);
       } else {
         this.date = Object(date_util_["changeYearMonthAndClampDate"])(this.date, year, this.month);
         // TODO: should emit intermediate value ??
@@ -4500,7 +4412,7 @@ date_table_component.options.__file = "packages/date-picker/src/basic/date-table
       }
     },
     confirm: function confirm() {
-      if (this.selectionMode === 'dates' || this.selectionMode === 'months' || this.selectionMode === 'years') {
+      if (this.selectionMode === 'dates') {
         this.emit(this.value);
       } else {
         // value were emitted in handle{Date,Time}Pick, nothing to update here
@@ -4511,9 +4423,9 @@ date_table_component.options.__file = "packages/date-picker/src/basic/date-table
       }
     },
     resetView: function resetView() {
-      if (this.selectionMode === 'month' || this.selectionMode === 'months') {
+      if (this.selectionMode === 'month') {
         this.currentView = 'month';
-      } else if (this.selectionMode === 'year' || this.selectionMode === 'years') {
+      } else if (this.selectionMode === 'year') {
         this.currentView = 'year';
       } else {
         this.currentView = 'date';
@@ -4658,7 +4570,7 @@ date_table_component.options.__file = "packages/date-picker/src/basic/date-table
       return this.date.getDate();
     },
     footerVisible: function footerVisible() {
-      return this.showTime || this.selectionMode === 'dates' || this.selectionMode === 'months' || this.selectionMode === 'years';
+      return this.showTime || this.selectionMode === 'dates';
     },
     visibleTime: function visibleTime() {
       if (this.userInputTime !== null) {

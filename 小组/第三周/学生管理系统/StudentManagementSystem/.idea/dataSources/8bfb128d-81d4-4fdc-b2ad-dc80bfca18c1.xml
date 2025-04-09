@@ -1013,7 +1013,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="294" parent="1" name="studentmanagementsystem">
-      <LastIntrospectionLocalTimestamp>2025-04-03.16:43:54</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-04-08.17:15:43</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="295" parent="1" name="mysql.infoschema">
@@ -1139,7 +1139,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Position>4</Position>
     </column>
     <column id="322" parent="302" name="id">
-      <AutoIncrement>16</AutoIncrement>
+      <AutoIncrement>19</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>

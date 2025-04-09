@@ -82,7 +82,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 58);
+/******/ 	return __webpack_require__(__webpack_require__.s = 56);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -224,20 +224,19 @@ module.exports = require("vue");
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getCell; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return orderBy; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return orderBy; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return getColumnById; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getColumnByKey; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getColumnByCell; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return getRowIdentity; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return getKeysMap; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return mergeOptions; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return parseWidth; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return parseMinWidth; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return parseHeight; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return parseWidth; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return parseMinWidth; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return parseHeight; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return compose; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return toggleRowStatus; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return walkTreeNode; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return objectEquals; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return toggleRowStatus; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return walkTreeNode; });
 /* harmony import */ var element_ui_src_utils_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 /* harmony import */ var element_ui_src_utils_util__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(element_ui_src_utils_util__WEBPACK_IMPORTED_MODULE_0__);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -515,24 +514,6 @@ function walkTreeNode(root, cb) {
   });
 }
 
-var objectEquals = function objectEquals(objectA, objectB) {
-  // 取对象a和b的属性名
-  var aProps = Object.getOwnPropertyNames(objectA);
-  var bProps = Object.getOwnPropertyNames(objectB);
-  // 判断属性名的length是否一致
-  if (aProps.length !== bProps.length) {
-    return false;
-  }
-  // 循环取出属性名，再判断属性值是否一致
-  for (var i = 0; i < aProps.length; i++) {
-    var propName = aProps[i];
-    if (objectA[propName] !== objectB[propName]) {
-      return false;
-    }
-  }
-  return true;
-};
-
 /***/ }),
 /* 9 */
 /***/ (function(module, exports) {
@@ -553,17 +534,17 @@ module.exports = require("element-ui/lib/mixins/migrating");
 module.exports = require("element-ui/lib/utils/clickoutside");
 
 /***/ }),
-/* 13 */
-/***/ (function(module, exports) {
-
-module.exports = require("element-ui/lib/utils/popup");
-
-/***/ }),
-/* 14 */,
-/* 15 */
+/* 13 */,
+/* 14 */
 /***/ (function(module, exports) {
 
 module.exports = require("element-ui/lib/scrollbar");
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports) {
+
+module.exports = require("element-ui/lib/utils/popup");
 
 /***/ }),
 /* 16 */
@@ -572,19 +553,19 @@ module.exports = require("element-ui/lib/scrollbar");
 module.exports = require("element-ui/lib/utils/resize-event");
 
 /***/ }),
-/* 17 */,
+/* 17 */
+/***/ (function(module, exports) {
+
+module.exports = require("throttle-debounce/debounce");
+
+/***/ }),
 /* 18 */
 /***/ (function(module, exports) {
 
 module.exports = require("element-ui/lib/checkbox");
 
 /***/ }),
-/* 19 */
-/***/ (function(module, exports) {
-
-module.exports = require("throttle-debounce/debounce");
-
-/***/ }),
+/* 19 */,
 /* 20 */,
 /* 21 */,
 /* 22 */,
@@ -623,21 +604,21 @@ module.exports = require("element-ui/lib/checkbox-group");
 /***/ }),
 /* 41 */,
 /* 42 */,
-/* 43 */,
-/* 44 */
+/* 43 */
 /***/ (function(module, exports) {
 
 module.exports = require("throttle-debounce");
 
 /***/ }),
+/* 44 */,
 /* 45 */,
-/* 46 */,
-/* 47 */
+/* 46 */
 /***/ (function(module, exports) {
 
 module.exports = require("normalize-wheel");
 
 /***/ }),
+/* 47 */,
 /* 48 */,
 /* 49 */,
 /* 50 */,
@@ -646,9 +627,7 @@ module.exports = require("normalize-wheel");
 /* 53 */,
 /* 54 */,
 /* 55 */,
-/* 56 */,
-/* 57 */,
-/* 58 */
+/* 56 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1101,13 +1080,13 @@ var checkbox_ = __webpack_require__(18);
 var checkbox_default = /*#__PURE__*/__webpack_require__.n(checkbox_);
 
 // EXTERNAL MODULE: external "throttle-debounce"
-var external_throttle_debounce_ = __webpack_require__(44);
+var external_throttle_debounce_ = __webpack_require__(43);
 
 // EXTERNAL MODULE: external "element-ui/lib/utils/resize-event"
 var resize_event_ = __webpack_require__(16);
 
 // EXTERNAL MODULE: external "normalize-wheel"
-var external_normalize_wheel_ = __webpack_require__(47);
+var external_normalize_wheel_ = __webpack_require__(46);
 var external_normalize_wheel_default = /*#__PURE__*/__webpack_require__.n(external_normalize_wheel_);
 
 // CONCATENATED MODULE: ./src/directives/mousewheel.js
@@ -1189,7 +1168,7 @@ var util = __webpack_require__(8);
       }
     },
     toggleRowExpansion: function toggleRowExpansion(row, expanded) {
-      var changed = Object(util["n" /* toggleRowStatus */])(this.states.expandRows, row, expanded);
+      var changed = Object(util["m" /* toggleRowStatus */])(this.states.expandRows, row, expanded);
       if (changed) {
         this.table.$emit('expand-change', row, this.states.expandRows.slice());
         this.scheduleLayout();
@@ -1388,7 +1367,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
           lazy = _states2.lazy;
 
       var res = {};
-      Object(util["o" /* walkTreeNode */])(data, function (parent, children, level) {
+      Object(util["n" /* walkTreeNode */])(data, function (parent, children, level) {
         var parentId = Object(util["g" /* getRowIdentity */])(parent, rowKey);
         if (Array.isArray(children)) {
           res[parentId] = {
@@ -1519,18 +1498,16 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
       var _this = this;
 
       var load = this.table.load;
-      var rawTreeData = this.states.treeData;
+      var _states6 = this.states,
+          lazyTreeNodeMap = _states6.lazyTreeNodeMap,
+          treeData = _states6.treeData;
 
-      if (load && !rawTreeData[key].loaded) {
-        rawTreeData[key].loading = true;
+      if (load && !treeData[key].loaded) {
+        treeData[key].loading = true;
         load(row, treeNode, function (data) {
           if (!Array.isArray(data)) {
             throw new Error('[ElTable] data must be an array');
           }
-          var _states6 = _this.states,
-              lazyTreeNodeMap = _states6.lazyTreeNodeMap,
-              treeData = _states6.treeData;
-
           treeData[key].loading = false;
           treeData[key].loaded = true;
           treeData[key].expanded = true;
@@ -1556,7 +1533,7 @@ var watcher_sortData = function sortData(data, states) {
   if (!sortingColumn || typeof sortingColumn.sortable === 'string') {
     return data;
   }
-  return Object(util["j" /* orderBy */])(data, states.sortProp, states.sortOrder, sortingColumn.sortMethod, sortingColumn.sortBy);
+  return Object(util["i" /* orderBy */])(data, states.sortProp, states.sortOrder, sortingColumn.sortMethod, sortingColumn.sortBy);
 };
 
 var doFlattenColumns = function doFlattenColumns(columns) {
@@ -1720,7 +1697,7 @@ var doFlattenColumns = function doFlattenColumns(columns) {
     toggleRowSelection: function toggleRowSelection(row, selected) {
       var emitChange = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
 
-      var changed = Object(util["n" /* toggleRowStatus */])(this.states.selection, row, selected);
+      var changed = Object(util["m" /* toggleRowStatus */])(this.states.selection, row, selected);
       if (changed) {
         var newSelection = (this.states.selection || []).slice();
         // 调用 API 修改选中值，不触发 select 事件
@@ -1744,11 +1721,11 @@ var doFlattenColumns = function doFlattenColumns(columns) {
       var selectionChanged = false;
       data.forEach(function (row, index) {
         if (states.selectable) {
-          if (states.selectable.call(null, row, index) && Object(util["n" /* toggleRowStatus */])(selection, row, value)) {
+          if (states.selectable.call(null, row, index) && Object(util["m" /* toggleRowStatus */])(selection, row, value)) {
             selectionChanged = true;
           }
         } else {
-          if (Object(util["n" /* toggleRowStatus */])(selection, row, value)) {
+          if (Object(util["m" /* toggleRowStatus */])(selection, row, value)) {
             selectionChanged = true;
           }
         }
@@ -2118,7 +2095,7 @@ watcher.prototype.updateTableScrollY = function () {
 
 /* harmony default export */ var src_store = (watcher);
 // EXTERNAL MODULE: external "throttle-debounce/debounce"
-var debounce_ = __webpack_require__(19);
+var debounce_ = __webpack_require__(17);
 var debounce_default = /*#__PURE__*/__webpack_require__.n(debounce_);
 
 // CONCATENATED MODULE: ./packages/table/src/store/helper.js
@@ -2237,7 +2214,7 @@ var table_layout_TableLayout = function () {
 
     if (external_vue_default.a.prototype.$isServer) return;
     var el = this.table.$el;
-    value = Object(util["k" /* parseHeight */])(value);
+    value = Object(util["j" /* parseHeight */])(value);
     this.height = value;
 
     if (!el && (value || value === 0)) return external_vue_default.a.nextTick(function () {
@@ -2305,6 +2282,7 @@ var table_layout_TableLayout = function () {
 
     var noData = !(this.store.states.data && this.store.states.data.length);
     this.viewportHeight = this.scrollX ? tableHeight - (noData ? 0 : this.gutterWidth) : tableHeight;
+
     this.updateScrollY();
     this.notifyObservers('scrollable');
   };
@@ -2525,94 +2503,10 @@ var tooltip_default = /*#__PURE__*/__webpack_require__.n(tooltip_);
     }
   }
 });
-// CONCATENATED MODULE: ./packages/table/src/table-row.js
-var table_row_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-
-/* harmony default export */ var table_row = ({
-  name: 'ElTableRow',
-  props: ['columns', 'row', 'index', 'isSelected', 'isExpanded', 'store', 'context', 'firstDefaultColumnIndex', 'treeRowData', 'treeIndent', 'columnsHidden', 'getSpan', 'getColspanRealWidth', 'getCellStyle', 'getCellClass', 'handleCellMouseLeave', 'handleCellMouseEnter', 'fixed'],
-  components: {
-    ElCheckbox: checkbox_default.a
-  },
-  render: function render() {
-    var _this = this;
-
-    var h = arguments[0];
-    var columns = this.columns,
-        row = this.row,
-        $index = this.index,
-        store = this.store,
-        context = this.context,
-        firstDefaultColumnIndex = this.firstDefaultColumnIndex,
-        treeRowData = this.treeRowData,
-        treeIndent = this.treeIndent,
-        _columnsHidden = this.columnsHidden,
-        columnsHidden = _columnsHidden === undefined ? [] : _columnsHidden,
-        isSelected = this.isSelected,
-        isExpanded = this.isExpanded;
-
-
-    return h('tr', [columns.map(function (column, cellIndex) {
-      var _getSpan = _this.getSpan(row, column, $index, cellIndex),
-          rowspan = _getSpan.rowspan,
-          colspan = _getSpan.colspan;
-
-      if (!rowspan || !colspan) {
-        return null;
-      }
-      var columnData = table_row_extends({}, column);
-      columnData.realWidth = _this.getColspanRealWidth(columns, colspan, cellIndex);
-      var data = {
-        store: store,
-        isSelected: isSelected,
-        isExpanded: isExpanded,
-        _self: context,
-        column: columnData,
-        row: row,
-        $index: $index
-      };
-      if (cellIndex === firstDefaultColumnIndex && treeRowData) {
-        data.treeNode = {
-          indent: treeRowData.level * treeIndent,
-          level: treeRowData.level
-        };
-        if (typeof treeRowData.expanded === 'boolean') {
-          data.treeNode.expanded = treeRowData.expanded;
-          // 表明是懒加载
-          if ('loading' in treeRowData) {
-            data.treeNode.loading = treeRowData.loading;
-          }
-          if ('noLazyChildren' in treeRowData) {
-            data.treeNode.noLazyChildren = treeRowData.noLazyChildren;
-          }
-        }
-      }
-      return h(
-        'td',
-        {
-          style: _this.getCellStyle($index, cellIndex, row, column),
-          'class': _this.getCellClass($index, cellIndex, row, column),
-          attrs: { rowspan: rowspan,
-            colspan: colspan
-          },
-          on: {
-            'mouseenter': function mouseenter($event) {
-              return _this.handleCellMouseEnter($event, row);
-            },
-            'mouseleave': _this.handleCellMouseLeave
-          }
-        },
-        [column.renderCell.call(_this._renderProxy, _this.$createElement, data, columnsHidden[cellIndex])]
-      );
-    })]);
-  }
-});
 // CONCATENATED MODULE: ./packages/table/src/table-body.js
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 var table_body_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 
 
 
@@ -2630,8 +2524,7 @@ var table_body_extends = Object.assign || function (target) { for (var i = 1; i 
 
   components: {
     ElCheckbox: checkbox_default.a,
-    ElTooltip: tooltip_default.a,
-    TableRow: table_row
+    ElTooltip: tooltip_default.a
   },
 
   props: {
@@ -2697,13 +2590,6 @@ var table_body_extends = Object.assign || function (target) { for (var i = 1; i 
       });
     }
   }), {
-    columnsHidden: function columnsHidden() {
-      var _this2 = this;
-
-      return this.columns.map(function (column, index) {
-        return _this2.isColumnHidden(index);
-      });
-    },
     firstDefaultColumnIndex: function firstDefaultColumnIndex() {
       return Object(util_["arrayFindIndex"])(this.columns, function (_ref2) {
         var type = _ref2.type;
@@ -2716,7 +2602,7 @@ var table_body_extends = Object.assign || function (target) { for (var i = 1; i 
     // don't trigger getter of currentRow in getCellClass. see https://jsfiddle.net/oe2b4hqt/
     // update DOM manually. see https://github.com/ElemeFE/element/pull/13954/files#diff-9b450c00d0a9dec0ffad5a3176972e40
     'store.states.hoverRow': function storeStatesHoverRow(newVal, oldVal) {
-      var _this3 = this;
+      var _this2 = this;
 
       if (!this.store.states.isComplex || this.$isServer) return;
       var raf = window.requestAnimationFrame;
@@ -2726,7 +2612,7 @@ var table_body_extends = Object.assign || function (target) { for (var i = 1; i 
         };
       }
       raf(function () {
-        var rows = _this3.$el.querySelectorAll('.el-table__row');
+        var rows = _this2.$el.querySelectorAll('.el-table__row');
         var oldRow = rows[oldVal];
         var newRow = rows[newVal];
         if (oldRow) {
@@ -2800,18 +2686,9 @@ var table_body_extends = Object.assign || function (target) { for (var i = 1; i 
       return rowStyle || null;
     },
     getRowClass: function getRowClass(row, rowIndex) {
-      var selection = this.store.states.selection;
       var classes = ['el-table__row'];
       if (this.table.highlightCurrentRow && row === this.store.states.currentRow) {
         classes.push('current-row');
-      }
-
-      if (this.table.highlightSelectionRow) {
-        for (var i = 0; i < selection.length; i++) {
-          if (Object(util["i" /* objectEquals */])(row, selection[i])) {
-            classes.push('selection-row');
-          }
-        };
       }
 
       if (this.stripe && rowIndex % 2 === 1) {
@@ -2863,8 +2740,6 @@ var table_body_extends = Object.assign || function (target) { for (var i = 1; i 
           column: column
         }));
       }
-
-      classes.push('el-table__cell');
 
       return classes.join(' ');
     },
@@ -2958,13 +2833,16 @@ var table_body_extends = Object.assign || function (target) { for (var i = 1; i 
       table.$emit('row-' + name, row, column, event);
     },
     rowRender: function rowRender(row, $index, treeRowData) {
-      var _this4 = this;
+      var _this3 = this;
 
       var h = this.$createElement;
       var treeIndent = this.treeIndent,
           columns = this.columns,
           firstDefaultColumnIndex = this.firstDefaultColumnIndex;
 
+      var columnsHidden = columns.map(function (column, index) {
+        return _this3.isColumnHidden(index);
+      });
       var rowClasses = this.getRowClass(row, $index);
       var display = true;
       if (treeRowData) {
@@ -2976,49 +2854,83 @@ var table_body_extends = Object.assign || function (target) { for (var i = 1; i 
       var displayStyle = display ? null : {
         display: 'none'
       };
-      return h(table_row, {
-        style: [displayStyle, this.getRowStyle(row, $index)],
-        'class': rowClasses,
-        key: this.getKeyOfRow(row, $index),
-        nativeOn: {
-          'dblclick': function dblclick($event) {
-            return _this4.handleDoubleClick($event, row);
-          },
-          'click': function click($event) {
-            return _this4.handleClick($event, row);
-          },
-          'contextmenu': function contextmenu($event) {
-            return _this4.handleContextMenu($event, row);
-          },
-          'mouseenter': function mouseenter(_) {
-            return _this4.handleMouseEnter($index);
-          },
-          'mouseleave': this.handleMouseLeave
+      return h(
+        'tr',
+        {
+          style: [displayStyle, this.getRowStyle(row, $index)],
+          'class': rowClasses,
+          key: this.getKeyOfRow(row, $index),
+          on: {
+            'dblclick': function dblclick($event) {
+              return _this3.handleDoubleClick($event, row);
+            },
+            'click': function click($event) {
+              return _this3.handleClick($event, row);
+            },
+            'contextmenu': function contextmenu($event) {
+              return _this3.handleContextMenu($event, row);
+            },
+            'mouseenter': function mouseenter(_) {
+              return _this3.handleMouseEnter($index);
+            },
+            'mouseleave': this.handleMouseLeave
+          }
         },
-        attrs: {
-          columns: columns,
-          row: row,
-          index: $index,
-          store: this.store,
-          context: this.context || this.table.$vnode.context,
-          firstDefaultColumnIndex: firstDefaultColumnIndex,
-          treeRowData: treeRowData,
-          treeIndent: treeIndent,
-          columnsHidden: this.columnsHidden,
-          getSpan: this.getSpan,
-          getColspanRealWidth: this.getColspanRealWidth,
-          getCellStyle: this.getCellStyle,
-          getCellClass: this.getCellClass,
-          handleCellMouseEnter: this.handleCellMouseEnter,
-          handleCellMouseLeave: this.handleCellMouseLeave,
-          isSelected: this.store.isSelected(row),
-          isExpanded: this.store.states.expandRows.indexOf(row) > -1,
-          fixed: this.fixed
-        }
-      });
+        [columns.map(function (column, cellIndex) {
+          var _getSpan = _this3.getSpan(row, column, $index, cellIndex),
+              rowspan = _getSpan.rowspan,
+              colspan = _getSpan.colspan;
+
+          if (!rowspan || !colspan) {
+            return null;
+          }
+          var columnData = table_body_extends({}, column);
+          columnData.realWidth = _this3.getColspanRealWidth(columns, colspan, cellIndex);
+          var data = {
+            store: _this3.store,
+            _self: _this3.context || _this3.table.$vnode.context,
+            column: columnData,
+            row: row,
+            $index: $index
+          };
+          if (cellIndex === firstDefaultColumnIndex && treeRowData) {
+            data.treeNode = {
+              indent: treeRowData.level * treeIndent,
+              level: treeRowData.level
+            };
+            if (typeof treeRowData.expanded === 'boolean') {
+              data.treeNode.expanded = treeRowData.expanded;
+              // 表明是懒加载
+              if ('loading' in treeRowData) {
+                data.treeNode.loading = treeRowData.loading;
+              }
+              if ('noLazyChildren' in treeRowData) {
+                data.treeNode.noLazyChildren = treeRowData.noLazyChildren;
+              }
+            }
+          }
+          return h(
+            'td',
+            {
+              style: _this3.getCellStyle($index, cellIndex, row, column),
+              'class': _this3.getCellClass($index, cellIndex, row, column),
+              attrs: { rowspan: rowspan,
+                colspan: colspan
+              },
+              on: {
+                'mouseenter': function mouseenter($event) {
+                  return _this3.handleCellMouseEnter($event, row);
+                },
+                'mouseleave': _this3.handleCellMouseLeave
+              }
+            },
+            [column.renderCell.call(_this3._renderProxy, _this3.$createElement, data, columnsHidden[cellIndex])]
+          );
+        })]
+      );
     },
     wrappedRowRender: function wrappedRowRender(row, $index) {
-      var _this5 = this;
+      var _this4 = this;
 
       var h = this.$createElement;
 
@@ -3046,7 +2958,7 @@ var table_body_extends = Object.assign || function (target) { for (var i = 1; i 
             'td',
             {
               attrs: { colspan: this.columnsCount },
-              'class': 'el-table__cell el-table__expanded-cell' },
+              'class': 'el-table__expanded-cell' },
             [renderExpanded(this.$createElement, { row: row, $index: $index, store: this.store })]
           )]
         )]];
@@ -3104,7 +3016,7 @@ var table_body_extends = Object.assign || function (target) { for (var i = 1; i 
                 }
               }
               i++;
-              tmp.push(_this5.rowRender(node, $index + i, innerTreeRowData));
+              tmp.push(_this4.rowRender(node, $index + i, innerTreeRowData));
               if (cur) {
                 var _nodes = lazyTreeNodeMap[childKey] || node[childrenColumnName];
                 traverse(_nodes, cur);
@@ -3277,7 +3189,7 @@ var vue_popper_ = __webpack_require__(5);
 var vue_popper_default = /*#__PURE__*/__webpack_require__.n(vue_popper_);
 
 // EXTERNAL MODULE: external "element-ui/lib/utils/popup"
-var popup_ = __webpack_require__(13);
+var popup_ = __webpack_require__(15);
 
 // EXTERNAL MODULE: external "element-ui/lib/utils/clickoutside"
 var clickoutside_ = __webpack_require__(12);
@@ -3316,7 +3228,7 @@ var checkbox_group_ = __webpack_require__(40);
 var checkbox_group_default = /*#__PURE__*/__webpack_require__.n(checkbox_group_);
 
 // EXTERNAL MODULE: external "element-ui/lib/scrollbar"
-var scrollbar_ = __webpack_require__(15);
+var scrollbar_ = __webpack_require__(14);
 var scrollbar_default = /*#__PURE__*/__webpack_require__.n(scrollbar_);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/table/src/filter-panel.vue?vue&type=script&lang=js&
@@ -3715,7 +3627,7 @@ var convertToRows = function convertToRows(originColumns) {
                   ) : '']
                 )]
               );
-            }), _this.hasGutter ? h('th', { 'class': 'el-table__cell gutter' }) : '']
+            }), _this.hasGutter ? h('th', { 'class': 'gutter' }) : '']
           );
         })]
       )]
@@ -3866,11 +3778,10 @@ var convertToRows = function convertToRows(originColumns) {
         }));
       }
 
-      classes.push('el-table__cell');
-
       return classes.join(' ');
     },
-    toggleAllSelection: function toggleAllSelection() {
+    toggleAllSelection: function toggleAllSelection(event) {
+      event.stopPropagation();
       this.store.commit('toggleAllSelection');
     },
     handleFilterClick: function handleFilterClick(event, column) {
@@ -4163,14 +4074,14 @@ var table_footer_extends = Object.assign || function (target) { for (var i = 1; 
               attrs: { colspan: column.colSpan,
                 rowspan: column.rowSpan
               },
-              'class': [].concat(_this.getRowClasses(column, cellIndex), ['el-table__cell']) },
+              'class': _this.getRowClasses(column, cellIndex) },
             [h(
               'div',
               { 'class': ['cell', column.labelClassName] },
               [sums[cellIndex]]
             )]
           );
-        }), this.hasGutter ? h('th', { 'class': 'el-table__cell gutter' }) : ''])]
+        }), this.hasGutter ? h('th', { 'class': 'gutter' }) : ''])]
       )]
     );
   },
@@ -4550,11 +4461,6 @@ var tableIdSeed = 1;
 
     highlightCurrentRow: Boolean,
 
-    highlightSelectionRow: {
-      type: Boolean,
-      default: false
-    },
-
     currentRowKey: [String, Number],
 
     emptyText: String,
@@ -4665,7 +4571,7 @@ var tableIdSeed = 1;
 
 
     // TODO 使用 CSS transform
-    syncPostion: function syncPostion() {
+    syncPostion: Object(external_throttle_debounce_["throttle"])(20, function () {
       var _bodyWrapper = this.bodyWrapper,
           scrollLeft = _bodyWrapper.scrollLeft,
           scrollTop = _bodyWrapper.scrollTop,
@@ -4689,29 +4595,16 @@ var tableIdSeed = 1;
       } else {
         this.scrollPosition = 'middle';
       }
-    },
-
-
-    throttleSyncPostion: Object(external_throttle_debounce_["throttle"])(16, function () {
-      this.syncPostion();
     }),
 
-    onScroll: function onScroll(evt) {
-      var raf = window.requestAnimationFrame;
-      if (!raf) {
-        this.throttleSyncPostion();
-      } else {
-        raf(this.syncPostion);
-      }
-    },
     bindEvents: function bindEvents() {
-      this.bodyWrapper.addEventListener('scroll', this.onScroll, { passive: true });
+      this.bodyWrapper.addEventListener('scroll', this.syncPostion, { passive: true });
       if (this.fit) {
         Object(resize_event_["addResizeListener"])(this.$el, this.resizeListener);
       }
     },
     unbindEvents: function unbindEvents() {
-      this.bodyWrapper.removeEventListener('scroll', this.onScroll, { passive: true });
+      this.bodyWrapper.removeEventListener('scroll', this.syncPostion, { passive: true });
       if (this.fit) {
         Object(resize_event_["removeResizeListener"])(this.$el, this.resizeListener);
       }
@@ -4786,7 +4679,7 @@ var tableIdSeed = 1;
           height: bodyHeight ? bodyHeight + 'px' : ''
         };
       } else if (this.maxHeight) {
-        var maxHeight = Object(util["k" /* parseHeight */])(this.maxHeight);
+        var maxHeight = Object(util["j" /* parseHeight */])(this.maxHeight);
         if (typeof maxHeight === 'number') {
           return {
             'max-height': maxHeight - footerHeight - (this.showHeader ? headerHeight : 0) + 'px'
@@ -4801,7 +4694,7 @@ var tableIdSeed = 1;
           height: this.layout.fixedBodyHeight ? this.layout.fixedBodyHeight + 'px' : ''
         };
       } else if (this.maxHeight) {
-        var maxHeight = Object(util["k" /* parseHeight */])(this.maxHeight);
+        var maxHeight = Object(util["j" /* parseHeight */])(this.maxHeight);
         if (typeof maxHeight === 'number') {
           maxHeight = this.layout.scrollX ? maxHeight - this.layout.gutterWidth : maxHeight;
           if (this.showHeader) {

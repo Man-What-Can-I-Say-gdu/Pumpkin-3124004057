@@ -7,7 +7,7 @@
         v-text="content"
         class="el-badge__content"
         :class="[
-          type ? 'el-badge__content--' + type : null,
+          'el-badge__content--' + type,
           {
             'is-fixed': $slots.default,
             'is-dot': isDot

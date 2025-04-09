@@ -3,41 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <title>StudentMajorWindow</title>
-    <script>import Vue from 'vue';
-    import ElementUI from 'element-ui';
-    import 'element-ui/lib/theme-chalk/index.css';
-    import App from './RegisterWindow.vue';
+    <script>
+        //初始化LoginUser对象成功
+        window.onload =function(){
+            this.LoginUser = JSON.parse(localStorage.getItem('LoginUser'));
+            //接受后移除localStorage
+            localStorage.removeItem('LoginUser');
+        }
     </script>
 </head>
 
 
 <body>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
-<!-- 引入样式 -->
-<link rel="stylesheet" href="element-ui/lib/theme-chalk/index.css">
+<script src="https://unpkg.com/vue-router@3/dist/vue-router.js"></script>
 <!-- 引入组件库 -->
 <script src="element-ui/lib/index.js"></script>
+<!-- 引入样式 -->
+<link rel="stylesheet" href="element-ui/lib/theme-chalk/index.css">
 <!--引入axios-->
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 <div id="StudentMajorWindow">
     <!--使用导航菜单进行总界面的跳转-->
+    <el-menu :default-active="$route.path"
+             class="MainMenu"
+             mode="horizontal"
+             router
+             @select="handleSelect"
+    >
+        <el-menu-item index="/">选课</el-menu-item>
+        <el-menu-item index="/DeleteCourse">退选课程</el-menu-item>
+        <el-menu-item index="/MyCourse">我的选课</el-menu-item>
+        <el-menu-item index="/MyInformation">我的信息</el-menu-item>
+    </el-menu>
 
+    <!-- 路由视图 -->
+    <router-view></router-view>
 </div>
+
 </body>
 <script>
-    new Vue({
-        el: '#RegisterWindow',
+//定义组件
+    const ChoseCourse = {
+        //将已选的课程与未选的课程分开为两个表格在同一页存放
+        template:'<div><el-card>ChoseCourse</el-card></div>'
+    }
+    const MyInformation = {
+        template:'<div><h2>MyInformation</h2></div>'
+    }
+    const DeleteCourse ={
+        template:'<div><h2>DeleteCourse</h2></div>'
+    }
+    const MyCourse = {
+        props:['TurnCourseImageToArray','LoginUser'],
+        template:'<div><el-table :data="Courses">' +
+            '<el-table-column prop="course_id" label="课程编号"></el-table-column>' +
+            '<el-table-column prop="course_name" label="课程名称"></el-table-column>' +
+            '<el-table-column prop="credits" label="学分"></el-table-column>' +
+            '</el-table></div>',
+        data(){
+            return{
+                //父组件存放用户数据和子组件的共同方法及数据，子组件直接获取父组件的数据并在子组件中使用即可
+                Courses:[
+                ],
+                Course:{
+                    course_id:'',
+                    course_name:'',
+                    credit:''
+                }
+            }
+        },
+        inject:["LoginUser"],
+        created(){
+            //能够成功获取LoginUser数据
+            this.fetchCourses();
+        },
+        methods:{
+            fetchCourses(){
+                alert("fetchCourse成功调用")
+                //服务器未成功接收到axios请求
+                //对课程信息进行初始化
+                axios.post('http://localhost:8080/StudentManagementSystem/MyCourse',
+                    {
+                        username: LoginUser.username,
+                        password: LoginUser.password
+                    },
+                    {
+                        headers:{'Content-Type':'application/json'}
+                    })
+                    .then(response=>{
+                        //判断恒为false
+                        if(response.data.success === "true"){
+                            //成功返回则将课程信息存放到课程数据中
+                            this.Courses = JSON.parse(response.data);
+                            alert("成功接受");
+                        }else{
+                            //返data.message:undefined
+                            alert(response.data)
+                            alert("接收失败"+ response.data.message);
+                        }
+                    }).catch(err => {
+                        alert(err);
+                })
+            }
+        }
 
+    }
+    //设置路由
+    const routes = [
+        {
+            path:'/',
+            name:'ChoseCourse',
+            component:ChoseCourse
+        },
+        {
+            path:'/DeleteCourse',
+            name:'DeleteCourse',
+            component:DeleteCourse},
+        {
+            path:'/MyCourse',
+            name:'MyCourse',
+            component:MyCourse,
+            props:(routes) =>({
+                TurnCourseImageToArray: router.app.TurnCourseImageToArray,
+                User: router.app.User
+            })
+        },
+        {
+            path:'/MyInformation',
+            name:'MyInformation',
+            component:MyInformation
+        }
+    ]
+
+    //创建路由实例：
+    const router = new VueRouter({
+        routes
+    })
+
+Vue.component('my-course',MyCourse);
+
+
+    new Vue({
+
+
+        el: '#StudentMajorWindow',
+        router,
         data() {
             return {
-                activeIndex: '1',
+                LoginUser: {
+                    username:'',
+                    password:''
+                },
+                Course:{
+                    course_id:'',
+                    course_name:''
+                },
+                courseData:[]
             };
         },
         methods: {
-            handleSelect(key, keyPath) {
-                console.log(key, keyPath);
-            }
+            ////接下来要获取用户的课程数据，但课程的数量未知，因此需要对获得的数组进行读取
+            //GetCourseImage(){
+            //   return fetch('http://localhost:8080/StudentManagementSystem/StudentMajorWindow')
+            //       .then(response => {
+            //           if(!response.ok) throw new Error('Network response was not ok');
+            //           return response.json();//解析json数据
+            //       }).then(dataArray => {
+            //           //将获得的数组传出，在组件中遍历即可
+            //            return Array.isArray(dataArray) ? dataArray : [];
+            //       }).catch(error =>{
+            //           console.log('获取数据失败' + error);
+            //           return [];
+            //   })
+            //},
+            ////将获取到的课程数据从promise类型转换成数组
+            //async TurnCourseImageToArray() {
+            //    try {
+            //        this.courseData = await this.GetCourseImage();
+            //    }catch (error){
+            //        console.error('获取课程数据失败：'+error);
+            //    }
+            //},
+
+
+            handleSelect(Path) {
+                this.$router.push(Path);
+            },
+
+
+        },
+        //提供LoginUser数据给子组件
+        provide:{
+            LoginUser:this.LoginUser,
+            TurnCourseImageToArray :this.TurnCourseImageToArray,
+            GetCourseImage:this.GetCourseImage
         }
     })
 </script>

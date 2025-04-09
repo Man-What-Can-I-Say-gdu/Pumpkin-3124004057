@@ -8,14 +8,8 @@
 
 
 <body>
-<!--引入vue-->
-<script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
-<!-- 引入样式 -->
-<link rel="stylesheet" href="element-ui/lib/theme-chalk/index.css">
-<!-- 引入组件库 -->
-<script src="element-ui/lib/index.js"></script>
-<!--引入axios-->
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
 <div id="RegisterWindow">
     <el-col :span="8">
         <el-card  class="RegisterWindow" header="RegisterWindow" body-style="10px">
@@ -38,17 +32,17 @@
                     <el-form-item label="密码" prop="password">
                         <el-input  v-model="RegisterUser.password" show-password label="输入密码"></el-input>
                     </el-form-item>
-<!--                    确认密码-->
+                    <!--                    确认密码-->
                     <el-form-item label="确认密码" prop="judgepassword" >
                         <el-input  v-model="RegisterUser.judgepassword" show-password label="重新输入以确认密码"></el-input>
                     </el-form-item>
                     <!--选择用户类型-->
                     <el-select v-model="RegisterUser.user_type" placeholder="请选择您的用户类型" label="您注册为身份">
                         <el-option
-                            v-for="item in user_type"
-                            :key="RegisterUser.user_type"
-                            :label="item.label"
-                            :value="item.value">
+                                v-for="item in user_type"
+                                :key="RegisterUser.user_type"
+                                :label="item.label"
+                                :value="item.value">
                         </el-option>
                     </el-select>
                     <!--提交数据-->
@@ -65,11 +59,22 @@
 </div>
 
 
+
+<!--引入vue-->
+<script src="js/vue.js"></script>
+<!-- 引入组件库 -->
+<script src="element-ui/lib/index.js"></script>
+<!-- 引入样式 -->
+<link rel="stylesheet" href="element-ui/lib/theme-chalk/index.css">
+<!--引入axios-->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+
 <script>
     new Vue({
-        el: '#RegisterWindow',
+        el:"#RegisterWindow",
         data(){
-
             let validatePass2 = (rule, value, callback) => {
                 if (value === '') {
                     callback(new Error('请再次输入密码'));
@@ -135,7 +140,7 @@
                                 //注册成功的情况
                                 alert("注册成功，点击确认跳转登录界面！")
                                 //跳转至登录界面
-                                window.location.href('http://localhost:63342/StudentManagementSystem/login');
+                                window.open('Login.html');
                             } else {
                                 //注册失败的情况
                                 alert("注册失败");
@@ -148,7 +153,7 @@
                             }else if(err.request){
                                 alert("请求未收到响应，请检查网络")
                             }else{
-                                alert("请求配置错误")
+                                alert("请求配置错误");
                             }
                         })
                     }else{

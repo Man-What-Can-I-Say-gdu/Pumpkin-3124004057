@@ -82,7 +82,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 104);
+/******/ 	return __webpack_require__(__webpack_require__.s = 119);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -189,7 +189,7 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ 104:
+/***/ 119:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -226,10 +226,7 @@ var render = function() {
               "div",
               {
                 staticClass: "el-progress-bar__outer",
-                style: {
-                  height: _vm.strokeWidth + "px",
-                  backgroundColor: _vm.defineBackColor
-                }
+                style: { height: _vm.strokeWidth + "px" }
               },
               [
                 _c(
@@ -242,10 +239,7 @@ var render = function() {
                     _vm.showText && _vm.textInside
                       ? _c(
                           "div",
-                          {
-                            staticClass: "el-progress-bar__innerText",
-                            style: { color: _vm.textColor }
-                          },
+                          { staticClass: "el-progress-bar__innerText" },
                           [_vm._v(_vm._s(_vm.content))]
                         )
                       : _vm._e()
@@ -267,7 +261,7 @@ var render = function() {
                   style: _vm.trailPathStyle,
                   attrs: {
                     d: _vm.trackPath,
-                    stroke: _vm.defineBackColor,
+                    stroke: "#e5e9f2",
                     "stroke-width": _vm.relativeStrokeWidth,
                     fill: "none"
                   }
@@ -291,10 +285,7 @@ var render = function() {
             "div",
             {
               staticClass: "el-progress__text",
-              style: {
-                fontSize: _vm.progressTextSize + "px",
-                color: _vm.textColor
-              }
+              style: { fontSize: _vm.progressTextSize + "px" }
             },
             [
               !_vm.status
@@ -415,14 +406,6 @@ render._withStripped = true
       type: [String, Array, Function],
       default: ''
     },
-    defineBackColor: {
-      type: [String, Array, Function],
-      default: '#ebeef5'
-    },
-    textColor: {
-      type: [String, Array, Function],
-      default: '#606266'
-    },
     format: Function
   },
   computed: {
@@ -541,7 +524,7 @@ render._withStripped = true
         if (typeof seriesColor === 'string') {
           return {
             color: seriesColor,
-            percentage: (index + 1) * span
+            progress: (index + 1) * span
           };
         }
         return seriesColor;

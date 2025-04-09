@@ -9,7 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-public class AdminDaoImp implements AdminDao {
+public class AdminDaoImp extends UserDaoImp implements AdminDao {
     @Override
     public User SelectStudentImage(String username) {
         User user = new User();
@@ -79,8 +79,8 @@ public class AdminDaoImp implements AdminDao {
             Connection connection = ConnectionPool.GetConnection();
             String AddCourseSQL = "insert into course(course_name, credit) values (?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(AddCourseSQL);
-            preparedStatement.setString(1, course.getCourseName());
-            preparedStatement.setInt(2,course.getCredits());
+            preparedStatement.setString(1, course.getCourse_name());
+            preparedStatement.setInt(2,course.getCredit());
             result = preparedStatement.execute();
             preparedStatement.close();
             ConnectionPool.RecycleConnection(connection);

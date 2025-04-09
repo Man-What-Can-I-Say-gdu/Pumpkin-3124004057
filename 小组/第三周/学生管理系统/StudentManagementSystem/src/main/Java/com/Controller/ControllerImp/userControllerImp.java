@@ -9,16 +9,15 @@ import com.entity.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.util.Enumeration;
 import java.util.Objects;
 
 @WebServlet({"/login","/register"})
-public class userControllerImp extends HttpServlet implements userController {
+public class userControllerImp extends HttpServlet implements userController, HttpSession {
     private UserServiceImp userServiceImp;
     @Override
     public void init() {
@@ -32,7 +31,11 @@ public class userControllerImp extends HttpServlet implements userController {
     }
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
-
+        try {
+            doPost(req,resp);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     /**
@@ -50,6 +53,8 @@ public class userControllerImp extends HttpServlet implements userController {
         //判断请求的页面
         if("/login".equals(req.getServletPath()) && user != null){
             LoginController(resp, user);
+            //使用session传递密码和用户名
+
         }else if("/register".equals(req.getServletPath()) && user != null){
             RegisterController(resp, user);
         }
@@ -59,7 +64,6 @@ public class userControllerImp extends HttpServlet implements userController {
     protected void doOptions(HttpServletRequest request,HttpServletResponse resp) throws ServletException, IOException {
         setCorsHeaders(resp,request.getHeader("Origin"));
         resp.setStatus(200);
-        System.out.println("成功返回了");
     }
 
 
@@ -78,7 +82,6 @@ public class userControllerImp extends HttpServlet implements userController {
             String line;
             while((line = reader.readLine()) != null){
                 stringBuilder.append(line);
-                System.out.println("line:"+line);
             }
 
         } catch (IOException e) {
@@ -103,20 +106,26 @@ public class userControllerImp extends HttpServlet implements userController {
         //请求页面为登录页面并且传入的用户数据不为空
         //调用service,获得登录对象
         user =  userServiceImp.Login(user.getUser_name(), user.getPassword());
-        System.out.println(user);
         //设置返回结果格式和编码集
         resp.setContentType("application/json;charset=utf-8");
         if(user ==null){
-            System.out.println("1");
+            //登录失败，设置401状态码
+            resp.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            try {
+                resp.getWriter().print("{\"success\": false, \"message\": \"No Such User\"}");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }else{
-            System.out.println("2");
         }
         if (user != null) {
             // 登录成功，设置200状态码
             resp.setStatus(HttpServletResponse.SC_OK);
-            System.out.println("登录成功");
             try {
                 resp.getWriter().print("{\"success\": true}");
+                //返回一个session对象
+                HttpSession session = this;
+                session.setAttribute("user", user);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -128,7 +137,6 @@ public class userControllerImp extends HttpServlet implements userController {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-            System.out.println("登录失败");
         }
     }
 
@@ -136,17 +144,13 @@ public class userControllerImp extends HttpServlet implements userController {
     public void RegisterController(HttpServletResponse resp , User user) {
         //请求页面为注册页面并且传入的用户数据不为空
         boolean IsRegister =  userServiceImp.Register(user);
-        System.out.println(user);
-        System.out.println(IsRegister);
         try{
             if(IsRegister){
                 //注册成功，返回success
-                System.out.println("注册成功");
                 resp.setStatus(HttpServletResponse.SC_OK);
                 resp.getWriter().print("{\"success\": true}");
             }else{
                 //注册失败返回false
-                System.out.println("注册失败");
                 resp.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
                 resp.getWriter().print("{\"success\": false}");
             }
@@ -158,5 +162,85 @@ public class userControllerImp extends HttpServlet implements userController {
     @Override
     public void DisplayMainWindow(User user) {
 
+    }
+
+    @Override
+    public long getCreationTime() {
+        return 0;
+    }
+
+    @Override
+    public String getId() {
+        return "";
+    }
+
+    @Override
+    public long getLastAccessedTime() {
+        return 0;
+    }
+
+    @Override
+    public void setMaxInactiveInterval(int i) {
+
+    }
+
+    @Override
+    public int getMaxInactiveInterval() {
+        return 0;
+    }
+
+    @Override
+    public HttpSessionContext getSessionContext() {
+        return null;
+    }
+
+    @Override
+    public Object getAttribute(String s) {
+        return null;
+    }
+
+    @Override
+    public Object getValue(String s) {
+        return null;
+    }
+
+    @Override
+    public Enumeration<String> getAttributeNames() {
+        return null;
+    }
+
+    @Override
+    public String[] getValueNames() {
+        return new String[0];
+    }
+
+    @Override
+    public void setAttribute(String s, Object o) {
+
+    }
+
+    @Override
+    public void putValue(String s, Object o) {
+
+    }
+
+    @Override
+    public void removeAttribute(String s) {
+
+    }
+
+    @Override
+    public void removeValue(String s) {
+
+    }
+
+    @Override
+    public void invalidate() {
+
+    }
+
+    @Override
+    public boolean isNew() {
+        return false;
     }
 }

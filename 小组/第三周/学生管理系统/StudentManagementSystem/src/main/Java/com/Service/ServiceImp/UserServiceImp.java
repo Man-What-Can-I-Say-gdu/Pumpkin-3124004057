@@ -26,7 +26,7 @@ public class UserServiceImp implements UserService {
     public User Login(String name, String password) {
         //1.验证用户是否存在，不存在报错，存在执行下一步
         if(!userDao.IsUserExist(name)){
-            throw new RuntimeException("User is not exist");
+            return null;
         }
         //存在：验证密码是否正确
         User LoginUser;
@@ -36,8 +36,6 @@ public class UserServiceImp implements UserService {
             throw new RuntimeException(e);
         }
         //2.验证密码是否正确
-        System.out.println(name);
-        System.out.println(password);
         if(password.equals(LoginUser.getPassword())){
             return LoginUser;
         }else {

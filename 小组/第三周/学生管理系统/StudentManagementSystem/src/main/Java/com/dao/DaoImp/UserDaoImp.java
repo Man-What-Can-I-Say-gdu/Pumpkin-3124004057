@@ -68,21 +68,14 @@ public class UserDaoImp implements UserDao{
             resultSet = preparedStatement.executeQuery();
             if(resultSet.next()){
                 //赋值user
-                System.out.println("1");
                 user.setUser_name(resultSet.getString("name"));
-                System.out.println("2");
                 user.setPassword(resultSet.getString("password"));
-                System.out.println("3");
                 user.setPhone_number(resultSet.getString("phone_number"));
-                System.out.println("4");
                 user.setUser_type(resultSet.getInt("user_type"));
-                System.out.println("5");
                 user.setId(resultSet.getInt("id"));
                 //关闭预处理语句并回收连接
                 preparedStatement.close();
-                System.out.println("6");
                 ConnectionPool.RecycleConnection(connection);
-                System.out.println("7");
             }
         }catch (Exception e){
             throw new RuntimeException(e);
@@ -152,6 +145,14 @@ public class UserDaoImp implements UserDao{
                 preparedStatement.setString(4, user.getPhone_number());
                 //执行sql语句
                 result = preparedStatement.executeUpdate();
+                //添加学生对象
+                if(user.getUser_type() == 0 && result > 0){
+                    addStudent(getAllByName(user.getUser_name()).getId());
+                }else if(user.getUser_type() == 1 && result > 0){
+
+                }else{
+
+                }
                 //回收连接
                 preparedStatement.close();
                 ConnectionPool.RecycleConnection(connection);
@@ -193,7 +194,7 @@ public class UserDaoImp implements UserDao{
         try {
             //获取连接和SQL语句
             Connection connection = ConnectionPool.GetConnection();
-            String SQL = "insert into student  values ?";
+            String SQL = "insert into student  values (?)";
             //获取预处理语句并获得结果
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
             preparedStatement.setInt(1,userId);

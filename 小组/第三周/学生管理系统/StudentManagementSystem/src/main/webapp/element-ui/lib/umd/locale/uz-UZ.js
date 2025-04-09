@@ -79,7 +79,7 @@
         loading: 'Yuklanmoqda',
         noMatch: 'Mos maʼlumot yoʻq',
         noData: 'Maʼlumot yoʻq',
-        placeholder: 'Tanlang'
+        placeholder: 'Tanladizngiz'
       },
       cascader: {
         noMatch: 'Mos maʼlumot topilmadi',
@@ -102,8 +102,8 @@
       upload: {
         deleteTip: 'Oʻchirish tugmasini bosib oʻchiring',
         delete: 'Oʻchirish',
-        preview: 'Oldindan koʻrish',
-        continue: 'Davom etish'
+        preview: 'Oldin koʻrish',
+        continue: 'Davom qilish'
       },
       table: {
         emptyText: 'Boʻsh',
@@ -130,11 +130,8 @@
         title: 'Orqaga'
       },
       popconfirm: {
-        confirmButtonText: 'Tasdiqlash',
-        cancelButtonText: 'Bekor qilish'
-      },
-      empty: {
-        description: 'Boʻsh'
+        confirmButtonText: 'Yes', // to be translated
+        cancelButtonText: 'No' // to be translated
       }
     }
   };
