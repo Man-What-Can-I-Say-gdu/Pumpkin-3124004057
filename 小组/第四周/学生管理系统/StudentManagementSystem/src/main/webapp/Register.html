@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RegisterWindow</title>
+</head>
+
+
+
+<body>
+
+
+<div id="RegisterWindow">
+    <el-col :span="8">
+        <el-card  class="RegisterWindow" header="RegisterWindow" body-style="10px">
+            <div slot="header" class="clearfix">
+                <h2> <span>注册界面</span></h2>
+            </div>
+            <div class="RegisterSelection">
+                <el-form :model="RegisterUser" :rules="RegisterRules" ref="RegisterUser" label-width="100px" class="RegisterWindow" action="action" method="post">
+
+                    <!--登录界面-->
+                    <!--用户名输入-->
+                    <el-form-item label="用户名" prop="username">
+                        <el-input v-model="RegisterUser.username" size="middle" label="请输入用户名"></el-input>
+                    </el-form-item>
+                    <!--手机号-->
+                    <el-form-item label="手机号码" prop="phonenumber">
+                        <el-input v-model="RegisterUser.phone_number"></el-input>
+                    </el-form-item>
+                    <!--密码-->
+                    <el-form-item label="密码" prop="password">
+                        <el-input  v-model="RegisterUser.password" show-password label="输入密码"></el-input>
+                    </el-form-item>
+                    <!--                    确认密码-->
+                    <el-form-item label="确认密码" prop="judgepassword" >
+                        <el-input  v-model="RegisterUser.judgepassword" show-password label="重新输入以确认密码"></el-input>
+                    </el-form-item>
+                    <!--选择用户类型-->
+                    <el-select v-model="RegisterUser.user_type" placeholder="请选择您的用户类型" label="您注册为身份">
+                        <el-option
+                                v-for="item in user_type"
+                                :key="RegisterUser.user_type"
+                                :label="item.label"
+                                :value="item.value">
+                        </el-option>
+                    </el-select>
+                    <!--提交数据-->
+                    <el-form-item>
+                        <el-button type="primary" @click="SubmitRegister('RegisterUser')">注册用户</el-button>
+                        <el-button type="warning" @click="resetForm(RegisterUser)">重置数据</el-button>
+                    </el-form-item>
+                    <!--超链接实现跳转-->
+                    <el-link type="primary" href="Login.html">已有账号？一键跳转登录</el-link>
+                </el-form>
+            </div>
+        </el-card>
+    </el-col>
+</div>
+
+
+
+<!--引入vue-->
+<script src="js/vue.js"></script>
+<!-- 引入组件库 -->
+<script src="element-ui/lib/index.js"></script>
+<!-- 引入样式 -->
+<link rel="stylesheet" href="element-ui/lib/theme-chalk/index.css">
+<!--引入axios-->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+
+<script>
+    new Vue({
+        el:"#RegisterWindow",
+        data(){
+            let validatePass2 = (rule, value, callback) => {
+                if (value === '') {
+                    callback(new Error('请再次输入密码'));
+                } else if (value !== this.RegisterUser.password) {
+                    callback(new Error('两次输入密码不一致!'));
+                } else {
+                    callback();
+                }
+            }
+            return{
+                user_type:[{
+                    value:'0',
+                    label:'学生'
+                },{
+                    value:'1',
+                    label:'管理员'
+                }],
+                RegisterUser:{
+                    name:'',
+                    password:'',
+                    phone_number:'',
+                    user_type:'',
+                    passwordRejudge:'',
+                    judegepassword:''
+                },
+
+                RegisterRules:{
+                    username:[
+                        { required: true, message:'请输入注册的用户名',trigger:'blur'},
+                        { min: 0 ,max: 10 ,message: '注册的用户名长度小于10个字符' ,trigger:'blur'}
+                    ],
+                    password:[
+                        { required:true, message:'请输入密码',trigger:'blur'},
+                        { min:10 , max: 20 ,message: '密码长度应在10到20之间', trigger:'blur'}
+                    ],
+                    phone_number:[
+                        { required:true , message:"请输入手机号码",trigger:'blur'},
+                        { pattern:/^\d{11}$/ , message: '请输入正确的手机号',trigger: 'blur'}
+                    ],
+                    judgepassword:[
+                        { required:true, message:'请再次输入密码',trigger:'blur'},
+                        { validator: validatePass2,trigger: ['blur','change'],required: true}
+                    ]
+                }
+            }
+
+        },
+        methods: {
+            SubmitRegister() {
+                this.$refs.RegisterUser.validate((valid) => {
+                    if (valid) {
+                        axios.post('http://localhost:8080/StudentManagementSystem/register',
+                            {
+                                username: this.RegisterUser.username,
+                                password: this.RegisterUser.password,
+                                phone_number: this.RegisterUser.phone_number,
+                                user_type: this.RegisterUser.user_type
+                            },
+                            {
+                                headers: {'Content-Type': 'application/json'}
+                            }).then(response => {
+                            if (response.data.success) {
+                                //注册成功的情况
+                                alert("注册成功，点击确认跳转登录界面！")
+                                //跳转至登录界面
+                                window.open('Login.html');
+                            } else {
+                                //注册失败的情况
+                                alert("注册失败");
+                            }
+                        }).catch(err => {
+                            console.error(err);
+                            if (err.response) {
+                                //答应请求失败的原因
+                                alert(`请求失败：${err.response.status} ${err.response.data.message}||'服务器错误'}`)
+                            }else if(err.request){
+                                alert("请求未收到响应，请检查网络")
+                            }else{
+                                alert("请求配置错误");
+                            }
+                        })
+                    }else{
+                        console.log('输入格式错误');
+                        return false;
+                    }
+                });
+            },
+            resetForm(RegisterUser) {
+                this.$refs.RegisterUser.resetField();
+            }
+        }
+    })
+
+</script>
+</body>
+
+
+
+
+</html>
